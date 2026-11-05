@@ -7,7 +7,7 @@ atlas server and page accept:
 
   state, chamber (upper/lower), district, seat, candidate, party, status,
   previous_party, votes, pct, reporting, updated, source, source_kind,
-  source_url, multimember, note
+  source_url, multimember, members (seats in a multi-seat district), note
 
 Rules (match the atlas's own conservative policy):
   * Only races with a reported winner are included; uncalled races are skipped.
@@ -117,7 +117,7 @@ def build():
                 if len(names) > 1:
                     for i, n in enumerate(names, 1):
                         races.append({**base, 'candidate': n, 'seat': f'member-{i}', 'previous_party': None,
-                                      'multimember': True,
+                                      'multimember': True, 'members': len(names),
                                       'note': (note + '; ' if note else '') + f'{len(names)} members elected together in this district'})
                 else:
                     row = {**base, 'candidate': names[0], 'seat': '', 'previous_party': flip_from(note, party),
@@ -133,6 +133,7 @@ def build():
                     if row['state'] == st and row['chamber'] == ch and row['district'] in dup and not row['multimember']:
                         counter[row['district']] = counter.get(row['district'], 0) + 1
                         row['seat'] = f'position-{counter[row["district"]]}'
+                        row['members'] = seen[row['district']]
                         row['note'] = ((row.get('note') or '') + '; ' if row.get('note') else '') + \
                             'position number follows the order MultiState lists the contests'
     # Utah: vote counts from the Utah table in results_all.js

@@ -2,7 +2,7 @@ name: Dry run of the full update (temporary)
 on:
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
   dry:
     runs-on: ubuntu-latest
@@ -14,9 +14,10 @@ jobs:
           python-version: "3.12"
       - run: python3 tools/scrape_federal.py
       - run: python3 tools/scrape_multistate.py
-      - uses: actions/upload-artifact@v4
-        with:
-          name: dry
-          path: |
-            federal_live.json
-            leg_live.json
+      - name: Push outputs to the dryrun branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p /tmp/out && cp federal_live.json leg_live.json /tmp/out/
+          git checkout --orphan dryrun && git rm -rq --cached . && cp /tmp/out/* . && git add federal_live.json leg_live.json
+          git commit -qm "dry run output" && git push -f origin dryrun

@@ -257,6 +257,7 @@ def update_statewide(rows, races, office, url):
 
 def house_items(A, races, abc, old_items, url):
     old = {(i['st'], str(i['dist'])): i for i in old_items if i['kind'] == 'house'}
+    nbc_marks = any(r.get('flip') and r.get('called') for r in races.values())
     out, dropped = [], []
     seen = set()
     for h in A['house']:
@@ -282,15 +283,20 @@ def house_items(A, races, abc, old_items, url):
         abc_gain = abc_note == {'D': 'dem gain', 'R': 'rep gain', 'I': 'ind gain'}.get(w['party'])
         margin = r1((w['pct'] or 0) - (cs[1]['pct'] or 0)) if len(cs) > 1 and w['pct'] is not None else None
         if r.get('called'):
-            flip = bool(r.get('flip') == w['party'] or abc_gain or (lost_inc and not same_inc)
-                        or (prev and prev['to'] == w['party']))
+            if nbc_marks:      # NBC marks changed seats itself (it accounts for redrawn districts); ABC as a second opinion
+                flip = bool(r.get('flip') == w['party'] or abc_gain)
+            else:
+                flip = bool(r.get('flip') == w['party'] or abc_gain or (lost_inc and not same_inc)
+                            or (prev and prev['to'] == w['party']))
             if not flip:
                 if prev:
                     dropped.append(f"{key[0]}-{key[1]} ({prev['to']} called for {w['party']} instead)")
                 continue
             fr = (lost_inc[0]['party'] if lost_inc and not same_inc else prev['fr'] if prev
                   else ('R' if w['party'] == 'D' else 'D'))
-            src = 'NBC News call' + ('; ABC News marks a gain' if abc_gain else '')
+            src = ('NBC News call' + ('; NBC and ABC mark it as a party gain' if r.get('flip') == w['party'] and abc_gain
+                                     else '; NBC marks it as a party gain' if r.get('flip') == w['party']
+                                     else '; ABC News marks it as a party gain' if abc_gain else ''))
             note = (prev or {}).get('note') or ('Incumbent defeated' if lost_inc and not same_inc else '')
             if prev and prev.get('status') == 'leading' and 'trailing' in note.lower():
                 note = 'Incumbent defeated' if lost_inc else ''
@@ -302,8 +308,8 @@ def house_items(A, races, abc, old_items, url):
             trailing_inc = lost_inc and not same_inc
             if prev and prev.get('status') == 'called':
                 out.append(prev)                      # another network already called it; keep their call
-            elif (prev and prev['to'] == w['party']) or trailing_inc:
-                fr = lost_inc[0]['party'] if trailing_inc else prev['fr']
+            elif (prev and prev['to'] == w['party']) or trailing_inc or r.get('flip') == w['party']:
+                fr = lost_inc[0]['party'] if trailing_inc else prev['fr'] if prev else ('R' if w['party'] == 'D' else 'D')
                 note = 'Incumbent trailing' if trailing_inc else ((prev or {}).get('note') or '')
                 out.append({'kind': 'house', 'st': h['st'], 'office': 'U.S. House', 'dist': str(h['d']),
                             'winner': w['name'], 'wp': w['party'], 'loser': label(loser), 'fr': fr, 'to': w['party'],
@@ -372,9 +378,11 @@ def house_context(A, races, abc, items, asof):
     by = {p: sum(1 for i in fl if i['to'] == p) for p in ('D', 'R', 'I')}
     parts = ', '.join(f"{n} to {PNAME[p]}" for p, n in by.items() if n)
     gains = sum(1 for a in abc.values() if 'gain' in (a.get('note') or ''))
+    marks = any(r.get('flip') and r.get('called') for r in races.values())
+    how = ('as marked by NBC News or ABC News' if marks else
+           'counting ABC flip markers and incumbents who lost to the other party')
     t = (f"NBC News had called {called} of 435 House races as of {asof}. Among called races, {len(fl)} seats "
-         f"changed party{f' ({parts})' if parts else ''}, counting NBC and ABC flip markers and incumbents "
-         f"who lost to the other party.")
+         f"changed party{f' ({parts})' if parts else ''}, {how}.")
     if gains:
         t += f" ABC News marked {gains} seats as party gains."
     return t

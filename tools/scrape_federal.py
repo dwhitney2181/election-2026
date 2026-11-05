@@ -75,6 +75,12 @@ def race_from(entry, flips):
             'race': tip.get('raceName'), 'cands': cands, 'flip': flips}
 
 
+def style_flip(entry):
+    """NBC colors a seat that changed party with a 'flipToBlue' / 'flipToRed' fill."""
+    m = re.search(r'flipTo(\w+)', str((entry.get('style') or {}).get('fill') or ''))
+    return {'blue': 'D', 'red': 'R'}.get(m.group(1).lower(), 'I') if m else None
+
+
 def table_flips(pp):
     """{stateAbbr or district key: party that flipped the seat} from NBC's table, when it marks flips."""
     out = {}
@@ -115,17 +121,14 @@ def nbc():
                 if not re.fullmatch(r'[A-Z]{2}', st):
                     continue
                 rid = st if str(k).upper() == st else str(k).upper()
-            r = race_from(entry, flips.get(rid) or flips.get(st))
+            r = race_from(entry, style_flip(entry) or flips.get(rid) or flips.get(st))
             if r['cands']:
                 races[rid] = r
         res[key] = races
-        if office == 'house':
-            e = (pp.get('mapData') or {}).get('5101') or {}
-            print('  NBC house entry fields:', sorted(e), {k: e[k] for k in e if k != 'tooltip'} if e else '')
         meta[f'{key}_asof'] = pp.get('lastModifiedFormatted') or pp.get('lastModified') or pp.get('currentTime')
         meta[f'{key}_url'] = NBC.format(office)
         print(f'NBC {office}: {len(races)} races, {sum(r["called"] for r in races.values())} called, '
-              f'{len(flips)} flips marked in table ({"yes" if flips else "none"})')
+              f'{sum(1 for r in races.values() if r["flip"] and r["called"])} called seats marked as changing party')
     return res, meta
 
 
@@ -180,7 +183,8 @@ def abc(office):
                     MISSED.append(row[:2])
                 continue
             name = m.group(1).strip()
-            st = AP.get(name) or AP.get(name.rstrip('.') + '.') or STATE_NAMES.get(name)
+            bare = name.rstrip('.')
+            st = AP.get(name) or AP.get(bare) or AP.get(bare + '.') or STATE_NAMES.get(name) or STATE_NAMES.get(bare)
             if not st:
                 if office == 'house' and len(MISSED) < 12:
                     MISSED.append(row[:2])
@@ -207,7 +211,7 @@ def main():
         try:
             abcd[office] = abc(office)
             if MISSED and office == 'house':
-                print('  ABC rows not parsed (sample):', MISSED)
+                print('  ABC rows not parsed (sample):', MISSED[:4])
             print(f'ABC {office}: {len(abcd[office])} rows, {sum("gain" in r["note"] for r in abcd[office].values())} gains')
         except Exception as e:
             print(f'ABC {office}: FAILED {str(e)[:150]}')

@@ -13,3 +13,13 @@ Open `index.html` in a browser, or view it on GitHub Pages.
 
 ## Sources
 MultiState Elections (state legislative calls), ABC News and Fox News (House vote shares), AP, NBC News and CBS News (race calls), NCSL (chamber control), Utah News Dispatch (Utah legislative vote shares). Each item on the page links to its source.
+
+## Feed for the Legislative Atlas
+
+`atlas-feed.json` is the nationwide results feed that the [Legislative Atlas](https://github.com/dwhitney2181/legislative-atlas) reads. It's built from `leg_all.js` and `results_all.js` by:
+
+```bash
+python3 tools/build_atlas_feed.py
+```
+
+Re-run it whenever those files change, then commit and push; the atlas picks up the new feed within 10 minutes.

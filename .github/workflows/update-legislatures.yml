@@ -7,7 +7,7 @@ name: Update election results
 # its previous numbers, and nothing is committed unless a result changed.
 on:
   schedule:
-    - cron: "23 */3 * * *"   # every 3 hours (times are UTC)
+    - cron: "25 */3 * * *"   # every 3 hours (times are UTC)
   workflow_dispatch:
 
 permissions:

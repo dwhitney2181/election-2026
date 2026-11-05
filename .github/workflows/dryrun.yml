@@ -19,5 +19,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           mkdir -p /tmp/out && cp federal_live.json leg_live.json /tmp/out/
-          git checkout --orphan dryrun && git rm -rq --cached . && cp /tmp/out/* . && git add federal_live.json leg_live.json
+          git checkout --orphan dryrun && git rm -rqf --cached . && cp /tmp/out/* . && git add federal_live.json leg_live.json
           git commit -qm "dry run output" && git push -f origin dryrun

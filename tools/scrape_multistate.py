@@ -36,6 +36,7 @@ VOID = {'br', 'img', 'hr', 'meta', 'link', 'input', 'source', 'wbr', 'col', 'are
 PARTY_WORDS = {'democrat': 'D', 'democratic': 'D', 'republican': 'R', 'independent': 'I', 'unaffiliated': 'I',
                'nonpartisan': 'NP', 'non-partisan': 'NP', 'libertarian': 'L', 'green': 'G', 'forward': 'F',
                'constitution': 'C'}
+DEBUG_LEFT = [2]
 MONTHS = ['Jan.', 'Feb.', 'March', 'April', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.']
 
 
@@ -209,14 +210,20 @@ def main():
             continue
         url = BASE.format(slug)
         try:
-            chambers = parse(fetch(url), st)
+            html = fetch(url)
+            chambers = parse(html, st)
         except Exception as e:
             errors[st] = f'fetch failed: {str(e)[:120]}'
             if st in old:
                 states[st] = old[st]
             continue
         n, prev = sum(len(c['races']) for c in chambers), count(old.get(st))
-        if n == 0 or (prev > 10 and n < 0.6 * prev):
+        if n == 0 and DEBUG_LEFT[0] > 0:  # print a sample of the page so the parser can be fixed
+            DEBUG_LEFT[0] -= 1
+            i = html.find('district.html')
+            print(f'--- {st} debug: {len(html)} bytes, district.html x{html.count("district.html")}, <table x{html.count("<table")}, <tr x{html.count("<tr")}')
+            print(html[max(0, i - 1500):i + 1500] if i >= 0 else html[:3000])
+            print(f'--- end {st} debug')
             errors[st] = f'parsed {n} rows (previously {prev}); kept previous data'
             if st in old:
                 states[st] = old[st]

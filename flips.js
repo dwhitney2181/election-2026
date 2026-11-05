@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 5, 2026, 7:50 a.m. MT",
-"house_context": "NBC News had called 393 of 435 House races as of 9:49 a.m. ET, Nov. 5. Among called races, 36 seats changed party (36 to Democrats), counting NBC and ABC flip markers and incumbents who lost to the other party. ABC News marked 24 seats as party gains.",
+"asof": "Nov. 5, 2026, 7:53 a.m. MT",
+"house_context": "NBC News had called 393 of 435 House races as of 9:52 a.m. ET, Nov. 5. Among called races, 38 seats changed party (37 to Democrats, 1 to Republicans), as marked by NBC News or ABC News. ABC News marked 33 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -155,7 +155,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Open seat (Ashley Hinson ran for Senate)"
@@ -171,7 +171,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call; ABC News marks a gain",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Open seat"
@@ -187,7 +187,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call; ABC News marks a gain",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": true,
 "note": "Open seat"
@@ -203,7 +203,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call; ABC News marks a gain",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Open seat"
@@ -251,7 +251,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": true,
 "note": "Incumbent defeated"
@@ -267,7 +267,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call; ABC News marks a gain",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": true,
 "note": "Incumbent defeated"
@@ -283,7 +283,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": true,
 "note": "Incumbent defeated; redrawn district"
@@ -299,7 +299,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call",
+"src": "NBC News call; NBC marks it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": true,
 "note": "Incumbent defeated"
@@ -347,7 +347,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call; ABC News marks a gain",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": true,
 "note": "Incumbent defeated"
@@ -363,7 +363,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call; ABC News marks a gain",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Open seat"
@@ -379,7 +379,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call; ABC News marks a gain",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": true,
 "note": "Incumbent defeated"
@@ -395,7 +395,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": true,
 "note": "Incumbent defeated"
@@ -411,7 +411,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": true,
 "note": "Incumbent defeated"
@@ -427,7 +427,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call; ABC News marks a gain",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": true,
 "note": "Incumbent defeated"
@@ -443,7 +443,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call; ABC News marks a gain",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Open seat (Chuck Edwards retired)"
@@ -459,7 +459,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call; ABC News marks a gain",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": true,
 "note": "Incumbent defeated"
@@ -475,7 +475,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call; ABC News marks a gain",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": true,
 "note": "Incumbent defeated"
@@ -491,7 +491,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call; ABC News marks a gain",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": true,
 "note": "Incumbent defeated"
@@ -507,7 +507,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call; ABC News marks a gain",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": true,
 "note": "Incumbent defeated"
@@ -523,7 +523,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call; ABC News marks a gain",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": true,
 "note": "Incumbent defeated"
@@ -539,7 +539,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call; ABC News marks a gain",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": true,
 "note": "Incumbent defeated"
@@ -587,7 +587,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call; ABC News marks a gain",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": ""
@@ -619,7 +619,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": true,
 "note": "Redrawn district"
@@ -651,7 +651,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": ""
@@ -667,10 +667,26 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call; ABC News marks a gain",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": true,
 "note": "Incumbent defeated"
+},
+{
+"kind": "house",
+"st": "CA",
+"office": "U.S. House",
+"dist": "6",
+"winner": "Richard Pan",
+"wp": "D",
+"loser": "Kevin Kiley (other)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "NBC News call; NBC marks it as a party gain",
+"url": "https://www.nbcnews.com/politics/2026-elections/house-results",
+"incdef": false,
+"note": ""
 },
 {
 "kind": "house",
@@ -683,7 +699,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call; ABC News marks a gain",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Open seat (Don Bacon retired)"
@@ -699,7 +715,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call; ABC News marks a gain",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": true,
 "note": "Incumbent defeated"
@@ -715,7 +731,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call; ABC News marks a gain",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": true,
 "note": "Incumbent defeated"
@@ -731,7 +747,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call",
+"src": "NBC News call; NBC marks it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": true,
 "note": "Incumbent defeated"
@@ -747,7 +763,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call",
+"src": "NBC News call; NBC marks it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": true,
 "note": "Incumbent defeated"
@@ -779,7 +795,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call; ABC News marks a gain",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": true,
 "note": "Redrawn under Proposition 50"
@@ -795,7 +811,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call; ABC News marks a gain",
+"src": "NBC News call; ABC News marks it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Redrawn under Proposition 50"
@@ -811,7 +827,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call; ABC News marks a gain",
+"src": "NBC News call; ABC News marks it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Redrawn under Proposition 50"
@@ -827,7 +843,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "New Democratic-leaning district from court-ordered map"
@@ -859,7 +875,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call",
+"src": "NBC News call; NBC marks it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": true,
 "note": "Incumbent defeated"
@@ -875,7 +891,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "called",
-"src": "NBC News call",
+"src": "NBC News call; NBC marks it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": true,
 "note": "Incumbent defeated"
@@ -895,6 +911,22 @@ window.FLIPS = {
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Incumbent trailing"
+},
+{
+"kind": "house",
+"st": "TX",
+"office": "U.S. House",
+"dist": "32",
+"winner": "Jace Yarbrough",
+"wp": "R",
+"loser": "Dan Barrios (D)",
+"fr": "D",
+"to": "R",
+"status": "called",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
+"url": "https://www.nbcnews.com/politics/2026-elections/house-results",
+"incdef": false,
+"note": ""
 },
 {
 "kind": "house",

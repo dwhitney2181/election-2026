@@ -164,9 +164,28 @@ def parse(html, st):
     return [{'name': n, 'races': r} for n, r in chambers.items()]
 
 
+_BROTLI = []
+
+
+def _brotli():
+    """MultiState often sends brotli even when asked for gzip; install a decoder on first use."""
+    if not _BROTLI:
+        try:
+            import brotli
+        except ImportError:
+            import subprocess
+            subprocess.run([sys.executable, '-m', 'pip', 'install', '--quiet', '--disable-pip-version-check', 'brotli'],
+                           check=True, timeout=180)
+            import importlib
+            importlib.invalidate_caches()
+            import brotli
+        _BROTLI.append(brotli)
+    return _BROTLI[0]
+
+
 def fetch(url):
     req = Request(url, headers={'User-Agent': 'Mozilla/5.0 (compatible; election-2026-results/1.0; +https://github.com/dwhitney2181/election-2026)',
-                                'Accept': 'text/html', 'Accept-Encoding': 'gzip, deflate'})
+                                'Accept': 'text/html', 'Accept-Encoding': 'gzip, deflate, br'})
     with urlopen(req, timeout=30) as r:
         raw = r.read(20_000_000)
         enc = (r.headers.get('Content-Encoding') or '').lower()
@@ -178,11 +197,7 @@ def fetch(url):
         except zlib.error:
             raw = zlib.decompress(raw, -zlib.MAX_WBITS)
     elif enc == 'br':
-        try:
-            import brotli  # only if installed; otherwise treat the page as unreadable
-            raw = brotli.decompress(raw)
-        except ImportError:
-            raise RuntimeError('page sent brotli-compressed and the brotli module is not installed')
+        raw = _brotli().decompress(raw)
     text = raw.decode('utf-8', 'replace')
     if '<' not in text[:2000]:
         raise RuntimeError(f'response is not HTML (Content-Encoding: {enc or "none"})')

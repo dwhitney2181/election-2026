@@ -13,7 +13,7 @@ Safety rules:
 Only the Python standard library is used.
 """
 from __future__ import annotations
-import json, re, sys, time
+import gzip, json, re, sys, time, zlib
 from datetime import datetime, timedelta, timezone
 from html.parser import HTMLParser
 from pathlib import Path
@@ -166,9 +166,27 @@ def parse(html, st):
 
 def fetch(url):
     req = Request(url, headers={'User-Agent': 'Mozilla/5.0 (compatible; election-2026-results/1.0; +https://github.com/dwhitney2181/election-2026)',
-                                'Accept': 'text/html'})
+                                'Accept': 'text/html', 'Accept-Encoding': 'gzip, deflate'})
     with urlopen(req, timeout=30) as r:
-        return r.read(8_000_000).decode('utf-8', 'replace')
+        raw = r.read(20_000_000)
+        enc = (r.headers.get('Content-Encoding') or '').lower()
+    if enc == 'gzip' or raw[:2] == b'\x1f\x8b':
+        raw = gzip.decompress(raw)
+    elif enc == 'deflate':
+        try:
+            raw = zlib.decompress(raw)
+        except zlib.error:
+            raw = zlib.decompress(raw, -zlib.MAX_WBITS)
+    elif enc == 'br':
+        try:
+            import brotli  # only if installed; otherwise treat the page as unreadable
+            raw = brotli.decompress(raw)
+        except ImportError:
+            raise RuntimeError('page sent brotli-compressed and the brotli module is not installed')
+    text = raw.decode('utf-8', 'replace')
+    if '<' not in text[:2000]:
+        raise RuntimeError(f'response is not HTML (Content-Encoding: {enc or "none"})')
+    return text
 
 
 def mt_now():
@@ -222,8 +240,9 @@ def main():
             DEBUG_LEFT[0] -= 1
             i = html.find('district.html')
             print(f'--- {st} debug: {len(html)} bytes, district.html x{html.count("district.html")}, <table x{html.count("<table")}, <tr x{html.count("<tr")}')
-            print(html[max(0, i - 1500):i + 1500] if i >= 0 else html[:3000])
+            print(html[max(0, i - 1200):i + 1200] if i >= 0 else html[:2400])
             print(f'--- end {st} debug')
+        if n == 0 or (prev > 10 and n < 0.6 * prev):
             errors[st] = f'parsed {n} rows (previously {prev}); kept previous data'
             if st in old:
                 states[st] = old[st]

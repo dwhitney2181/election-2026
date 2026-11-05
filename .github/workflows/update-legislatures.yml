@@ -1,7 +1,8 @@
 name: Update election results
 
-# Refreshes everything on the site: state legislatures (MultiState), U.S. House,
-# Senate and governors (NBC News, cross-checked with ABC News), the flip lists,
+# Refreshes everything on the site: state legislatures (MultiState; Utah vote counts
+# from the state's own results site), U.S. House, Senate and governors (NBC News,
+# cross-checked with ABC News), the flip lists,
 # and the files the Legislative Atlas reads. A source that can't be read keeps
 # its previous numbers, and nothing is committed unless a result changed.
 on:
@@ -31,6 +32,9 @@ jobs:
       - name: Read House, Senate and governor results (NBC News, ABC News)
         continue-on-error: true
         run: python3 tools/scrape_federal.py
+      - name: Read Utah's official legislative vote counts (state results site)
+        continue-on-error: true
+        run: python3 tools/scrape_utah.py
       - name: Update the site's data files
         run: python3 tools/update_site.py
       - name: Rebuild the atlas files
@@ -41,7 +45,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          for f in leg_live.json federal_live.json leg_all.js results_all.js flips.js atlas-feed.json atlas-federal.json atlas-live.json; do
+          for f in leg_live.json federal_live.json utah_live.json leg_all.js results_all.js flips.js atlas-feed.json atlas-federal.json atlas-live.json; do
             [ -f "$f" ] && git add "$f"
           done
           if git diff --cached --quiet; then echo "No new results"; exit 0; fi

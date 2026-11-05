@@ -460,7 +460,7 @@ function renderSources() {
   const u = uncalledLeg();
   const uncTxt = u.total ? ` MultiState hadn't recorded a winner yet in ${u.total.toLocaleString()} races, most of them in ${andList(u.per.slice(0, 5).map(x => NAMES[x[0]] || x[0]))}, so those states may be undercounted here.` : "";
   const p1 = P("As of", `${m.asof}. All results are unofficial until certified.` + (auto ? " This page updates itself every few hours from the sources below." : ""));
-  const p2 = P("State legislatures", "called flips come from ", el("a", { href: "https://www.multistate.us/elections/general-2026" }, "MultiState Elections' state results pages"), `, which mark each race where the winner's party differs from the seat's previous party.${uncTxt} Utah's "Leading" rows come from Utah News Dispatch's election-night tables. Multi-member districts (New Hampshire, Vermont, Arizona and others) are listed once per district.`);
+  const p2 = P("State legislatures", "called flips come from ", el("a", { href: "https://www.multistate.us/elections/general-2026" }, "MultiState Elections' state results pages"), `, which mark each race where the winner's party differs from the seat's previous party.${uncTxt} Utah's "Leading" rows come from ${am.ut_url ? "the state's own vote counts" : "Utah News Dispatch's election-night tables"}. Multi-member districts (New Hampshire, Vermont, Arizona and others) are listed once per district.`);
   const p3 = P("Chambers", m.chambers + " ", el("a", { href: m.chambers_url }, "NCSL"));
   const p4 = P("U.S. House", m.house_context + (auto ? " Each row links its source." : " Seats listed here are the ones named in AP, NBC, CBS and other reports; each row links its source.") + " Several states drew new maps for 2026, so some flips are newly drawn districts.");
   let p5, p6;
@@ -470,7 +470,7 @@ function renderSources() {
     p6 = P("All results", "House, Senate and governor results (candidates, vote shares, how much of the vote is counted and race calls) come from NBC News's results pages for the ",
       el("a", { href: am.house_url }, "House"), ", ", el("a", { href: am.sen_url }, "Senate"), " and ", el("a", { href: am.gov_url }, "governors"),
       `, last read ${am.house_asof}. `, el("a", { href: am.abc_url || "https://abcnews.com/Elections/2026-us-house-election-results-live-map/" }, "ABC News's results tables"),
-      " are a cross-check for which seats changed party. Utah's legislative results come from Utah News Dispatch's election-night tables, with calls from MultiState. The non-voting delegate races (D.C. and four territories) come from the local outlets linked in each row; Puerto Rico's resident commissioner isn't up until 2028. Rows say when a number isn't available.");
+      " are a cross-check for which seats changed party. ", ...(am.ut_url ? ["Utah's legislative vote counts come from ", el("a", { href: am.ut_url }, "the state's official results site"), ` (${am.ut_official ? "official" : "unofficial"}, as of ${am.ut_asof})`] : ["Utah's legislative results come from Utah News Dispatch's election-night tables"]), ", with calls from MultiState. The non-voting delegate races (D.C. and four territories) come from the local outlets linked in each row; Puerto Rico's resident commissioner isn't up until 2028. Rows say when a number isn't available.");
   } else {
     p5 = P("Governors", "calls from AP and NBC News. Kansas, Minnesota and Nebraska had no call in the sources checked; Alaska and Guam show leads.");
     p6 = P("All results", "House vote shares for all 435 districts come from ", el("a", { href: am.house_url }, "ABC News's House results table"), ` as of ${am.house_asof}, with later counts from `, el("a", { href: am.fox_url }, "Fox News"), " for 22 key races. Senate calls are AP's as compiled by ", el("a", { href: am.sen_url }, "The Sunday Guardian"), ", with percentages from ABC News where shown. Governor percentages come from ", el("a", { href: am.gov_url }, "NBC News"), "; calls from AP, NBC and MultiState. Utah's legislative results come from Utah News Dispatch's election-night tables. The non-voting delegate races (D.C. and four territories) come from the local outlets linked in each row; Puerto Rico's resident commissioner isn't up until 2028. Rows say when a number isn't available.");
@@ -614,6 +614,7 @@ function legRowsUT() {
     row.append(who);
     out.push(row);
   }
+  out.push(el("p", { class: "note" }, A.meta.ut_url ? `Vote counts: Utah's official results site, ${A.meta.ut_official ? "official" : "unofficial"}, as of ${A.meta.ut_asof}. Calls: MultiState.` : "Vote counts: Utah News Dispatch's election-night tables. Calls: MultiState."));
   return out;
 }
 const LEG = (window.LEG && window.LEG.states) ? window.LEG : { states: {} };

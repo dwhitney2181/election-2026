@@ -169,10 +169,11 @@ def build(leg='leg_all.js', out_name='atlas-feed.json', stable=False):
                       'status': 'called' if r.get('called') else 'leading',
                       'previous_party': prior, 'votes': top.get('votes'), 'pct': top.get('pct'),
                       'margin': margin, 'reporting': None,
-                      'updated': iso_from_asof(ut_updated, fallback) if isinstance(ut_updated, str) else fallback,
+                      'updated': meta.get('ut_asof_utc') or (iso_from_asof(ut_updated, fallback) if isinstance(ut_updated, str) else fallback),
                       'source_kind': 'news',
-                      'source': 'Utah News Dispatch election-night vote tables (unofficial); race calls from MultiState',
-                      'source_url': 'https://www.yahoo.com/news/politics/articles/utah-legislature-2026-election-night-045111772.html',
+                      'source': (f"{meta['ut_src']} ({'official' if meta.get('ut_official') else 'unofficial'} counts); race calls from MultiState"
+                                 if meta.get('ut_src') else 'Utah News Dispatch election-night vote tables (unofficial); race calls from MultiState'),
+                      'source_url': meta.get('ut_url') or 'https://www.yahoo.com/news/politics/articles/utah-legislature-2026-election-night-045111772.html',
                       'multimember': False})
     feed = {'meta': {'source': 'Compiled for the Legislative Atlas from MultiState reported winners and Utah unofficial returns',
                      'generated_utc': fallback if stable else datetime.now(timezone.utc).isoformat(timespec='seconds'),

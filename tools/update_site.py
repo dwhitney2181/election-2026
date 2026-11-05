@@ -189,6 +189,66 @@ def update_leg_ut(A, LEG):
     return n
 
 
+SUFFIXES = {'jr', 'jr.', 'sr', 'sr.', 'ii', 'iii', 'iv'}
+
+
+def last_name(n):
+    toks = [x for x in re.split(r'[\s,]+', n.lower()) if x and x not in SUFFIXES]
+    return re.sub(r'[^a-z]', '', toks[-1]) if toks else ''
+
+
+def nice_name(o, old):
+    """The state lists names in capitals; reuse the name already on file for the same candidate."""
+    same = [c['name'] for c in old if c.get('party') == o['party'] and last_name(c['name']) == last_name(o['name'])]
+    if len(same) == 1:
+        return same[0]
+    if o['party'] == 'W' and re.fullmatch(r'write[- ]?ins?', o['name'].strip(), re.I):
+        return 'Write-In'
+    fix = lambda w: w.upper() if w.lower() in ('ii', 'iii', 'iv') else re.sub(r"[A-Za-z]+", lambda m: m.group(0).capitalize(), w)
+    return ' '.join(fix(w) for w in o['name'].split())
+
+
+def update_utah(A, UT):
+    """Utah legislative vote counts from the state's own results feed, race by race.
+    A race keeps its old counts if the feed's total is lower (counts only go up)."""
+    races, n = UT.get('races', {}), 0
+    for row in A.get('leg_ut', []):
+        r = races.get(f"{row['office']}|{row['d']}")
+        if not r:
+            continue
+        opts = [o for o in r['c'] if o['votes'] > 0 or not o['write_in']]
+        total = sum(o['votes'] for o in opts)
+        if not total or total < sum(c.get('votes') or 0 for c in row['c']):
+            continue
+        cs = [{'name': nice_name(o, row['c']), 'party': o['party'] or 'O', 'votes': o['votes'],
+               'pct': round(100 * o['votes'] / total, 2)} for o in sorted(opts, key=lambda o: -o['votes'])]
+        if UT.get('official') and not row.get('called'):
+            row['called'] = True
+        if cs != row['c']:
+            row['c'] = cs
+            n += 1
+    return n
+
+
+def utah_leading(A, leg, url):
+    """Utah seats where the leader's party differs from the seat's previous party and no call is recorded yet."""
+    have = {(i['st'], i['office'], str(i['dist'])) for i in leg}
+    out = []
+    for row in A.get('leg_ut', []):
+        c = row.get('c') or []
+        if row.get('called') or len(c) < 2 or ('UT', row['office'], str(row['d'])) in have:
+            continue
+        lead = c[0]
+        if lead['party'] in ('W', row.get('prior')):
+            continue
+        out.append({'kind': 'leg', 'st': 'UT', 'office': row['office'], 'dist': str(row['d']), 'winner': lead['name'],
+                    'wp': lead['party'], 'loser': ', '.join(f"{x['name']} ({x['party']})" for x in c[1:] if x['party'] != 'W'),
+                    'fr': row.get('prior'), 'to': lead['party'], 'status': 'leading',
+                    'margin': round(lead['pct'] - c[1]['pct'], 1),
+                    'src': "Utah's official results site (unofficial count)", 'url': url, 'incdef': False, 'note': ''})
+    return out
+
+
 # ---------------------------------------------------------------- federal
 def update_house(A, races, abc):
     n = 0
@@ -422,6 +482,19 @@ def main():
         print(f"legislatures: {len(leg)} seats changing party ({kept} kept from before); Utah calls added: {n_ut}")
     else:
         leg = [i for i in items if i['kind'] == 'leg']
+
+    up = ROOT / 'utah_live.json'
+    UT = json.loads(up.read_text(encoding='utf-8')) if up.exists() else {}
+    if UT.get('races'):
+        nu = update_utah(A, UT)
+        t_ut = parse_time(UT.get('asof_utc'))
+        A['meta'].update({'ut_src': "Utah Lieutenant Governor's Office results site", 'ut_url': UT.get('url'),
+                          'ut_asof': clock(t_ut, 'America/Denver', 'MT') if t_ut else '', 'ut_asof_utc': UT.get('asof_utc'),
+                          'ut_official': bool(UT.get('official'))})
+        leg = [i for i in leg if not (i['st'] == 'UT' and i['status'] == 'leading')]
+        leg += utah_leading(A, leg, UT.get('url'))
+        print(f"Utah: {nu} legislative races got newer counts from the state; "
+              f"{sum(1 for i in leg if i['st'] == 'UT' and i['status'] == 'leading')} seats show the challenging party ahead")
 
     house_races, sen_races, gov_races = nbc.get('house', {}), nbc.get('senate', {}), nbc.get('governor', {})
     abc_house = abc.get('house', {})

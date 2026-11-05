@@ -120,7 +120,9 @@ def chamber_and_district(race, st):
             'house of delegates': 'House of Delegates', 'legislature': 'Legislature'}.get(word, 'State House')
     if st == 'NE':
         name = 'Legislature'
-    d = re.sub(r'^(?:HD|SD|AD|LD|District|Dist\.?)\s*[-#:]?\s*', '', rest.strip(), flags=re.I).strip()
+    # 'HD-12', 'SD-A', 'LD-3' prefixes are upper-case codes; don't eat the 'Ad' of 'Addison-1'
+    d = re.sub(r'^(?:HD|SD|AD|LD)(?:\s*-\s*|(?=\d))', '', rest.strip())
+    d = re.sub(r'^(?:District|Dist\.)\s*[-#:]?\s*', '', d, flags=re.I).strip()
     return name, d
 
 
@@ -257,6 +259,13 @@ def main():
             print(f'--- {st} debug: {len(html)} bytes, district.html x{html.count("district.html")}, <table x{html.count("<table")}, <tr x{html.count("<tr")}')
             print(html[max(0, i - 1200):i + 1200] if i >= 0 else html[:2400])
             print(f'--- end {st} debug')
+        old_d = {(c['name'], r['d']) for c in (old.get(st) or {}).get('chambers', []) for r in c['races']}
+        new_d = {(c['name'], r['d']) for c in chambers for r in c['races']}
+        if old_d and len(old_d & new_d) < 0.8 * len(old_d) and prev > 10:
+            errors[st] = f'district names changed for {len(old_d - new_d)} of {len(old_d)} races; kept previous data'
+            if st in old:
+                states[st] = old[st]
+            continue
         if n == 0 or (prev > 10 and n < 0.6 * prev):
             errors[st] = f'parsed {n} rows (previously {prev}); kept previous data'
             if st in old:

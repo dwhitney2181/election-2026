@@ -1,5 +1,9 @@
-name: Update legislative results
+name: Update election results
 
+# Refreshes everything on the site: state legislatures (MultiState), U.S. House,
+# Senate and governors (NBC News, cross-checked with ABC News), the flip lists,
+# and the files the Legislative Atlas reads. A source that can't be read keeps
+# its previous numbers, and nothing is committed unless a result changed.
 on:
   schedule:
     - cron: "23 */3 * * *"   # every 3 hours (times are UTC)
@@ -9,7 +13,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: legislative-results
+  group: election-results
   cancel-in-progress: false
 
 jobs:
@@ -21,16 +25,26 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Read MultiState results
+      - name: Read state legislative results (MultiState)
+        continue-on-error: true
         run: python3 tools/scrape_multistate.py
-      - name: Build the atlas file
-        run: python3 tools/build_atlas_feed.py --leg leg_live.json --out atlas-live.json --no-federal
+      - name: Read House, Senate and governor results (NBC News, ABC News)
+        continue-on-error: true
+        run: python3 tools/scrape_federal.py
+      - name: Update the site's data files
+        run: python3 tools/update_site.py
+      - name: Rebuild the atlas files
+        run: |
+          python3 tools/build_atlas_feed.py
+          python3 tools/build_atlas_feed.py --leg leg_live.json --out atlas-live.json --no-federal
       - name: Save if anything changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add leg_live.json atlas-live.json
+          for f in leg_live.json federal_live.json leg_all.js results_all.js flips.js atlas-feed.json atlas-federal.json atlas-live.json; do
+            [ -f "$f" ] && git add "$f"
+          done
           if git diff --cached --quiet; then echo "No new results"; exit 0; fi
-          git commit -m "Legislative results update ($(date -u +'%b %d %H:%M UTC'))"
+          git commit -m "Election results update ($(date -u +'%b %d %H:%M UTC'))"
           git pull --rebase origin main
           git push origin HEAD:main

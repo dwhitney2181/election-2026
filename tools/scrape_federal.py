@@ -168,7 +168,7 @@ def abc(office):
         for row in tb[1:]:
             if len(row) < 3:
                 continue
-            m = re.match(r'^(.*?)\s*(\d+)?\s*(\d+(?:\.\d+)?)% in$', row[0].strip())
+            m = re.match(r'^(.*?)(?:\s+(\d+))?\s+(\d+(?:\.\d+)?)% in$', row[0].strip())
             if not m:
                 continue
             name = m.group(1).strip()
@@ -211,6 +211,10 @@ def main():
             print(f'  kept previous ABC {sec}')
     if not data['nbc'] and not data['abc']:
         sys.exit('no federal source could be read; leaving federal_live.json unchanged')
+    same = lambda a, b: all(a.get(k) == b.get(k) for k in ('nbc', 'abc'))
+    if prev and same(data, prev):
+        print('no new federal numbers since the last read')
+        return
     OUT.write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
 
 

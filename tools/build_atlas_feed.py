@@ -76,6 +76,20 @@ def flip_from(notes: str, party: str):
     return old if old and new == party and old != party else None
 
 
+def write_if_changed(path, obj):
+    """Write JSON only when something other than meta.generated_utc differs, so unchanged runs commit nothing."""
+    if path.exists():
+        try:
+            old = json.loads(path.read_text(encoding='utf-8'))
+            strip = lambda o: {**o, 'meta': {k: v for k, v in o.get('meta', {}).items() if k != 'generated_utc'}}
+            if strip(old) == strip(obj):
+                return False
+        except (ValueError, AttributeError):
+            pass
+    path.write_text(json.dumps(obj, separators=(',', ':'), ensure_ascii=False), encoding='utf-8')
+    return True
+
+
 def build(leg='leg_all.js', out_name='atlas-feed.json', stable=False):
     L = load_js(ROOT / leg)
     A = load_js(ROOT / 'results_all.js')
@@ -168,8 +182,7 @@ def build(leg='leg_all.js', out_name='atlas-feed.json', stable=False):
                      'skipped_mixed_party_multi_winner': skipped,
                      'notes': 'Unofficial. Only races with a reported winner are listed. previous_party is set only where a source says the seat flipped (or, in Utah, the documented prior party).'},
             'races': races}
-    out = ROOT / out_name
-    out.write_text(json.dumps(feed, separators=(',', ':'), ensure_ascii=False), encoding='utf-8')
+    write_if_changed(ROOT / out_name, feed)
     return feed
 
 
@@ -194,9 +207,17 @@ def build_federal():
         fl = flips.get(('house', r['st'], str(r['d'])))
         status = 'called' if 'gain' in note or (fl and fl.get('status') == 'called') else (
             'leading' if 'lead' in note else '')
+        who = r.get('who') or ''
+        c = r.get('c')  # candidates from the automatic NBC read: [name, party, pct, incumbent]
+        if c and (c[0][2] or r.get('called')):
+            lead = c[0][1] if c[0][1] in ('D', 'R', 'I') else 'O'
+            status = 'called' if r.get('called') or (fl and fl.get('status') == 'called' and fl.get('to') == lead) else 'leading'
+            who = c[0][0]
         row = {'st': r['st'], 'd': r['d'], 'dem': dem, 'rep': rep, 'oth': r.get('oth'), 'inn': r.get('inn'),
                'lead': lead, 'status': status, 'note': r.get('note') or '', 'rating': r.get('rating') or '',
-               'who': r.get('who') or ''}
+               'who': who}
+        if c:
+            row['c'] = c
         if r.get('fox'):
             row['fox'] = r['fox']
         if fl:
@@ -230,7 +251,7 @@ def build_federal():
            'governors': statewide(A.get('gov', []), 'gov'),
            'delegates': statewide(A.get('house_del', []), None),
            'pending_gov': F.get('pending_gov', [])}
-    (ROOT / 'atlas-federal.json').write_text(json.dumps(fed, separators=(',', ':'), ensure_ascii=False), encoding='utf-8')
+    write_if_changed(ROOT / 'atlas-federal.json', fed)
     return fed
 
 

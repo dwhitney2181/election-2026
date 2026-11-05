@@ -12,7 +12,7 @@ Open `index.html` in a browser, or view it on GitHub Pages.
 - `leg_all.js` – state legislative races by state
 
 ## Sources
-MultiState Elections (state legislative calls), ABC News and Fox News (House vote shares), AP, NBC News and CBS News (race calls), NCSL (chamber control), Utah News Dispatch (Utah legislative vote shares). Each item on the page links to its source.
+NBC News (U.S. House, Senate and governor candidates, vote shares and calls), ABC News (cross-check for seats changing party), MultiState Elections (state legislative calls), NCSL (chamber control), Utah News Dispatch (Utah legislative vote shares). Earlier snapshots also drew on AP, CBS News and Fox News. Each item on the page links to its source.
 
 ## Feed for the Legislative Atlas
 
@@ -24,6 +24,15 @@ python3 tools/build_atlas_feed.py
 
 Re-run it whenever those files change, then commit and push; the atlas picks up the new feed within 10 minutes.
 
-## Updates every 30 minutes (state legislatures)
+## Automatic updates every 3 hours
 
-`.github/workflows/update-legislatures.yml` runs `tools/scrape_multistate.py` on GitHub Actions every 30 minutes. It reads MultiState's results pages, writes `leg_live.json`, then `tools/build_atlas_feed.py --leg leg_live.json --out atlas-live.json --no-federal` turns that into `atlas-live.json`, which the atlas loads on top of the daily feed. Files are only committed when results actually change. A state whose page can't be read, or suddenly parses to far fewer races, keeps its previous data.
+`.github/workflows/update-legislatures.yml` ("Update election results") runs on GitHub Actions every 3 hours and refreshes the whole site:
+
+1. `tools/scrape_multistate.py` reads MultiState's results page for each state with legislative races and writes `leg_live.json`.
+2. `tools/scrape_federal.py` reads NBC News's House, Senate and governor results pages (candidates, votes, share counted, calls) and ABC News's results tables (which seats each network marks as a party gain), and writes `federal_live.json`.
+3. `tools/update_site.py` folds both into `leg_all.js`, `results_all.js` and `flips.js`: vote shares and calls for every race, the list of seats changing party, uncalled-race counts and the page's "as of" time.
+4. `tools/build_atlas_feed.py` rebuilds `atlas-feed.json`, `atlas-federal.json` and `atlas-live.json` for the Legislative Atlas.
+
+Files are only committed when a result actually changes. A source that can't be read, or a state page that suddenly parses to far fewer races, keeps its previous data. Rows the automatic sources don't cover (territory governors, non-voting delegates, chamber-control notes) stay as they were.
+
+To change how often it runs, edit the `cron` line in that file (times are UTC). To run it right away, open the repository's Actions tab, pick "Update election results" and press "Run workflow".

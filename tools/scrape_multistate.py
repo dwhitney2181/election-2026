@@ -30,7 +30,7 @@ STATES = {
     'MT': 'montana', 'NE': 'nebraska', 'NV': 'nevada', 'NH': 'new-hampshire', 'NM': 'new-mexico',
     'NY': 'new-york', 'NC': 'north-carolina', 'ND': 'north-dakota', 'OH': 'ohio', 'OK': 'oklahoma',
     'OR': 'oregon', 'PA': 'pennsylvania', 'RI': 'rhode-island', 'SC': 'south-carolina', 'SD': 'south-dakota',
-    'TN': 'tennessee', 'TX': 'texas', 'VT': 'vermont', 'WA': 'washington', 'WV': 'west-virginia',
+    'TN': 'tennessee', 'TX': 'texas', 'UT': 'utah', 'VT': 'vermont', 'WA': 'washington', 'WV': 'west-virginia',
     'WI': 'wisconsin', 'WY': 'wyoming'}
 VOID = {'br', 'img', 'hr', 'meta', 'link', 'input', 'source', 'wbr', 'col', 'area', 'base', 'embed', 'param', 'track'}
 PARTY_WORDS = {'democrat': 'D', 'democratic': 'D', 'republican': 'R', 'independent': 'I', 'unaffiliated': 'I',

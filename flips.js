@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 5, 2026, 7:41 a.m. MT",
-"house_context": "NBC News had called 393 of 435 House races as of 9:40 a.m. ET, Nov. 5. Among called races, 36 seats changed party (36 to Democrats), counting NBC and ABC flip markers and incumbents who lost to the other party. ABC News marked 24 seats as party gains.",
+"asof": "Nov. 5, 2026, 7:50 a.m. MT",
+"house_context": "NBC News had called 393 of 435 House races as of 9:49 a.m. ET, Nov. 5. Among called races, 36 seats changed party (36 to Democrats), counting NBC and ABC flip markers and incumbents who lost to the other party. ABC News marked 24 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -27,7 +27,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"src": "NBC News count (49.1% to 29.2%, 75.2% counted)",
+"src": "NBC News count (49.1% to 29.2%, 74.2% counted)",
 "url": "https://www.nbcnews.com/politics/2026-elections/governor-results",
 "incdef": false,
 "note": "Open seat; Alaska uses ranked-choice voting"
@@ -6957,7 +6957,7 @@ window.FLIPS = {
 "status": "called",
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/west-virginia-2026.html",
-"incdef": false,
+"incdef": true,
 "note": ""
 },
 {
@@ -7903,7 +7903,7 @@ window.FLIPS = {
 "pending_gov": [
 [
 "AK",
-"Jonathan Kreiss-Tomkins (D) led Bernadette Wilson (R) 49.1% to 29.2% with 75.2% counted (NBC News); not called"
+"Jonathan Kreiss-Tomkins (D) led Bernadette Wilson (R) 49.1% to 29.2% with 74.2% counted (NBC News); not called"
 ],
 [
 "KS",

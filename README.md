@@ -23,3 +23,7 @@ python3 tools/build_atlas_feed.py
 ```
 
 Re-run it whenever those files change, then commit and push; the atlas picks up the new feed within 10 minutes.
+
+## Updates every 30 minutes (state legislatures)
+
+`.github/workflows/update-legislatures.yml` runs `tools/scrape_multistate.py` on GitHub Actions every 30 minutes. It reads MultiState's results pages, writes `leg_live.json`, then `tools/build_atlas_feed.py --leg leg_live.json --out atlas-live.json --no-federal` turns that into `atlas-live.json`, which the atlas loads on top of the daily feed. Files are only committed when results actually change. A state whose page can't be read, or suddenly parses to far fewer races, keeps its previous data.

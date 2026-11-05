@@ -25,7 +25,7 @@ import json, re, sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-ROOT = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).resolve().parent.parent
+ROOT = Path(sys.argv[1]) if len(sys.argv) > 1 and not sys.argv[1].startswith('-') else Path(__file__).resolve().parent.parent
 
 PARTY = {'R': 'R', 'D': 'D', 'I': 'I', 'NP': 'N', 'N': 'N', 'F': 'F', 'O': 'O', 'NONPARTISAN': 'N',
          'C': 'O', 'L': 'O', 'G': 'O', 'IAP': 'O', 'U': 'I'}
@@ -76,8 +76,8 @@ def flip_from(notes: str, party: str):
     return old if old and new == party and old != party else None
 
 
-def build():
-    L = load_js(ROOT / 'leg_all.js')
+def build(leg='leg_all.js', out_name='atlas-feed.json', stable=False):
+    L = load_js(ROOT / leg)
     A = load_js(ROOT / 'results_all.js')
     fallback = L.get('updated_utc') or datetime.now(timezone.utc).isoformat(timespec='seconds')
     races, skipped = [], []
@@ -161,14 +161,14 @@ def build():
                       'source_url': 'https://www.yahoo.com/news/politics/articles/utah-legislature-2026-election-night-045111772.html',
                       'multimember': False})
     feed = {'meta': {'source': 'Compiled for the Legislative Atlas from MultiState reported winners and Utah unofficial returns',
-                     'generated_utc': datetime.now(timezone.utc).isoformat(timespec='seconds'),
+                     'generated_utc': fallback if stable else datetime.now(timezone.utc).isoformat(timespec='seconds'),
                      'data_as_of_utc': fallback,
                      'states': sorted({r['state'] for r in races}),
                      'rows': len(races),
                      'skipped_mixed_party_multi_winner': skipped,
                      'notes': 'Unofficial. Only races with a reported winner are listed. previous_party is set only where a source says the seat flipped (or, in Utah, the documented prior party).'},
             'races': races}
-    out = ROOT / 'atlas-feed.json'
+    out = ROOT / out_name
     out.write_text(json.dumps(feed, separators=(',', ':'), ensure_ascii=False), encoding='utf-8')
     return feed
 
@@ -235,6 +235,17 @@ def build_federal():
 
 
 if __name__ == '__main__':
+    import argparse
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    ap.add_argument('root', nargs='?', default=None)
+    ap.add_argument('--leg', default='leg_all.js', help='legislative tables to read (leg_all.js or leg_live.json)')
+    ap.add_argument('--out', default='atlas-feed.json', help='legislative feed file to write')
+    ap.add_argument('--no-federal', action='store_true', help='skip atlas-federal.json')
+    args = ap.parse_args()
+    if args.no_federal:
+        f = build(args.leg, args.out, stable=True)
+        print(f"wrote {args.out}: {f['meta']['rows']} rows, {len(f['meta']['states'])} states")
+        raise SystemExit(0)
     fd = build_federal()
     print(f"wrote atlas-federal.json: {len(fd['house'])} House districts, {len(fd['senate'])} Senate races, "
           f"{len(fd['governors'])} governor races, {len(fd['delegates'])} delegates")

@@ -2,7 +2,7 @@ name: Update legislative results
 
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "23 */3 * * *"   # every 3 hours (times are UTC)
   workflow_dispatch:
 
 permissions:

@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026 Election Results and Flips</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,650&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: a results-desk page. Totals first, the state map as the index, the tapped state's seats beside it, then every flip grouped by state. */
+:root {
+  --bg: #f2f3f5;
+  --panel: #ffffff;
+  --ink: #171b22;
+  --muted: #5b6372;
+  --line: #d8dce3;
+  --focus: #b8860b;
+  --rep: #c6362f;
+  --dem: #2457b0;
+  --ind: #7b4fb8;
+  --none: #dfe2e8;
+  --font-display: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-body: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111419; --panel: #1a1e25; --ink: #e9ecf1; --muted: #9aa3b2; --line: #2f3541;
+    --focus: #f0c04a; --rep: #ec6a62; --dem: #6f9cf0; --ind: #b393e8; --none: #2a3039;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #111419; --panel: #1a1e25; --ink: #e9ecf1; --muted: #9aa3b2; --line: #2f3541;
+  --focus: #f0c04a; --rep: #ec6a62; --dem: #6f9cf0; --ind: #b393e8; --none: #2a3039;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.45; -webkit-text-size-adjust: 100%; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 18px 16px 40px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0; }
+h1 { font-family: var(--font-display); font-weight: 650; font-size: clamp(26px, 5.2vw, 40px); line-height: 1.08; margin: 0; text-wrap: balance; }
+.dek { margin: 0; max-width: 70ch; color: var(--muted); }
+.dek strong { color: var(--ink); font-weight: 600; }
+header.top { display: grid; gap: 6px; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; }
+
+.tiles { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.tile { padding: 14px 16px; display: grid; gap: 4px; }
+.tile .lab { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.tile .num { font-family: var(--font-display); font-size: 34px; font-weight: 650; line-height: 1; font-variant-numeric: tabular-nums; }
+.tile .num small { font-family: var(--font-body); font-size: 14px; font-weight: 600; color: var(--muted); margin-left: 6px; }
+.tile p { margin: 0; font-size: 13px; color: var(--muted); }
+
+.controls { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; }
+.seg { min-width: 0; display: inline-flex; flex-wrap: wrap; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); padding: 3px; gap: 2px; }
+.seg button { font: inherit; font-size: 13.5px; font-weight: 600; color: var(--muted); background: transparent; border: 0; border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--panel); }
+button:focus-visible, summary:focus-visible, input:focus-visible, a:focus-visible, .st:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+input[type="search"] { font: inherit; font-size: 14px; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 7px 10px; min-width: 0; width: 220px; max-width: 100%; }
+
+.main { display: grid; gap: 16px; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); align-items: start; }
+@media (max-width: 860px) { .main { grid-template-columns: minmax(0, 1fr); } }
+.mapcard { padding: 10px; display: grid; gap: 8px; }
+svg#map { display: block; width: 100%; height: auto; }
+.st { stroke: var(--panel); stroke-width: .8; cursor: pointer; }
+.st:hover { filter: brightness(1.06); }
+.st.sel { stroke: var(--focus); stroke-width: 2.6; }
+.govring { fill: none; stroke: var(--ink); stroke-dasharray: 5 3; vector-effect: non-scaling-stroke; pointer-events: none; }
+.slab { stroke-width: inherit; font-family: var(--font-body); font-weight: 700; fill: var(--ink); text-anchor: middle; dominant-baseline: central; pointer-events: none; paint-order: stroke; stroke: var(--panel); stroke-linejoin: round; }
+.terr { display: flex; flex-wrap: wrap; gap: 6px; }
+.terr button { font: inherit; font-size: 12.5px; font-weight: 600; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 5px 9px; cursor: pointer; display: inline-flex; gap: 6px; align-items: center; }
+.terr button[aria-pressed="true"] { border-color: var(--focus); box-shadow: inset 0 0 0 1px var(--focus); }
+.terr .sw { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 12.5px; color: var(--muted); align-items: center; }
+.lg { display: inline-flex; align-items: center; gap: 6px; }
+.ramp { display: inline-flex; }
+.ramp i { width: 12px; height: 12px; display: inline-block; }
+.ramp i:first-child { border-radius: 3px 0 0 3px; }
+.ramp i:last-child { border-radius: 0 3px 3px 0; }
+.ringsw { width: 16px; height: 12px; border: 2px dashed var(--ink); border-radius: 3px; display: inline-block; }
+
+.detail { padding: 16px; display: grid; gap: 12px; }
+.detail h2 { font-family: var(--font-display); font-weight: 650; font-size: 24px; margin: 0; line-height: 1.1; }
+.detail .sub { margin: 0; color: var(--muted); font-size: 14px; }
+.counts { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12px; font-weight: 700; border-radius: 999px; padding: 3px 9px; border: 1px solid var(--line); color: var(--muted); background: var(--bg); font-variant-numeric: tabular-nums; }
+.grp h3 { font-size: 13px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin: 6px 0 2px; }
+.row { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 4px 10px; padding: 9px 0; border-top: 1px solid var(--line); }
+.row .where { font-weight: 700; font-variant-numeric: tabular-nums; font-size: 14px; }
+.row .who b { font-weight: 600; }
+.row .who small { display: block; color: var(--muted); font-size: 12.5px; }
+.row .who a { color: inherit; }
+.pill { display: inline-block; font-size: 11px; font-weight: 700; color: #fff; border-radius: 4px; padding: 1px 5px; margin-right: 5px; vertical-align: 1px; }
+.lead { font-size: 11px; font-weight: 700; border-radius: 4px; padding: 1px 5px; margin-left: 5px; border: 1px solid var(--focus); color: var(--ink); background: color-mix(in srgb, var(--focus) 22%, var(--panel)); vertical-align: 1px; }
+.muted { color: var(--muted); }
+.note { margin: 0; font-size: 13px; color: var(--muted); }
+
+.all { padding: 14px 12px; display: grid; gap: 8px; }
+.all h2 { font-family: var(--font-display); font-size: 21px; font-weight: 650; margin: 0 4px; }
+.all .note { margin: 0 4px; }
+details.state { border-top: 1px solid var(--line); }
+details.state summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; gap: 10px; align-items: baseline; padding: 10px 4px; font-weight: 700; }
+details.state summary::-webkit-details-marker { display: none; }
+details.state summary .c { font-variant-numeric: tabular-nums; color: var(--muted); font-weight: 600; font-size: 13.5px; white-space: nowrap; }
+details.state summary::before { content: "▸"; color: var(--muted); margin-right: 6px; }
+details.state[open] summary::before { content: "▾"; }
+details.state .body { padding: 0 4px 10px; }
+@media (max-width: 600px) {
+  .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .tile { padding: 10px; }
+  .tile .num { font-size: 26px; }
+  .tile .num small { display: block; margin: 4px 0 0; font-size: 12px; }
+  .tile .lab { font-size: 10.5px; letter-spacing: .04em; }
+  .tile p { display: none; }
+  .controls { gap: 8px; }
+  .seg { flex-wrap: nowrap; overflow-x: auto; max-width: 100%; scrollbar-width: none; }
+  .seg button { white-space: nowrap; padding: 6px 10px; font-size: 13px; }
+  .row { grid-template-columns: 70px minmax(0, 1fr); }
+}
+.rbar { display: flex; height: 7px; border-radius: 4px; overflow: hidden; background: var(--bg); margin: 5px 0 3px; }
+.rbar > span { display: block; height: 100%; }
+.rbar > span + span { box-shadow: inset 1px 0 0 var(--panel); }
+.rtop { display: flex; flex-wrap: wrap; gap: 4px 6px; align-items: center; }
+.rchip { font-size: 11px; font-weight: 700; border-radius: 4px; padding: 1px 6px; border: 1px solid var(--line); color: var(--muted); }
+.rchip.flip { background: var(--ink); color: var(--panel); border-color: var(--ink); }
+.rchip.lead { border-color: var(--focus); color: var(--ink); background: color-mix(in srgb, var(--focus) 22%, var(--panel)); }
+.sw2 { width: 14px; height: 12px; border-radius: 3px; display: inline-block; }
+[hidden] { display: none !important; }
+footer.src { font-size: 13px; color: var(--muted); display: grid; gap: 6px; max-width: 82ch; }
+footer.src p { margin: 0; }
+footer.src a { color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <p class="eyebrow" id="eyebrow">Nov. 3, 2026 general election · unofficial</p>
+    <h1>2026 election results</h1>
+    <p class="dek">Every seat that changed party, plus the full results for the U.S. House, Senate and governors. <strong>Called</strong> races are listed as results; races where someone is only <strong>ahead</strong> are marked “Leading.” Everything here is unofficial.</p>
+  </header>
+
+  <div class="tiles" id="tiles"></div>
+
+  <div class="controls" role="group" aria-label="View">
+    <div class="seg" role="group" aria-label="View" id="f-mode">
+      <button type="button" data-v="flips" aria-pressed="true">Seats that changed party</button>
+      <button type="button" data-v="all" aria-pressed="false">All results</button>
+    </div>
+    <div class="seg" role="group" aria-label="Office" id="f-roff" hidden>
+      <button type="button" data-v="house" aria-pressed="true">U.S. House</button>
+      <button type="button" data-v="sen" aria-pressed="false">U.S. Senate</button>
+      <button type="button" data-v="gov" aria-pressed="false">Governors</button>
+      <button type="button" data-v="leg" aria-pressed="false">Legislatures</button>
+    </div>
+  </div>
+
+  <div class="controls" role="group" aria-label="Filters" id="flipctl">
+    <div class="seg" role="group" aria-label="Office" id="f-office">
+      <button type="button" data-v="all" aria-pressed="true">All offices</button>
+      <button type="button" data-v="leg" aria-pressed="false">Legislatures</button>
+      <button type="button" data-v="house" aria-pressed="false">U.S. House</button>
+      <button type="button" data-v="gov" aria-pressed="false">Governors</button>
+    </div>
+    <div class="seg" role="group" aria-label="Status" id="f-status">
+      <button type="button" data-v="all" aria-pressed="true">Called + leading</button>
+      <button type="button" data-v="called" aria-pressed="false">Called only</button>
+    </div>
+    <div class="seg" role="group" aria-label="Direction" id="f-dir">
+      <button type="button" data-v="all" aria-pressed="true">Any direction</button>
+      <button type="button" data-v="D" aria-pressed="false">To Dem</button>
+      <button type="button" data-v="R" aria-pressed="false">To Rep</button>
+      <button type="button" data-v="I" aria-pressed="false">To independent</button>
+    </div>
+    <label for="q" class="muted" style="font-size:14px;display:inline-flex;gap:8px;align-items:center">Search
+      <input type="search" id="q" placeholder="Name or district">
+    </label>
+  </div>
+
+  <div class="main">
+    <section class="panel mapcard" aria-label="Map of flips by state">
+      <svg id="map" viewBox="0 0 975 610" role="img" aria-label="U.S. map shaded by net seats changing party in each state"></svg>
+      <div class="terr" id="terr" aria-label="DC and territories"></div>
+      <div class="legend" id="legend"></div>
+    </section>
+    <section class="panel detail" id="detail" aria-live="polite"></section>
+  </div>
+
+  <section class="panel all" aria-labelledby="all-h">
+    <h2 id="all-h">All flips by state</h2>
+    <p class="note" id="all-note"></p>
+    <div id="all-list"></div>
+  </section>
+
+  <footer class="src" id="src"></footer>
+</div>
+
+<script src="states.js"></script>
+<script src="flips.js"></script>
+<script src="results_all.js"></script>
+<script src="leg_all.js"></script>
+<script>
+const S = window.STATES, F = window.FLIPS;
+const NAMES = F.names;
+const FIPS = {"01":"AL","02":"AK","04":"AZ","05":"AR","06":"CA","08":"CO","09":"CT","10":"DE","11":"DC","12":"FL","13":"GA","15":"HI","16":"ID","17":"IL","18":"IN","19":"IA","20":"KS","21":"KY","22":"LA","23":"ME","24":"MD","25":"MA","26":"MI","27":"MN","28":"MS","29":"MO","30":"MT","31":"NE","32":"NV","33":"NH","34":"NJ","35":"NM","36":"NY","37":"NC","38":"ND","39":"OH","40":"OK","41":"OR","42":"PA","44":"RI","45":"SC","46":"SD","47":"TN","48":"TX","49":"UT","50":"VT","51":"VA","53":"WA","54":"WV","55":"WI","56":"WY"};
+const TERR = ["DC", "GU", "VI", "MP", "AS", "PR"];
+const PV = { D: "--dem", R: "--rep", I: "--ind", U: "--ind", F: "--ind" };
+const PN = { D: "Dem", R: "Rep", I: "Ind", U: "Unaff.", F: "Fwd" };
+const dirOf = p => (p === "D" ? "D" : p === "R" ? "R" : "I");
+const state = { office: "all", status: "all", dir: "all", q: "", sel: null, mode: "flips", roff: "house" };
+const A = window.ALL;
+const DEL = A.house_del || [];
+
+function el(tag, attrs = {}, text) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
+  if (text != null) e.textContent = text;
+  return e;
+}
+const svgEl = (tag, attrs = {}) => { const e = document.createElementNS("http://www.w3.org/2000/svg", tag); for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v); return e; };
+
+function filtered() {
+  const q = state.q.trim().toLowerCase();
+  return F.items.filter(i =>
+    (state.office === "all" || i.kind === state.office) &&
+    (state.status === "all" || i.status === "called") &&
+    (state.dir === "all" || dirOf(i.to) === state.dir) &&
+    (!q || [i.winner, i.loser, i.dist, i.office, NAMES[i.st], i.st].join(" ").toLowerCase().includes(q)));
+}
+function byState(list) {
+  const m = {};
+  for (const i of list) (m[i.st] ||= []).push(i);
+  return m;
+}
+function net(list) { let d = 0, r = 0, o = 0; for (const i of list) { const t = dirOf(i.to); if (t === "D") d++; else if (t === "R") r++; else o++; } return { d, r, o, n: d - r }; }
+function fillFor(list) {
+  if (!list || !list.length) return "var(--none)";
+  const { d, r, n } = net(list);
+  if (n === 0) return "color-mix(in srgb, var(--ind) 45%, var(--panel))";
+  const v = n > 0 ? "--dem" : "--rep";
+  const a = Math.abs(n);
+  const pct = a >= 20 ? 100 : a >= 10 ? 78 : a >= 5 ? 58 : a >= 2 ? 40 : 26;
+  return `color-mix(in srgb, var(${v}) ${pct}%, var(--panel))`;
+}
+
+// ---------- map ----------
+const svg = document.getElementById("map");
+const gStates = svgEl("g"), gRings = svgEl("g"), gLabels = svgEl("g");
+svg.append(gStates, gRings, gLabels);
+const stateNodes = {};
+for (const s of S.states) {
+  const ab = FIPS[s.id];
+  const p = svgEl("path", { d: s.d, class: "st", tabindex: "0", role: "button", "aria-label": s.name });
+  p.addEventListener("click", () => select(ab));
+  p.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(ab); } });
+  const t = svgEl("title"); t.textContent = s.name; p.append(t);
+  gStates.append(p);
+  stateNodes[ab] = { p, s };
+}
+function unitPx() { return (svg.getBoundingClientRect().width || 600) / 975; }
+function sizeLabels() {
+  const u = unitPx();
+  gLabels.setAttribute("font-size", (11.5 / u).toFixed(1));
+  gLabels.setAttribute("stroke-width", (3 / u).toFixed(1));
+  gRings.setAttribute("stroke-width", (2 / u).toFixed(1));
+}
+window.addEventListener("resize", () => drawMap());
+const small = new Set(["RI", "DE", "CT", "NJ", "MA", "MD", "VT", "NH", "DC"]);
+function drawMap() {
+  const list = filtered();
+  const bs = byState(list);
+  gRings.replaceChildren(); gLabels.replaceChildren();
+  for (const [ab, { p, s }] of Object.entries(stateNodes)) {
+    p.classList.toggle("sel", state.sel === ab);
+    const items = bs[ab] || [];
+    const v = state.mode === "all" ? resultsView(ab) : { fill: fillFor(bs[ab]), label: items.length ? String(items.length) : "", ring: items.some(i => i.kind === "gov"), title: `${s.name}: ${items.length} flip${items.length === 1 ? "" : "s"}` };
+    p.style.fill = v.fill;
+    p.querySelector("title").textContent = v.title || s.name;
+    if (v.ring) gRings.append(svgEl("path", { d: s.d, class: "govring" }));
+    if (v.label && !small.has(ab) && s.a * unitPx() > (v.label.length > 3 ? 34 : 22)) {
+      const t = svgEl("text", { x: s.cx, y: s.cy, class: "slab" }); t.textContent = v.label; gLabels.append(t);
+    }
+  }
+  if (state.sel && stateNodes[state.sel]) gStates.append(stateNodes[state.sel].p);
+  sizeLabels();
+  // territories + small states as buttons
+  const terr = document.getElementById("terr");
+  terr.replaceChildren();
+  for (const ab of ["NH", "VT", "MA", "RI", "CT", "NJ", "DE", "MD", ...TERR]) {
+    const items = bs[ab] || [];
+    const v = state.mode === "all" ? resultsView(ab) : { fill: fillFor(items), label: String(items.length) };
+    const b = el("button", { type: "button", "aria-pressed": String(state.sel === ab) });
+    const sw = el("span", { class: "sw" }); sw.style.background = v.fill;
+    b.append(sw, document.createTextNode(`${ab} ${v.label || "–"}`));
+    b.title = NAMES[ab];
+    b.addEventListener("click", () => select(ab));
+    terr.append(b);
+  }
+}
+
+// ---------- detail ----------
+function rowFor(i, showState) {
+  const r = el("div", { class: "row" });
+  const where = el("div", { class: "where" });
+  const label = i.kind === "gov" ? "Governor" : i.kind === "house" ? (i.dist === "Delegate" ? "Delegate" : `${i.st}-${i.dist}`) : `${short(i.office)} ${i.dist}`;
+  where.textContent = showState && i.kind !== "house" ? `${i.st} ${label}` : label;
+  const who = el("div", { class: "who" });
+  const top = el("div");
+  const pill = el("span", { class: "pill" }, PN[i.to] || i.to); pill.style.background = `var(${PV[i.to] || "--ind"})`;
+  top.append(pill, el("b", {}, i.winner));
+  if (i.status === "leading") top.append(el("span", { class: "lead" }, "Leading"));
+  who.append(top);
+  const parts = [`${PN[i.fr] || i.fr} → ${PN[i.to] || i.to}`];
+  if (i.loser && i.loser !== "Unopposed") parts.push(`over ${i.loser}`);
+  if (i.margin != null) parts.push(`+${i.margin} pts`);
+  if (i.incdef && !(i.note || "").includes("Incumbent")) parts.push("incumbent defeated");
+  if (i.note) parts.push(i.note);
+  const sm = el("small"); sm.textContent = parts.join(" · ") + " · ";
+  const a = el("a", { href: i.url }, i.src); sm.append(a);
+  who.append(sm);
+  r.append(where, who);
+  return r;
+}
+function short(office) { return office.replace("State ", "").replace("House of Delegates", "House").replace("Assembly", "Assembly"); }
+
+function renderDetail() {
+  if (state.mode === "all") return renderResultsDetail();
+  const box = document.getElementById("detail");
+  box.replaceChildren();
+  const ab = state.sel;
+  if (!ab) {
+    box.append(el("h2", {}, "Tap a state"));
+    box.append(el("p", { class: "sub" }, "The map is shaded by net seats changing party with the filters above: blue means more seats went to Democrats, red more to Republicans, purple an even split. Numbers count every flip in the state. A dashed outline marks a governor's office that changed party."));
+    box.append(el("p", { class: "note" }, "Small states and the territories are the buttons under the map."));
+    return;
+  }
+  const list = filtered().filter(i => i.st === ab);
+  box.append(el("h2", {}, NAMES[ab] || ab));
+  const { d, r, o } = net(list);
+  const counts = el("div", { class: "counts" });
+  counts.append(el("span", { class: "chip" }, `${list.length} shown`));
+  if (d) counts.append(el("span", { class: "chip" }, `${d} to Dem`));
+  if (r) counts.append(el("span", { class: "chip" }, `${r} to Rep`));
+  if (o) counts.append(el("span", { class: "chip" }, `${o} to independent`));
+  box.append(counts);
+  for (const [k, lab] of [["gov", "Governor"], ["house", "U.S. House"], ["leg", "State legislature"]]) {
+    const g = list.filter(i => i.kind === k);
+    if (!g.length) continue;
+    const grp = el("div", { class: "grp" });
+    grp.append(el("h3", {}, `${lab} (${g.length})`));
+    g.sort(sortItems).forEach(i => grp.append(rowFor(i, false)));
+    box.append(grp);
+  }
+  if (!list.length) box.append(el("p", { class: "note" }, "No flips match the current filters for this state."));
+  const unc = F.uncalled[ab];
+  if (unc && (state.office === "all" || state.office === "leg")) {
+    const txt = unc.filter(([, c]) => c !== "0").map(([ch, c]) => `${ch}: ${c}`).join(", ");
+    if (txt) box.append(el("p", { class: "note" }, `Legislative races with no call recorded yet: ${txt}. Any flips among them aren't listed until they're called.`));
+  }
+  const pg = F.pending_gov.find(([s]) => s === ab);
+  if (pg && (state.office === "all" || state.office === "gov")) box.append(el("p", { class: "note" }, `Governor: ${pg[1]}.`));
+}
+function sortItems(a, b) {
+  const o = { gov: 0, house: 1, leg: 2 };
+  if (o[a.kind] !== o[b.kind]) return o[a.kind] - o[b.kind];
+  if (a.office !== b.office) return a.office.localeCompare(b.office);
+  const na = parseInt(a.dist), nb = parseInt(b.dist);
+  if (!isNaN(na) && !isNaN(nb) && na !== nb) return na - nb;
+  return String(a.dist).localeCompare(String(b.dist));
+}
+
+// ---------- tiles ----------
+function renderTiles() {
+  const t = document.getElementById("tiles");
+  t.replaceChildren();
+  if (state.mode === "all") return renderResultsTiles(t);
+  const it = F.items;
+  const c = (k, s) => it.filter(i => i.kind === k && i.status === s).length;
+  const tile = (lab, called, leading, foot) => {
+    const d = el("div", { class: "panel tile" });
+    d.append(el("span", { class: "lab" }, lab));
+    const n = el("span", { class: "num" }, String(called));
+    n.append(el("small", {}, leading ? `called · +${leading} leading` : "called"));
+    d.append(n, el("p", {}, foot));
+    return d;
+  };
+  const legStates = new Set(it.filter(i => i.kind === "leg").map(i => i.st)).size;
+  t.append(
+    tile("Legislative races", c("leg", "called"), c("leg", "leading"), `Across ${legStates} states. Calls are still missing for hundreds of races, so this will grow.`),
+    tile("U.S. House", c("house", "called"), c("house", "leading"), "Named so far. Early tallies put the total at 23 to 31, with many races uncalled."),
+    tile("Governors", c("gov", "called"), c("gov", "leading"), "Georgia, Iowa, Nevada, Ohio and Texas went to Democrats.")
+  );
+}
+
+// ---------- all list ----------
+function renderAll() {
+  if (state.mode === "all") return renderResultsAll();
+  const list = filtered();
+  const bs = byState(list);
+  const box = document.getElementById("all-list");
+  box.replaceChildren();
+  const order = Object.keys(bs).sort((a, b) => (NAMES[a] || a).localeCompare(NAMES[b] || b));
+  document.getElementById("all-note").textContent = `${list.length} flip${list.length === 1 ? "" : "s"} in ${order.length} state${order.length === 1 ? "" : "s"} and territories with the current filters. Tap a state to open it.`;
+  for (const ab of order) {
+    const items = bs[ab].sort(sortItems);
+    const det = el("details", { class: "state" });
+    if (state.sel === ab || state.q) det.open = true;
+    const sum = el("summary");
+    const { d, r, o } = net(items);
+    sum.append(el("span", {}, NAMES[ab] || ab));
+    const bits = [`${items.length}`]; if (d) bits.push(`${d} D`); if (r) bits.push(`${r} R`); if (o) bits.push(`${o} other`);
+    sum.append(el("span", { class: "c" }, bits.join(" · ")));
+    det.append(sum);
+    const body = el("div", { class: "body" });
+    items.forEach(i => body.append(rowFor(i, false)));
+    det.append(body);
+    box.append(det);
+  }
+  if (!order.length) box.append(el("p", { class: "note" }, "Nothing matches these filters."));
+}
+
+function renderLegend() {
+  const lg = document.getElementById("legend");
+  lg.replaceChildren();
+  if (state.mode === "all" && state.roff !== "leg") return renderResultsLegend(lg);
+  const mk = (v, label) => {
+    const s = el("span", { class: "lg" });
+    const r = el("span", { class: "ramp", "aria-hidden": "true" });
+    for (const p of [26, 40, 58, 78, 100]) { const i = el("i"); i.style.background = `color-mix(in srgb, var(${v}) ${p}%, var(--panel))`; r.append(i); }
+    s.append(r, document.createTextNode(label));
+    return s;
+  };
+  lg.append(mk("--dem", "Net to Dem"), mk("--rep", "Net to Rep"));
+  const e = el("span", { class: "lg" }); const sw = el("span", { class: "ringsw" }); e.append(sw, document.createTextNode("Governor changed party")); lg.append(e);
+  lg.append(el("span", { class: "lg" }, "Darker = bigger net change (1, 2–4, 5–9, 10–19, 20+)"));
+}
+
+function renderSources() {
+  const f = document.getElementById("src");
+  f.replaceChildren();
+  const m = F.meta;
+  const p1 = el("p"); p1.append(el("b", {}, "As of: "), document.createTextNode(`${m.asof}. All results are unofficial until certified.`));
+  const p2 = el("p"); p2.append(el("b", {}, "State legislatures: "), document.createTextNode("called flips come from "));
+  p2.append(el("a", { href: "https://www.multistate.us/elections/general-2026" }, "MultiState Elections' state results pages"), document.createTextNode(", which mark each race where the winner's party differs from the seat's previous party. MultiState hadn't recorded calls yet for most races in several states, including Michigan, Minnesota, Maine, Iowa, Texas and Washington, so those states are undercounted here. Utah's \"Leading\" rows come from Utah News Dispatch's election-night tables. Multi-member districts (New Hampshire, Vermont, Arizona and others) are listed once per district."));
+  const p3 = el("p"); p3.append(el("b", {}, "Chambers: "), document.createTextNode(m.chambers + " "), el("a", { href: m.chambers_url }, "NCSL"));
+  const p4 = el("p"); p4.append(el("b", {}, "U.S. House: "), document.createTextNode(m.house_context + " Seats listed here are the ones named in AP, NBC, CBS and other reports; each row links its source. Several states drew new maps for 2026, so some flips are newly drawn districts."));
+  const p5 = el("p"); p5.append(el("b", {}, "Governors: "), document.createTextNode("calls from AP and NBC News. Kansas, Minnesota and Nebraska had no call in the sources checked; Alaska and Guam show leads."));
+  const p6 = el("p"); p6.append(el("b", {}, "All results: "), document.createTextNode("House vote shares for all 435 districts come from "), el("a", { href: A.meta.house_url }, "ABC News's House results table"), document.createTextNode(` as of ${A.meta.house_asof}, with later counts from `), el("a", { href: A.meta.fox_url }, "Fox News"), document.createTextNode(" for 22 key races. Senate calls are AP's as compiled by "), el("a", { href: A.meta.sen_url }, "The Sunday Guardian"), document.createTextNode(", with percentages from ABC News where shown. Governor percentages come from "), el("a", { href: A.meta.gov_url }, "NBC News"), document.createTextNode("; calls from AP, NBC and MultiState. Utah's legislative results come from Utah News Dispatch's election-night tables. The non-voting delegate races (D.C. and four territories) come from the local outlets linked in each row; Puerto Rico's resident commissioner isn't up until 2028. Rows say when a number isn't available."));
+  f.append(p1, p2, p3, p4, p5, p6);
+}
+
+// ---------- all-results mode ----------
+const PFULL = { D: "Democrat", R: "Republican", O: "Other", I: "Independent" };
+const mixv = (p, pct) => `color-mix(in srgb, var(${PV[p] || "--ind"}) ${pct}%, var(--panel))`;
+function houseLead(h) {
+  if (h.fox) return { p: h.fox.p, pct: h.fox.pct, m: h.fox.m, inn: h.fox.inn, src: "Fox News (later count)", name: h.fox.name };
+  if (!h.inn) return null;
+  const v = [["D", h.dem], ["R", h.rep], ["O", h.oth]].filter(x => x[1] != null && x[1] > 0).sort((a, b) => b[1] - a[1]);
+  if (!v.length) return null;
+  return { p: v[0][0], pct: v[0][1], m: v.length > 1 ? +(v[0][1] - v[1][1]).toFixed(1) : null, inn: h.inn, src: "ABC News" };
+}
+const flipKey = i => `${i.st}|${i.kind}|${i.dist}`;
+const FLIPIDX = {}; for (const i of F.items) FLIPIDX[flipKey(i)] = i;
+function resultsView(ab) {
+  const ro = state.roff;
+  if (ro === "house") {
+    const rows = A.house.filter(h => h.st === ab);
+    const dr = !rows.length && DEL.find(x => x.st === ab);
+    if (dr) {
+      let fill = "color-mix(in srgb, var(--muted) 28%, var(--panel))";
+      if (dr.win) fill = mixv(dr.win, dr.status === "called" ? 92 : 50);
+      const lab = dr.win ? (dr.status === "called" ? dr.win : dr.win + "?") : "…";
+      return { fill, label: lab, ring: !!(dr.win && dr.win !== dr.prior), del: true,
+        title: `${NAMES[ab]}: ${dr.status === "called" ? (PFULL[dr.win] + " won") : dr.win ? (PFULL[dr.win] + " leading") : "no result yet"}` };
+    }
+    if (!rows.length) return { fill: "var(--none)", label: "", title: NAMES[ab] + ": no House race this year" };
+    let d = 0, r = 0, o = 0;
+    for (const h of rows) { const l = houseLead(h); if (!l) continue; if (l.p === "D") d++; else if (l.p === "R") r++; else o++; }
+    const tot = d + r;
+    let fill = "var(--none)";
+    if (tot) {
+      const sh = d / tot;
+      if (sh === 0.5) fill = "color-mix(in srgb, var(--ind) 45%, var(--panel))";
+      else fill = mixv(sh > 0.5 ? "D" : "R", Math.round(26 + 74 * Math.abs(sh - 0.5) * 2));
+    }
+    const gains = rows.filter(h => FLIPIDX[`${h.st}|house|${h.d}`]).length;
+    return { fill, label: `${d}–${r}`, ring: false, title: `${NAMES[ab]}: Dem ahead in ${d}, Rep ahead in ${r}${o ? `, other ${o}` : ""} of ${rows.length}` + (gains ? ` · ${gains} changing party` : "") };
+  }
+  if (ro === "sen" || ro === "gov") {
+    const r = (ro === "sen" ? A.sen : A.gov).find(x => x.st === ab);
+    if (!r) return { fill: "var(--none)", label: "", title: `${NAMES[ab]}: no ${ro === "sen" ? "Senate" : "governor"} race` };
+    let fill = "color-mix(in srgb, var(--muted) 28%, var(--panel))";
+    if (r.win) fill = mixv(r.win, r.status === "called" ? 92 : 50);
+    const flip = r.win && r.win !== r.prior;
+    const lab = r.win ? (r.status === "called" ? r.win : r.win + "?") : "…";
+    return { fill, label: lab, ring: flip, title: `${NAMES[ab]}: ${r.status === "called" ? (PFULL[r.win] + " won") : r.win ? (PFULL[r.win] + " leading") : "no result yet"}` };
+  }
+  // legislatures: flips by state
+  const items = F.items.filter(i => i.kind === "leg" && i.st === ab);
+  return { fill: fillFor(items), label: items.length ? String(items.length) : "", ring: false, title: `${NAMES[ab]}: ${items.length} legislative seats changing party` };
+}
+function bar(parts) {
+  const b = el("div", { class: "rbar" });
+  for (const [p, v] of parts) { if (!v) continue; const s = el("span"); s.style.width = Math.min(100, v) + "%"; s.style.background = `var(${PV[p] || "--ind"})`; b.append(s); }
+  return b;
+}
+function statusChip(txt, cls) { return el("span", { class: "rchip " + (cls || "") }, txt); }
+function houseRow(h) {
+  const r = el("div", { class: "row" });
+  r.append(el("div", { class: "where" }, `${h.st}-${h.d}`));
+  const who = el("div", { class: "who" });
+  const l = houseLead(h);
+  const top = el("div", { class: "rtop" });
+  const fl = FLIPIDX[`${h.st}|house|${h.d}`];
+  if (l) {
+    const pill = el("span", { class: "pill" }, l.p === "O" ? "Other" : PN[l.p]); pill.style.background = `var(${PV[l.p] || "--ind"})`;
+    top.append(pill, el("b", {}, (l.name || h.who || (l.p === "D" ? "Democrat" : l.p === "R" ? "Republican" : "Other candidate")) + (l.m != null ? ` +${l.m}` : "")));
+  } else top.append(el("b", { class: "muted" }, "No votes reported in this snapshot"));
+  if (fl) top.append(statusChip(fl.status === "called" ? "Flip" : "Flip?", fl.status === "called" ? "flip" : "lead"));
+  who.append(top);
+  if (h.dem != null || h.rep != null) who.append(bar([["D", h.dem], ["R", h.rep], ["O", h.oth]]));
+  const bits = [];
+  if (h.dem != null) bits.push(`Dem ${h.dem}%`); if (h.rep != null) bits.push(`Rep ${h.rep}%`); if (h.oth) bits.push(`Other ${h.oth}%`);
+  bits.push(`${h.inn ?? 0}% in (ABC, ${A.meta.house_asof})`);
+  if (h.fox) bits.push(`later: ${h.fox.name} +${h.fox.m}, ${h.fox.inn}% in (Fox)`);
+  if (h.note === "dem gain") bits.push("ABC: Dem gain");
+  if (fl && fl.note) bits.push(fl.note);
+  if (h.who && !(l && l.name)) bits.push(`Named in reports: ${h.who}`);
+  who.append(el("small", {}, bits.join(" · ")));
+  r.append(who);
+  return r;
+}
+function statewideRow(r, kind) {
+  const row = el("div", { class: "row" });
+  row.append(el("div", { class: "where" }, kind === "sen" ? "Senate" : kind === "del" ? "Delegate" : "Governor"));
+  const who = el("div", { class: "who" });
+  const top = el("div", { class: "rtop" });
+  if (r.win) {
+    const pill = el("span", { class: "pill" }, PN[r.win]); pill.style.background = `var(${PV[r.win]})`;
+    const nm = r.win === "D" ? r.dn : r.win === "R" ? r.rn : r.other;
+    top.append(pill, el("b", {}, nm || PFULL[r.win]));
+    top.append(statusChip(r.status === "called" ? "Called" : "Leading", r.status === "called" ? "" : "lead"));
+    if (r.win !== r.prior) top.append(statusChip("Flip", "flip"));
+  } else top.append(el("b", { class: "muted" }, r.status === "uncalled" ? "Not called yet" : "No result gathered yet"));
+  who.append(top);
+  if (r.dp != null || r.rp != null || r.op != null) who.append(bar([["D", r.dp], ["R", r.rp], ["O", r.op]]));
+  const bits = [];
+  const cands = [r.dn && `${r.dn} (D)`, r.rn && `${r.rn} (R)`, r.other].filter(Boolean).join(" vs. ");
+  if (cands) bits.push(cands);
+  const pct = [r.dp != null && `Dem ${r.dp}%`, r.rp != null && `Rep ${r.rp}%`, r.op != null && `Other ${r.op}%`].filter(Boolean);
+  if (pct.length) bits.push(pct.join(" · ") + (r.inn ? ` · ${r.inn}% in` : ""));
+  if (r.note) bits.push(r.note);
+  const sm = el("small", {}, bits.join(" · "));
+  if (r.url) { sm.append(document.createTextNode(" · ")); sm.append(el("a", { href: r.url }, r.src || "Source")); }
+  who.append(sm);
+  row.append(who);
+  return row;
+}
+function legRowsUT() {
+  const out = [];
+  for (const r of A.leg_ut) {
+    const row = el("div", { class: "row" });
+    row.append(el("div", { class: "where" }, `${r.office.replace("State ", "")} ${r.d}`));
+    const who = el("div", { class: "who" });
+    const L = r.c[0];
+    const top = el("div", { class: "rtop" });
+    const pill = el("span", { class: "pill" }, PN[L.party] || L.party); pill.style.background = `var(${PV[L.party] || "--ind"})`;
+    const m = r.c[1] ? +(L.pct - r.c[1].pct).toFixed(1) : null;
+    top.append(pill, el("b", {}, L.name + (m != null ? ` +${m}` : "")));
+    top.append(statusChip(r.called ? "Called" : r.c.length === 1 ? "Unopposed" : "Leading", r.called || r.c.length === 1 ? "" : "lead"));
+    if (L.party !== r.prior) top.append(statusChip(r.called ? "Flip" : "Flip?", r.called ? "flip" : "lead"));
+    who.append(top);
+    who.append(bar(r.c.map(c => [c.party === "W" ? "O" : c.party, c.pct])));
+    who.append(el("small", {}, r.c.map(c => `${c.name} (${c.party}) ${c.pct.toFixed(1)}%`).join(" · ")));
+    row.append(who);
+    out.push(row);
+  }
+  return out;
+}
+const LEG = (window.LEG && window.LEG.states) ? window.LEG : { states: {} };
+function legRowsFull(ab) {
+  const S = LEG.states[ab]; const out = [];
+  for (const ch of S.chambers) {
+    out.push(el("h3", { class: "note", style: "margin:8px 0 2px;font-weight:700" }, `${ch.name} (${ch.races.length} races)`));
+    for (const r of ch.races) {
+      const row = el("div", { class: "row" });
+      row.append(el("div", { class: "where" }, String(r.d)));
+      const who = el("div", { class: "who" });
+      const top = el("div", { class: "rtop" });
+      if (r.called && r.w) {
+        const pill = el("span", { class: "pill" }, PN[r.wp] || r.wp || "?"); pill.style.background = `var(${PV[r.wp] || "--ind"})`;
+        top.append(pill, el("b", {}, r.w), statusChip("Called"));
+      } else top.append(el("b", { class: "muted" }, "No winner recorded yet"));
+      if (r.notes && /flip/i.test(r.notes)) top.append(statusChip("Flip", "flip"));
+      who.append(top);
+      const bits = []; if (r.others) bits.push((r.called ? "Others: " : "Candidates: ") + r.others); if (r.notes) bits.push(r.notes);
+      if (bits.length) who.append(el("small", {}, bits.join(" · ")));
+      row.append(who); out.push(row);
+    }
+  }
+  out.push(el("p", { class: "note" }, `Source: ${S.src}, as of ${S.asof}. No vote shares are published there.`));
+  return out;
+}
+function renderResultsDetail() {
+  const box = document.getElementById("detail");
+  box.replaceChildren();
+  const ab = state.sel, ro = state.roff;
+  const officeName = { house: "U.S. House", sen: "U.S. Senate", gov: "Governor", leg: "State legislature" }[ro];
+  if (!ab) {
+    box.append(el("h2", {}, "Tap a state"));
+    const t = { house: "Each state is shaded by how many of its House seats each party leads; the label is Dem–Rep. Tap for every district's vote shares.",
+      sen: "States are shaded by the party that won or leads the Senate race; lighter means not called. A dashed outline marks a seat changing party.",
+      gov: "States are shaded by the party that won or leads the governor's race; lighter means not called. A dashed outline marks a change of party.",
+      leg: "Legislatures are shaded by seats changing party. Utah has every race with vote shares; other states show called flips and how many races are still uncalled." }[ro];
+    box.append(el("p", { class: "sub" }, t));
+    return;
+  }
+  box.append(el("h2", {}, `${NAMES[ab] || ab}`));
+  box.append(el("p", { class: "sub" }, officeName));
+  if (ro === "house") {
+    const rows = A.house.filter(h => h.st === ab).sort((a, b) => a.d - b.d);
+    const dr = DEL.find(x => x.st === ab);
+    if (!rows.length && dr) { box.append(statewideRow(dr, "del")); return; }
+    if (!rows.length) { box.append(el("p", { class: "note" }, "No House election here this year.")); return; }
+    rows.forEach(h => box.append(houseRow(h)));
+  } else if (ro === "sen" || ro === "gov") {
+    const r = (ro === "sen" ? A.sen : A.gov).find(x => x.st === ab);
+    if (!r) box.append(el("p", { class: "note" }, `No ${ro === "sen" ? "Senate" : "governor's"} race here this year.`));
+    else box.append(statewideRow(r, ro));
+  } else {
+    if (ab === "UT") { legRowsUT().forEach(r => box.append(r)); return; }
+    if (LEG.states[ab]) { legRowsFull(ab).forEach(r => box.append(r)); return; }
+    const items = F.items.filter(i => i.kind === "leg" && i.st === ab).sort(sortItems);
+    if (items.length) { box.append(el("h3", { class: "note" }, `Seats changing party (${items.length})`)); items.forEach(i => box.append(rowFor(i, false))); }
+    const unc = F.uncalled[ab];
+    if (unc) { const txt = unc.map(([ch, c]) => `${ch}: ${c}`).join(", "); box.append(el("p", { class: "note" }, `Races with no call recorded yet: ${txt}.`)); }
+    box.append(el("p", { class: "note" }, "This state's race-by-race table hasn't been added yet. A background update is filling these in state by state."));
+  }
+}
+function renderResultsAll() {
+  const box = document.getElementById("all-list");
+  box.replaceChildren();
+  const ro = state.roff;
+  const q = state.q.trim().toLowerCase();
+  const states = Object.keys(NAMES).filter(ab => {
+    if (ro === "house") return A.house.some(h => h.st === ab) || DEL.some(r => r.st === ab);
+    if (ro === "sen") return A.sen.some(r => r.st === ab);
+    if (ro === "gov") return A.gov.some(r => r.st === ab);
+    return F.items.some(i => i.kind === "leg" && i.st === ab) || F.uncalled[ab];
+  }).sort((a, b) => NAMES[a].localeCompare(NAMES[b]));
+  const counts = { house: `435 House races plus ${DEL.length} non-voting delegate races`, sen: "35 Senate races", gov: "36 governor races plus territories", leg: "legislatures in 46 states" }[ro];
+  document.getElementById("all-note").textContent = `${counts}. Tap a state to open it.`;
+  for (const ab of states) {
+    const det = el("details", { class: "state" });
+    if (state.sel === ab) det.open = true;
+    const sum = el("summary");
+    sum.append(el("span", {}, NAMES[ab]));
+    const v = resultsView(ab);
+    sum.append(el("span", { class: "c" }, ro === "house" ? (v.del ? `Delegate: ${v.title.split(": ")[1] || ""}` : `Dem–Rep ${v.label}`) : ro === "leg" ? `${v.label || 0} flips` : (v.title.split(": ")[1] || "")));
+    det.append(sum);
+    const body = el("div", { class: "body" });
+    det.addEventListener("toggle", () => {
+      if (!det.open || body.childElementCount) return;
+      if (ro === "house") {
+        const hr = A.house.filter(h => h.st === ab).sort((a, b) => a.d - b.d);
+        if (hr.length) hr.forEach(h => body.append(houseRow(h)));
+        else { const dr = DEL.find(x => x.st === ab); if (dr) body.append(statewideRow(dr, "del")); }
+      }
+      else if (ro === "sen" || ro === "gov") body.append(statewideRow((ro === "sen" ? A.sen : A.gov).find(x => x.st === ab), ro));
+      else if (ab === "UT") legRowsUT().forEach(r => body.append(r));
+      else if (LEG.states[ab]) legRowsFull(ab).forEach(r => body.append(r));
+      else F.items.filter(i => i.kind === "leg" && i.st === ab).sort(sortItems).forEach(i => body.append(rowFor(i, false)));
+    });
+    det.append(body);
+    box.append(det);
+  }
+}
+function renderResultsTiles(t) {
+  let hd = 0, hr = 0, hn = 0;
+  for (const h of A.house) { const l = houseLead(h); if (!l) hn++; else if (l.p === "D") hd++; else if (l.p === "R") hr++; }
+  const cnt = (arr, p, called) => arr.filter(r => r.win === p && (called ? r.status === "called" : true)).length;
+  const tile = (lab, big, small, foot) => { const d = el("div", { class: "panel tile" }); d.append(el("span", { class: "lab" }, lab)); const n = el("span", { class: "num" }, big); n.append(el("small", {}, small)); d.append(n, el("p", {}, foot)); return d; };
+  t.append(
+    tile("U.S. House", `${hd}–${hr}`, "Dem–Rep ahead", `${hn} districts had no votes in this snapshot. Leading isn't winning; many races are uncalled.`),
+    tile("U.S. Senate", `${cnt(A.sen, "D", 1)}–${cnt(A.sen, "R", 1)}`, "called, of 35", `${A.sen.filter(r => !r.win).length} not called or not gathered yet.`),
+    tile("Governors", `${cnt(A.gov.filter(r => NAMES[r.st] && !["GU","VI","MP"].includes(r.st)), "D", 1)}–${cnt(A.gov.filter(r => !["GU","VI","MP"].includes(r.st)), "R", 1)}`, "called, of 36", "Kansas, Minnesota and Nebraska had no call yet; Alaska and Arkansas show leads.")
+  );
+}
+function renderResultsLegend(lg) {
+  const sw = (bg, label) => { const s = el("span", { class: "lg" }); const i = el("span", { class: "sw2" }); i.style.background = bg; s.append(i, document.createTextNode(label)); return s; };
+  if (state.roff === "house") {
+    lg.append(sw(mixv("D", 80), "More seats with Dem ahead"), sw(mixv("R", 80), "More with Rep ahead"), sw("color-mix(in srgb, var(--ind) 45%, var(--panel))", "Even"));
+    lg.append(el("span", { class: "lg" }, "Label = Dem–Rep seats ahead"));
+  } else {
+    lg.append(sw(mixv("D", 92), "Dem won"), sw(mixv("D", 50), "Dem leading"), sw(mixv("R", 92), "Rep won"), sw(mixv("R", 50), "Rep leading"), sw("color-mix(in srgb, var(--muted) 28%, var(--panel))", "No result yet"));
+    const e = el("span", { class: "lg" }); e.append(el("span", { class: "ringsw" }), document.createTextNode("Changing party")); lg.append(e);
+  }
+}
+
+function select(ab) {
+  state.sel = state.sel === ab ? null : ab;
+  drawMap(); renderDetail(); renderAll();
+  if (state.sel && window.innerWidth <= 860) document.getElementById("detail").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+function bindSeg(id, key) {
+  const g = document.getElementById(id);
+  g.querySelectorAll("button").forEach(b => b.addEventListener("click", () => {
+    state[key] = b.dataset.v;
+    g.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+    refresh();
+  }));
+}
+function refresh() { drawMap(); renderDetail(); renderAll(); renderLegend(); renderTiles(); }
+document.querySelectorAll("#f-mode button").forEach(b => b.addEventListener("click", () => {
+  state.mode = b.dataset.v;
+  document.querySelectorAll("#f-mode button").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+  document.getElementById("f-roff").hidden = state.mode !== "all";
+  document.getElementById("flipctl").hidden = state.mode === "all";
+  document.getElementById("all-h").textContent = state.mode === "all" ? "All races by state" : "All flips by state";
+  refresh();
+}));
+document.querySelectorAll("#f-roff button").forEach(b => b.addEventListener("click", () => {
+  state.roff = b.dataset.v;
+  document.querySelectorAll("#f-roff button").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+  refresh();
+}));
+bindSeg("f-office", "office"); bindSeg("f-status", "status"); bindSeg("f-dir", "dir");
+document.getElementById("q").addEventListener("input", e => { state.q = e.target.value; refresh(); });
+document.getElementById("eyebrow").textContent = `Nov. 3, 2026 general election · unofficial · as of ${F.meta.asof}`;
+renderSources(); refresh();
+</script>
+</body>
+</html>

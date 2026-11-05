@@ -119,6 +119,9 @@ def nbc():
             if r['cands']:
                 races[rid] = r
         res[key] = races
+        if office == 'house':
+            e = (pp.get('mapData') or {}).get('5101') or {}
+            print('  NBC house entry fields:', sorted(e), {k: e[k] for k in e if k != 'tooltip'} if e else '')
         meta[f'{key}_asof'] = pp.get('lastModifiedFormatted') or pp.get('lastModified') or pp.get('currentTime')
         meta[f'{key}_url'] = NBC.format(office)
         print(f'NBC {office}: {len(races)} races, {sum(r["called"] for r in races.values())} called, '
@@ -154,6 +157,9 @@ class Cells(HTMLParser):
             self.cell.append(d)
 
 
+MISSED = []
+
+
 def num(s):
     m = re.match(r'\s*(\d+(?:\.\d+)?)%', s or '')
     return float(m.group(1)) if m else None
@@ -170,10 +176,14 @@ def abc(office):
                 continue
             m = re.match(r'^(.*?)(?:\s+(\d+))?\s+(\d+(?:\.\d+)?)% in$', row[0].strip())
             if not m:
+                if office == 'house' and len(MISSED) < 12 and '% in' in ' '.join(row):
+                    MISSED.append(row[:2])
                 continue
             name = m.group(1).strip()
             st = AP.get(name) or AP.get(name.rstrip('.') + '.') or STATE_NAMES.get(name)
             if not st:
+                if office == 'house' and len(MISSED) < 12:
+                    MISSED.append(row[:2])
                 continue
             rid = f'{st}-{int(m.group(2))}' if (office == 'house' and m.group(2)) else (f'{st}-1' if office == 'house' else st)
             text = ' '.join(row[1:]).lower()
@@ -196,6 +206,8 @@ def main():
     for office in ('house', 'senate', 'governor'):
         try:
             abcd[office] = abc(office)
+            if MISSED and office == 'house':
+                print('  ABC rows not parsed (sample):', MISSED)
             print(f'ABC {office}: {len(abcd[office])} rows, {sum("gain" in r["note"] for r in abcd[office].values())} gains')
         except Exception as e:
             print(f'ABC {office}: FAILED {str(e)[:150]}')

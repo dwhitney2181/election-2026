@@ -16,7 +16,7 @@ MultiState Elections (state legislative calls), ABC News and Fox News (House vot
 
 ## Feed for the Legislative Atlas
 
-`atlas-feed.json` is the nationwide results feed that the [Legislative Atlas](https://github.com/dwhitney2181/legislative-atlas) reads. It's built from `leg_all.js` and `results_all.js` by:
+`atlas-feed.json` (state legislatures) and `atlas-federal.json` (U.S. House, U.S. Senate, governors and delegates) are the results files the [Legislative Atlas](https://github.com/dwhitney2181/legislative-atlas) reads. It's built from `leg_all.js` and `results_all.js` by:
 
 ```bash
 python3 tools/build_atlas_feed.py

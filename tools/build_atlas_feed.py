@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build atlas-feed.json for the Legislative Atlas (dwhitney2181/legislative-atlas).
+"""Build atlas-feed.json and atlas-federal.json for the Legislative Atlas (dwhitney2181/legislative-atlas).
 
 Reads leg_all.js (MultiState winners, all states) and results_all.js (Utah vote
 counts) from the repository root and writes atlas-feed.json in the row format the
@@ -173,7 +173,71 @@ def build():
     return feed
 
 
+def build_federal():
+    """atlas-federal.json: U.S. House, U.S. Senate, governors and delegates for the atlas."""
+    A = load_js(ROOT / 'results_all.js')
+    F = load_js(ROOT / 'flips.js')
+    meta = dict(A.get('meta', {}))
+    fm = F.get('meta', {})
+    flips = {}
+    for i in F.get('items', []):
+        if i.get('kind') in ('house', 'gov'):
+            flips[(i['kind'], i['st'], str(i.get('dist') or ''))] = {
+                k: i.get(k) for k in ('winner', 'wp', 'loser', 'fr', 'to', 'status', 'src', 'url', 'note', 'incdef')}
+    house = []
+    for r in A.get('house', []):
+        dem, rep = r.get('dem'), r.get('rep')
+        lead = None
+        if isinstance(dem, (int, float)) and isinstance(rep, (int, float)) and dem != rep:
+            lead = 'D' if dem > rep else 'R'
+        note = (r.get('note') or '').lower()
+        fl = flips.get(('house', r['st'], str(r['d'])))
+        status = 'called' if 'gain' in note or (fl and fl.get('status') == 'called') else (
+            'leading' if 'lead' in note else '')
+        row = {'st': r['st'], 'd': r['d'], 'dem': dem, 'rep': rep, 'oth': r.get('oth'), 'inn': r.get('inn'),
+               'lead': lead, 'status': status, 'note': r.get('note') or '', 'rating': r.get('rating') or '',
+               'who': r.get('who') or ''}
+        if r.get('fox'):
+            row['fox'] = r['fox']
+        if fl:
+            row['flip'] = fl
+            if fl.get('winner'):
+                row['who'] = fl['winner']
+        house.append(row)
+
+    def statewide(rows, kind):
+        out = []
+        for r in rows:
+            row = dict(r)
+            row['flip'] = bool(r.get('win') and r.get('prior') and r['win'] != r['prior'] and r.get('status') in ('called', 'leading'))
+            fl = flips.get((kind, r['st'], '')) if kind else None
+            if fl:
+                row['flip_src'] = fl.get('src')
+                row['flip_url'] = fl.get('url')
+            out.append(row)
+        return out
+
+    fed = {'meta': {'generated_utc': datetime.now(timezone.utc).isoformat(timespec='seconds'),
+                    'asof': fm.get('asof', ''),
+                    'house_src': meta.get('house_src'), 'house_url': meta.get('house_url'), 'house_asof': meta.get('house_asof'),
+                    'fox_url': meta.get('fox_url'),
+                    'gov_src': meta.get('gov_src'), 'gov_url': meta.get('gov_url'),
+                    'sen_src': meta.get('sen_src'), 'sen_url': meta.get('sen_url'),
+                    'house_context': fm.get('house_context', ''), 'house_context_urls': fm.get('house_context_urls', []),
+                    'notes': 'Unofficial. House percentages from the named results table; a district is called only when a source called it.'},
+           'house': house,
+           'senate': statewide(A.get('sen', []), None),
+           'governors': statewide(A.get('gov', []), 'gov'),
+           'delegates': statewide(A.get('house_del', []), None),
+           'pending_gov': F.get('pending_gov', [])}
+    (ROOT / 'atlas-federal.json').write_text(json.dumps(fed, separators=(',', ':'), ensure_ascii=False), encoding='utf-8')
+    return fed
+
+
 if __name__ == '__main__':
+    fd = build_federal()
+    print(f"wrote atlas-federal.json: {len(fd['house'])} House districts, {len(fd['senate'])} Senate races, "
+          f"{len(fd['governors'])} governor races, {len(fd['delegates'])} delegates")
     f = build()
     print(f"wrote atlas-feed.json: {f['meta']['rows']} rows, {len(f['meta']['states'])} states, "
           f"{len(f['meta']['skipped_mixed_party_multi_winner'])} mixed multi-winner rows skipped")

@@ -614,7 +614,9 @@ function legRowsUT() {
     row.append(who);
     out.push(row);
   }
-  out.push(el("p", { class: "note" }, A.meta.ut_url ? `Vote counts: Utah's official results site, ${A.meta.ut_official ? "official" : "unofficial"}, as of ${A.meta.ut_asof}. Calls: MultiState.` : "Vote counts: Utah News Dispatch's election-night tables. Calls: MultiState."));
+  const utn = el("p", { class: "note" }, A.meta.ut_url ? `Vote counts: Utah's official results site, ${A.meta.ut_official ? "official" : "unofficial"}, as of ${A.meta.ut_asof}. Calls: MultiState. ` : "Vote counts: Utah News Dispatch's election-night tables. Calls: MultiState. ");
+  utn.append(el("a", { href: "utah/" }, "Open the Utah legislature map"));
+  out.push(utn);
   return out;
 }
 const LEG = (window.LEG && window.LEG.states) ? window.LEG : { states: {} };

@@ -36,7 +36,9 @@ jobs:
         continue-on-error: true
         run: python3 tools/scrape_utah.py
       - name: Update the site's data files
-        run: python3 tools/update_site.py
+        run: |
+          python3 tools/update_site.py
+          python3 tools/build_utah_map.py
       - name: Rebuild the atlas files
         run: |
           python3 tools/build_atlas_feed.py
@@ -45,7 +47,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          for f in leg_live.json federal_live.json utah_live.json leg_all.js results_all.js flips.js atlas-feed.json atlas-federal.json atlas-live.json; do
+          for f in leg_live.json federal_live.json utah_live.json utah/results.js leg_all.js results_all.js flips.js atlas-feed.json atlas-federal.json atlas-live.json; do
             [ -f "$f" ] && git add "$f"
           done
           if git diff --cached --quiet; then echo "No new results"; exit 0; fi

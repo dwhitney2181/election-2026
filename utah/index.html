@@ -1,0 +1,733 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Utah Legislature 2026 Results Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,650&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: a results-desk page. Summary strip on top, the district map as the main surface,
+   the tapped district's returns beside it (below it on phones), then the lists of seats changing party. */
+:root {
+  --bg: #f2f3f5;
+  --panel: #ffffff;
+  --ink: #171b22;
+  --muted: #5b6372;
+  --line: #d8dce3;
+  --focus: #b8860b;
+  --rep: #c6362f;
+  --dem: #2457b0;
+  --ind: #7b4fb8;
+  --fwd: #0f8577;
+  --con: #8a6a1f;
+  --none: #c9ced6;
+  --font-display: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-body: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111419;
+    --panel: #1a1e25;
+    --ink: #e9ecf1;
+    --muted: #9aa3b2;
+    --line: #2f3541;
+    --focus: #f0c04a;
+    --rep: #ec6a62;
+    --dem: #6f9cf0;
+    --ind: #b393e8;
+    --fwd: #3fc2b0;
+    --con: #d4b061;
+    --none: #3a404b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #111419;
+  --panel: #1a1e25;
+  --ink: #e9ecf1;
+  --muted: #9aa3b2;
+  --line: #2f3541;
+  --focus: #f0c04a;
+  --rep: #ec6a62;
+  --dem: #6f9cf0;
+  --ind: #b393e8;
+  --fwd: #3fc2b0;
+  --con: #d4b061;
+  --none: #3a404b;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.45;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 1180px; margin: 0 auto; padding: 18px 16px 40px; display: grid; gap: 16px; }
+
+header.top { display: grid; gap: 6px; }
+.eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0; }
+h1 { font-family: var(--font-display); font-weight: 650; font-size: clamp(26px, 5.2vw, 40px); line-height: 1.08; margin: 0; text-wrap: balance; }
+.dek { margin: 0; max-width: 68ch; color: var(--muted); }
+.dek strong { color: var(--ink); font-weight: 600; }
+.asof { margin: 0; font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.asof b { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; }
+
+/* controls */
+.controls { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); padding: 3px; gap: 2px; }
+.seg button {
+  font: inherit; font-size: 14px; font-weight: 600; color: var(--muted);
+  background: transparent; border: 0; border-radius: 999px; padding: 7px 14px; cursor: pointer;
+}
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--panel); }
+.seg button:focus-visible, .chipbtn:focus-visible, select:focus-visible, .row:focus-visible, .zbtn:focus-visible, .toggle input:focus-visible + span {
+  outline: 2px solid var(--focus); outline-offset: 2px;
+}
+.toggle { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: var(--muted); cursor: pointer; user-select: none; }
+.toggle input { width: 18px; height: 18px; accent-color: var(--ink); margin: 0; }
+.jump { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: var(--muted); }
+select {
+  font: inherit; font-size: 14px; color: var(--ink); background: var(--panel);
+  border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px;
+}
+
+/* summary */
+.summary { padding: 14px 16px; display: grid; gap: 10px; }
+.sumhead { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; align-items: baseline; }
+.sumhead h2 { font-family: var(--font-display); font-size: 20px; font-weight: 650; margin: 0; }
+.sumhead p { margin: 0; font-size: 13px; color: var(--muted); }
+.tally { display: flex; flex-wrap: wrap; gap: 8px 18px; font-variant-numeric: tabular-nums; }
+.tally .t { display: flex; align-items: baseline; gap: 6px; }
+.tally .num { font-family: var(--font-display); font-size: 28px; font-weight: 650; line-height: 1; }
+.tally .lab { font-size: 13px; color: var(--muted); }
+.tally .was { font-size: 12px; color: var(--muted); }
+.bar { position: relative; height: 22px; }
+.segs { display: flex; height: 100%; border-radius: 5px; overflow: hidden; background: var(--none); }
+.bar .seg-d { background: var(--dem); }
+.bar .seg-u { background: var(--ind); }
+.bar .seg-f { background: var(--fwd); }
+.bar .seg-r { background: var(--rep); }
+.bar .seg-h { background-image: repeating-linear-gradient(135deg, rgba(255,255,255,.45) 0 3px, transparent 3px 7px); }
+.segs > span { height: 100%; }
+.segs > span + span { box-shadow: inset 1px 0 0 var(--panel); }
+.tick { position: absolute; top: -5px; bottom: -5px; width: 2px; background: var(--ink); }
+.ticklab { position: absolute; top: 26px; transform: translateX(-50%); font-size: 11px; color: var(--muted); white-space: nowrap; }
+.barwrap { padding-bottom: 16px; }
+.flipline { font-size: 14px; margin: 0; }
+.flipline b { font-variant-numeric: tabular-nums; }
+
+/* main grid */
+.main { display: grid; gap: 16px; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); align-items: start; }
+@media (max-width: 860px) { .main { grid-template-columns: minmax(0, 1fr); } }
+
+.mapcard { padding: 10px; display: grid; gap: 8px; position: relative; }
+.mapbar { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; justify-content: space-between; }
+.zooms { display: flex; flex-wrap: wrap; gap: 6px; }
+.chipbtn, .zbtn {
+  font: inherit; font-size: 13px; font-weight: 600; color: var(--ink);
+  background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 5px 11px; cursor: pointer;
+}
+.chipbtn[aria-pressed="true"] { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
+.zbtn { width: 32px; height: 32px; padding: 0; font-size: 18px; line-height: 1; border-radius: 8px; }
+.zpm { display: flex; gap: 6px; }
+.mapbox { position: relative; border-radius: 8px; overflow: hidden; background: var(--bg); touch-action: none; }
+svg#map { display: block; width: 100%; height: auto; max-height: 76vh; cursor: grab; }
+svg#map:active { cursor: grabbing; }
+.dist { stroke: var(--panel); stroke-width: .9; vector-effect: non-scaling-stroke; cursor: pointer; }
+.dist.flip { stroke: var(--ink); stroke-width: 2.4; }
+.flipsoff .dist.flip { stroke: var(--panel); stroke-width: .9; }
+#map .dist.sel { stroke: var(--focus); stroke-width: 3.5; }
+.dist:hover { filter: brightness(1.08); }
+.dlab { font-family: var(--font-body); font-weight: 700; fill: var(--ink); paint-order: stroke; stroke: var(--panel); stroke-opacity: .85; stroke-linejoin: round; pointer-events: none; text-anchor: middle; dominant-baseline: central; }
+.plab { font-family: var(--font-body); font-style: italic; font-weight: 500; fill: var(--ink); opacity: .82; paint-order: stroke; stroke: var(--bg); stroke-linejoin: round; pointer-events: none; }
+.pdot { fill: var(--ink); pointer-events: none; }
+.hint { position: absolute; left: 8px; bottom: 8px; font-size: 12px; color: var(--muted); background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 3px 7px; pointer-events: none; }
+.selbar { position: absolute; left: 8px; right: 8px; bottom: 8px; display: none; align-items: center; gap: 8px; font: inherit; font-size: 13.5px; text-align: left; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; box-shadow: 0 2px 10px rgba(0,0,0,.12); cursor: pointer; }
+.selbar b { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.selbar .go { margin-left: auto; color: var(--muted); font-size: 12.5px; white-space: nowrap; }
+@media (max-width: 860px) { .selbar.on { display: flex; } }
+
+.legend { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 12.5px; color: var(--muted); align-items: center; }
+.lg { display: inline-flex; align-items: center; gap: 6px; }
+.ramp { display: inline-flex; }
+.ramp i { width: 12px; height: 12px; display: inline-block; }
+.ramp i:first-child { border-radius: 3px 0 0 3px; }
+.ramp i:last-child { border-radius: 0 3px 3px 0; }
+.sw { width: 14px; height: 12px; border-radius: 3px; display: inline-block; }
+.sw.out { background: transparent; border: 2.4px solid var(--ink); }
+.sw.hold { background: var(--none); background-image: repeating-linear-gradient(135deg, var(--muted) 0 1px, transparent 1px 4px); }
+
+/* detail */
+.detail { padding: 16px; display: grid; gap: 12px; }
+.detail h2 { font-family: var(--font-display); font-weight: 650; font-size: 24px; margin: 0; line-height: 1.1; }
+.detail .sub { margin: 0; color: var(--muted); font-size: 14px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12px; font-weight: 700; letter-spacing: .02em; border-radius: 999px; padding: 3px 9px; border: 1px solid var(--line); color: var(--muted); background: var(--bg); }
+.chip.flip { color: var(--panel); background: var(--ink); border-color: var(--ink); }
+.chip.called { color: var(--ink); border-color: var(--ink); }
+.chip.close { color: var(--ink); background: color-mix(in srgb, var(--focus) 28%, var(--panel)); border-color: color-mix(in srgb, var(--focus) 60%, var(--panel)); }
+.cands { display: grid; gap: 10px; }
+.cand { display: grid; gap: 4px; }
+.cand .top { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+.cand .nm { font-weight: 600; }
+.cand .pty { font-size: 12px; font-weight: 700; margin-left: 6px; }
+.cand .pc { font-variant-numeric: tabular-nums; font-weight: 700; white-space: nowrap; }
+.cand .vt { font-variant-numeric: tabular-nums; color: var(--muted); font-size: 13px; font-weight: 400; margin-left: 6px; }
+.track { height: 8px; background: var(--bg); border-radius: 4px; overflow: hidden; }
+.track > span { display: block; height: 100%; border-radius: 4px; }
+.lead { font-size: 13px; color: var(--muted); margin: 0; font-variant-numeric: tabular-nums; }
+.empty { color: var(--muted); margin: 0; }
+
+/* lists */
+.lists { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.list { padding: 14px 12px 8px; }
+.list h3 { font-family: var(--font-display); font-size: 19px; font-weight: 650; margin: 0 4px 2px; }
+.list p.note { margin: 0 4px 8px; font-size: 13px; color: var(--muted); }
+.row {
+  width: 100%; display: grid; grid-template-columns: 54px minmax(0, 1fr) auto; gap: 10px; align-items: center;
+  font: inherit; color: inherit; text-align: left; background: transparent; border: 0; border-top: 1px solid var(--line);
+  padding: 9px 4px; cursor: pointer;
+}
+.row:hover { background: var(--bg); }
+.row .dn { font-weight: 700; font-variant-numeric: tabular-nums; }
+.row .who { min-width: 0; }
+.row .who b { font-weight: 600; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.row .who small { color: var(--muted); font-size: 12.5px; }
+.row .mg { font-variant-numeric: tabular-nums; font-weight: 700; font-size: 14px; text-align: right; white-space: nowrap; }
+.pill { display: inline-block; font-size: 11px; font-weight: 700; color: #fff; border-radius: 4px; padding: 1px 5px; margin-right: 4px; }
+
+footer.src { font-size: 13px; color: var(--muted); display: grid; gap: 6px; max-width: 80ch; }
+footer.src p { margin: 0; }
+footer.src a { color: var(--ink); }
+@media (prefers-reduced-motion: no-preference) { .track > span { transition: width .3s ease; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <p class="eyebrow">Utah general election · Nov. 3, 2026 · unofficial</p>
+    <h1>Utah Legislature results by district</h1>
+    <p class="dek">Who's ahead in each state House and state Senate race in the unofficial count. <strong>Counting continues</strong>, so close leads can still change.</p>
+    <p class="asof" id="asof"></p>
+  </header>
+
+  <div class="controls" role="group" aria-label="Map options">
+    <div class="seg" role="group" aria-label="Chamber">
+      <button type="button" id="btn-house" aria-pressed="true">State House</button>
+      <button type="button" id="btn-senate" aria-pressed="false">State Senate</button>
+    </div>
+    <label class="toggle"><input type="checkbox" id="flips" checked><span>Outline seats changing party</span></label>
+    <label class="toggle"><input type="checkbox" id="cities" checked><span>City names</span></label>
+    <label class="jump" for="jump">Go to
+      <select id="jump"></select>
+    </label>
+  </div>
+
+  <section class="panel summary" aria-live="polite">
+    <div class="sumhead">
+      <h2 id="sum-title">State House, 75 seats</h2>
+      <p id="sum-note">All 75 seats were on the ballot.</p>
+    </div>
+    <div class="tally" id="tally"></div>
+    <div class="barwrap"><div class="bar" id="bar"></div></div>
+    <p class="flipline" id="flipline"></p>
+  </section>
+
+  <div class="main">
+    <section class="panel mapcard" aria-label="District map">
+      <div class="mapbar">
+        <div class="zooms" role="group" aria-label="Zoom to area">
+          <button type="button" class="chipbtn" data-region="state">Whole state</button>
+          <button type="button" class="chipbtn" data-region="front" aria-pressed="true">Wasatch Front</button>
+          <button type="button" class="chipbtn" data-region="slco">Salt Lake Co.</button>
+          <button type="button" class="chipbtn" data-region="utco">Utah Co.</button>
+        </div>
+        <div class="zpm">
+          <button type="button" class="zbtn" id="zin" aria-label="Zoom in">+</button>
+          <button type="button" class="zbtn" id="zout" aria-label="Zoom out">−</button>
+        </div>
+      </div>
+      <div class="mapbox" id="mapbox">
+        <svg id="map" role="img" aria-label="Map of Utah legislative districts colored by the party leading in early returns">
+          <defs>
+            <pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+              <rect width="6" height="6" style="fill:var(--none)"></rect>
+              <line x1="0" y1="0" x2="0" y2="6" style="stroke:var(--muted);stroke-width:1.2;stroke-opacity:.55"></line>
+            </pattern>
+          </defs>
+          <g id="zoomg">
+            <g id="g-house"></g>
+            <g id="g-senate" style="display:none"></g>
+            <g id="g-places"></g>
+            <g id="g-labels"></g>
+          </g>
+        </svg>
+        <div class="hint" id="hint">Tap a district · pinch or scroll to zoom</div>
+        <button type="button" class="selbar" id="selbar"></button>
+      </div>
+      <div class="legend" id="legend"></div>
+    </section>
+
+    <section class="panel detail" id="detail" aria-live="polite"></section>
+  </div>
+
+  <div class="lists">
+    <section class="panel list" aria-labelledby="flips-h">
+      <h3 id="flips-h">Seats on track to change party</h3>
+      <p class="note" id="flips-note">Closest first. Tap one to see it on the map.</p>
+      <div id="flips-list"></div>
+    </section>
+    <section class="panel list" aria-labelledby="close-h">
+      <h3 id="close-h">Closest races</h3>
+      <p class="note">Leads under 5 points in early returns.</p>
+      <div id="close-list"></div>
+    </section>
+  </div>
+
+  <footer class="src">
+    <p id="src-counts"></p>
+    <p id="src-calls"></p>
+    <p>The latest count is always on the <a href="https://electionresults.utah.gov/results/public/Utah/General11032026">official Utah results site</a>. Results aren't final until the county and state canvass.</p>
+    <p><b>“Changing party”</b> compares the leader's party with the party that held the seat going into the election (House: 60 R, 14 D, one vacant R seat; Senate: 22 R, 6 D, 1 Forward).</p>
+    <p><b>District lines:</b> U.S. Census Bureau 2022 cartographic boundaries for the current Utah House and Senate maps.</p>
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="geo.js"></script>
+<script src="results.js"></script>
+<script>
+const GEO = window.GEO;
+const RES = window.RES;
+
+const VW = 795.7, VH = 1020.7;
+const PARTY = {
+  R: { name: "Republican", short: "R", plural: "Republicans", v: "--rep" },
+  D: { name: "Democrat", short: "D", plural: "Democrats", v: "--dem" },
+  U: { name: "Unaffiliated", short: "Unaff.", plural: "an unaffiliated member", v: "--ind" },
+  F: { name: "Forward Party", short: "Fwd", plural: "the Forward Party", v: "--fwd" },
+  C: { name: "Constitution Party", short: "Const.", plural: "the Constitution Party", v: "--con" },
+  W: { name: "Write-in", short: "Write-in", plural: "write-ins", v: "--muted" }
+};
+const cssv = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+const pc = (p) => `var(${PARTY[p].v})`;
+
+const state = { chamber: "house", sel: null, region: "front", k: 1 };
+
+// ---------- derived race info ----------
+function info(chamber, n) {
+  if (chamber === "senate" && RES.senate_hold[n]) {
+    return { n, chamber, hold: true, prior: RES.senate_hold[n] };
+  }
+  const r = RES[chamber][n];
+  const c = r.c;
+  const L = c[0];
+  const second = c[1];
+  const total = c.reduce((s, x) => s + x.votes, 0);
+  const margin = second ? L.pct - second.pct : 100;
+  const voteLead = second ? L.votes - second.votes : L.votes;
+  return {
+    n, chamber, hold: false, c, total, leader: L.party, prior: r.prior, called: r.called,
+    unopposed: c.length === 1,
+    margin, voteLead, flip: L.party !== r.prior
+  };
+}
+function fillFor(i) {
+  if (i.hold) return "url(#hatch)";
+  const m = i.unopposed ? 100 : i.margin;
+  const pct = m >= 20 ? 100 : m >= 10 ? 74 : m >= 5 ? 52 : 32;
+  return `color-mix(in srgb, var(${PARTY[i.leader].v}) ${pct}%, var(--panel))`;
+}
+const label = (ch, n) => (ch === "house" ? "House District " : "Senate District ") + n;
+const abbr = (ch, n) => (ch === "house" ? "HD " : "SD ") + n;
+
+// ---------- map ----------
+const svg = d3.select("#map").attr("viewBox", `0 0 ${VW} ${VH}`);
+const zg = d3.select("#zoomg");
+const groups = { house: d3.select("#g-house"), senate: d3.select("#g-senate") };
+
+for (const ch of ["house", "senate"]) {
+  groups[ch].selectAll("path").data(GEO[ch]).join("path")
+    .attr("class", d => "dist" + (info(ch, d.n).flip ? " flip" : ""))
+    .attr("id", d => `${ch}-${d.n}`)
+    .attr("d", d => d.d)
+    .style("fill", d => fillFor(info(ch, d.n)))
+    .on("click", (ev, d) => select(ch, d.n, false))
+    .append("title").text(d => {
+      const i = info(ch, d.n);
+      if (i.hold) return `${label(ch, d.n)}: not on the ballot`;
+      return `${label(ch, d.n)}: ${i.c[0].name} (${PARTY[i.leader].short}) ${i.c[0].pct.toFixed(1)}%`;
+    });
+}
+
+const placeG = d3.select("#g-places");
+const pl = placeG.selectAll("g").data(GEO.places).join("g").attr("class", d => "place t" + d.t);
+pl.append("circle").attr("class", "pdot").attr("cx", d => d.x).attr("cy", d => d.y);
+pl.append("text").attr("class", "plab").attr("x", d => d.x).attr("y", d => d.y).text(d => d.name);
+
+const labG = d3.select("#g-labels");
+function drawLabels() {
+  const data = GEO[state.chamber];
+  labG.selectAll("text").data(data, d => state.chamber + d.n).join("text")
+    .attr("class", "dlab").attr("x", d => d.lx).attr("y", d => d.ly).text(d => d.n);
+  scaleLabels();
+}
+
+function pxPerUnit() {
+  const el = document.getElementById("map");
+  const r = el.getBoundingClientRect();
+  return Math.min(r.width / VW, r.height / VH) || 0.5;
+}
+function scaleLabels() {
+  const k = state.k, s = pxPerUnit() * k;
+  const showCities = document.getElementById("cities").checked;
+  labG.selectAll("text")
+    .attr("font-size", 11 / s)
+    .attr("stroke-width", 3 / s)
+    .style("display", d => (d.a * s > 30 ? null : "none"));
+  placeG.style("display", showCities ? null : "none");
+  placeG.selectAll("g.place").style("display", d => (d.t === 1 || k >= 5 ? null : "none"));
+  placeG.selectAll("circle").attr("r", 2 / s);
+  placeG.selectAll("text").attr("font-size", 11.5 / s).attr("stroke-width", 3 / s);
+  placeLabels(s);
+}
+// Keep city names off the district numbers: try four spots around the dot, hide the name if none is clear.
+function placeLabels(s) {
+  const boxes = [];
+  labG.selectAll("text").each(function (d) {
+    if (this.style.display === "none") return;
+    const w = String(d.n).length * 7.5 / s, h = 13 / s;
+    boxes.push([d.lx - w / 2, d.ly - h / 2, d.lx + w / 2, d.ly + h / 2]);
+  });
+  const T = state.t || d3.zoomIdentity;
+  const vx1 = (0 - T.x) / T.k, vx2 = (VW - T.x) / T.k, vy1 = (0 - T.y) / T.k, vy2 = (VH - T.y) / T.k;
+  const out = (b) => b[0] < vx1 || b[2] > vx2 || b[1] < vy1 || b[3] > vy2;
+  const hit = (b) => out(b) || boxes.some(o => b[0] < o[2] && b[2] > o[0] && b[1] < o[3] && b[3] > o[1]);
+  const spots = [[1, -1], [-1, -1], [1, 1], [-1, 1]];
+  placeG.selectAll("g.place").each(function (d) {
+    if (this.style.display === "none") return;
+    const t = d3.select(this).select("text");
+    const w = d.name.length * 6.4 / s, h = 12 / s, g = 4 / s;
+    let placed = false;
+    for (const [sx, sy] of spots) {
+      const x1 = sx > 0 ? d.x + g : d.x - g - w;
+      const y1 = sy < 0 ? d.y - g - h : d.y + g;
+      const bx = [x1, y1, x1 + w, y1 + h];
+      if (!hit(bx)) {
+        t.attr("text-anchor", sx > 0 ? "start" : "end").attr("dx", sx * g).attr("dy", sy < 0 ? -g : g + h * 0.8).style("display", null);
+        boxes.push(bx); placed = true; break;
+      }
+    }
+    if (!placed) t.style("display", "none");
+  });
+}
+
+const zoom = d3.zoom()
+  .scaleExtent([0.9, 60])
+  .translateExtent([[-200, -200], [VW + 200, VH + 200]])
+  .clickDistance(5)
+  .on("zoom", (ev) => {
+    zg.attr("transform", ev.transform);
+    state.k = ev.transform.k;
+    state.t = ev.transform;
+    scaleLabels();
+    if (ev.sourceEvent) { clearRegion(); if (state.sel == null) document.getElementById("hint").style.display = "none"; }
+  });
+svg.call(zoom).on("dblclick.zoom", null);
+
+function boxTransform(b, pad = 0.9) {
+  const [x1, y1, x2, y2] = b;
+  const k = Math.min(60, pad * Math.min(VW / (x2 - x1), VH / (y2 - y1)));
+  const cx = (x1 + x2) / 2, cy = (y1 + y2) / 2;
+  return d3.zoomIdentity.translate(VW / 2 - k * cx, VH / 2 - k * cy).scale(k);
+}
+const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+function goTo(b, pad, animate = true) {
+  const t = boxTransform(b, pad);
+  if (animate && !reduceMotion) svg.transition().duration(650).call(zoom.transform, t);
+  else svg.call(zoom.transform, t);
+}
+function regionBox(r) { return r === "state" ? [0, 0, VW, VH] : GEO.regions[r]; }
+function setRegion(r, animate = true) {
+  state.region = r;
+  document.querySelectorAll("[data-region]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.region === r)));
+  goTo(regionBox(r), r === "state" ? 1 : 0.95, animate);
+}
+function clearRegion() {
+  state.region = null;
+  document.querySelectorAll("[data-region]").forEach(b => b.setAttribute("aria-pressed", "false"));
+}
+document.querySelectorAll("[data-region]").forEach(b => b.addEventListener("click", () => setRegion(b.dataset.region)));
+document.getElementById("zin").addEventListener("click", () => { clearRegion(); svg.transition().duration(reduceMotion ? 0 : 250).call(zoom.scaleBy, 1.6); });
+document.getElementById("zout").addEventListener("click", () => { clearRegion(); svg.transition().duration(reduceMotion ? 0 : 250).call(zoom.scaleBy, 1 / 1.6); });
+
+// ---------- selection & detail ----------
+function select(ch, n, zoomTo) {
+  if (ch !== state.chamber) setChamber(ch);
+  state.sel = n;
+  d3.selectAll(".dist").classed("sel", false);
+  const node = document.getElementById(`${ch}-${n}`);
+  if (node) { node.classList.add("sel"); node.parentNode.appendChild(node); }
+  document.getElementById("jump").value = String(n);
+  renderDetail();
+  if (zoomTo) {
+    const f = GEO[ch].find(d => d.n === n);
+    const [x1, y1, x2, y2] = f.b;
+    const w = x2 - x1, h = y2 - y1, padx = Math.max(w, 30) * 0.9, pady = Math.max(h, 30) * 0.9;
+    clearRegion();
+    goTo([x1 - padx, y1 - pady, x2 + padx, y2 + pady], 0.95);
+  }
+  if (zoomTo && window.innerWidth <= 860) {
+    document.getElementById("mapbox").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+  }
+}
+
+function el(tag, attrs = {}, text) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === "style") e.setAttribute("style", v); else e.setAttribute(k, v);
+  }
+  if (text != null) e.textContent = text;
+  return e;
+}
+function fmt(n) { return n.toLocaleString("en-US"); }
+
+function renderSelbar() {
+  const b = document.getElementById("selbar");
+  b.replaceChildren();
+  const ch = state.chamber, n = state.sel;
+  if (n == null) { b.classList.remove("on"); document.getElementById("hint").style.visibility = ""; return; }
+  document.getElementById("hint").style.visibility = "hidden";
+  const i = info(ch, n);
+  b.append(el("b", {}, abbr(ch, n)));
+  if (i.hold) b.append(document.createTextNode("Not on the ballot"));
+  else {
+    const t = el("span");
+    t.append(el("span", { class: "pill", style: `background:${pc(i.leader)}` }, PARTY[i.leader].short));
+    t.append(document.createTextNode(`${i.c[0].name} ${i.c[0].pct.toFixed(1)}%` + (i.unopposed ? " (unopposed)" : ` · leads by ${i.margin.toFixed(1)} pts`)));
+    b.append(t);
+  }
+  b.append(el("span", { class: "go" }, "Details ↓"));
+  b.classList.add("on");
+}
+document.getElementById("selbar").addEventListener("click", () => document.getElementById("detail").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" }));
+
+function renderDetail() {
+  renderSelbar();
+  const box = document.getElementById("detail");
+  box.replaceChildren();
+  const ch = state.chamber, n = state.sel;
+  if (n == null) {
+    box.append(el("h2", {}, "Tap a district"));
+    box.append(el("p", { class: "sub" }, ch === "house"
+      ? "Each district shows the candidates, their share of the vote and how many votes separate them. Darker shading means a wider lead."
+      : "Senate seats are on a four-year cycle, so 15 of the 29 districts were on the ballot. Hatched districts weren't up this year."));
+    box.append(el("p", { class: "empty" }, "Or pick one from the lists below the map."));
+    return;
+  }
+  const i = info(ch, n);
+  box.append(el("h2", {}, label(ch, n)));
+  if (i.hold) {
+    box.append(el("p", { class: "sub" }, `Not on the ballot in 2026. This seat stays with ${PARTY[i.prior].plural}; its next election is in 2028.`));
+    return;
+  }
+  const chips = el("div", { class: "chips" });
+  if (i.flip) chips.append(el("span", { class: "chip flip" }, `Changing party: ${PARTY[i.prior].short} → ${PARTY[i.leader].short}`));
+  if (i.unopposed) chips.append(el("span", { class: "chip" }, "Unopposed"));
+  else if (i.called) chips.append(el("span", { class: "chip called" }, "Called (MultiState)"));
+  else chips.append(el("span", { class: "chip" }, "Leading, not called"));
+  if (!i.unopposed && i.margin < 2) chips.append(el("span", { class: "chip close" }, "Very close"));
+  else if (!i.unopposed && i.margin < 5) chips.append(el("span", { class: "chip close" }, "Close"));
+  box.append(chips);
+  const priorTxt = (ch === "house" && n === 16)
+    ? "Held by Republicans before this election (the seat was vacant)."
+    : `Held by ${PARTY[i.prior].plural} before this election.`;
+  box.append(el("p", { class: "sub" }, priorTxt));
+
+  const list = el("div", { class: "cands" });
+  for (const c of i.c) {
+    const row = el("div", { class: "cand" });
+    const top = el("div", { class: "top" });
+    const left = el("span");
+    left.append(el("span", { class: "nm" }, c.name));
+    left.append(el("span", { class: "pty", style: `color:${pc(c.party)}` }, PARTY[c.party].name));
+    const right = el("span", { class: "pc" }, c.pct.toFixed(1) + "%");
+    right.append(el("span", { class: "vt" }, fmt(c.votes)));
+    top.append(left, right);
+    const tr = el("div", { class: "track" });
+    tr.append(el("span", { style: `width:${c.pct}%;background:${pc(c.party)}` }));
+    row.append(top, tr);
+    list.append(row);
+  }
+  box.append(list);
+  if (!i.unopposed) {
+    box.append(el("p", { class: "lead" }, `Lead: ${i.margin.toFixed(1)} points (${fmt(i.voteLead)} votes) out of ${fmt(i.total)} counted.`));
+  } else {
+    box.append(el("p", { class: "lead" }, `${fmt(i.total)} votes counted. No other candidate on the ballot.`));
+  }
+}
+
+// ---------- summary ----------
+function renderSummary() {
+  const ch = state.chamber;
+  const nums = Object.keys(RES[ch]).map(Number);
+  const lead = { R: 0, D: 0, U: 0, F: 0 };
+  let flips = 0, rd = 0, ru = 0;
+  for (const n of nums) { const i = info(ch, n); lead[i.leader]++; if (i.flip) { flips++; if (i.leader === "D") rd++; else ru++; } }
+  const hold = { R: 0, D: 0 };
+  if (ch === "senate") for (const p of Object.values(RES.senate_hold)) hold[p]++;
+  const total = ch === "house" ? 75 : 29;
+  const tot = { R: lead.R + hold.R, D: lead.D + hold.D, U: lead.U, F: lead.F };
+  const before = ch === "house" ? { R: 61, D: 14, U: 0, F: 0 } : { R: 22, D: 6, U: 0, F: 1 };
+
+  document.getElementById("sum-title").textContent = ch === "house" ? "State House, 75 seats" : "State Senate, 29 seats";
+  document.getElementById("sum-note").textContent = ch === "house"
+    ? "All 75 seats were on the ballot."
+    : "15 seats were on the ballot; the other 14 carry over (hatched in the bar).";
+
+  const tally = document.getElementById("tally");
+  tally.replaceChildren();
+  const order = ["D", "U", "F", "R"].filter(p => tot[p] > 0 || before[p] > 0);
+  for (const p of order) {
+    const t = el("div", { class: "t" });
+    t.append(el("span", { class: "num", style: `color:${pc(p)}` }, String(tot[p])));
+    t.append(el("span", { class: "lab" }, (p === "U" ? "Unaffiliated" : p === "F" ? "Forward" : PARTY[p].plural)));
+    t.append(el("span", { class: "was" }, `(had ${before[p]}${ch === "house" && p === "R" ? ", incl. vacant seat" : ""})`));
+    tally.append(t);
+  }
+
+  const bar = document.getElementById("bar");
+  bar.replaceChildren();
+  const segWrap = el("div", { class: "segs" });
+  bar.append(segWrap);
+  const segs = [];
+  segs.push(["seg-d", lead.D], ["seg-d seg-h", hold.D], ["seg-u", lead.U], ["seg-f", lead.F], ["seg-r seg-h", hold.R], ["seg-r", lead.R]);
+  for (const [cls, v] of segs) if (v > 0) {
+    const s = el("span", { class: cls, style: `width:${(100 * v / total).toFixed(3)}%` });
+    s.title = v + " seats";
+    segWrap.append(s);
+  }
+  const two3 = Math.ceil(total * 2 / 3);
+  const posFromRight = (100 * two3 / total);
+  const tick = el("span", { class: "tick", style: `right:calc(${posFromRight}% - 1px)` });
+  const tl = el("span", { class: "ticklab", style: `right:calc(${posFromRight}% - 1px);transform:translateX(50%)` }, `⅔ = ${two3} seats`);
+  bar.append(tick, tl);
+
+  const fl = document.getElementById("flipline");
+  fl.replaceChildren();
+  const parts = [];
+  if (rd) parts.push(`${rd} from Republican to Democrat`);
+  if (ru) parts.push(`${ru} from Republican to unaffiliated`);
+  fl.append(document.createTextNode("Seats on track to change party: "));
+  fl.append(el("b", {}, String(flips)));
+  if (parts.length) fl.append(document.createTextNode(" (" + parts.join(", ") + ")."));
+  fl.append(document.createTextNode(` The tick marks two-thirds of the chamber, counted from the right end of the bar.`));
+}
+
+// ---------- lists ----------
+function rowFor(ch, i, sub) {
+  const b = el("button", { type: "button", class: "row" });
+  b.append(el("span", { class: "dn" }, abbr(ch, i.n)));
+  const who = el("span", { class: "who" });
+  const nm = el("b");
+  nm.append(el("span", { class: "pill", style: `background:${pc(i.leader)}` }, PARTY[i.leader].short));
+  nm.append(document.createTextNode(i.c[0].name));
+  who.append(nm, el("small", {}, sub));
+  b.append(who, el("span", { class: "mg" }, "+" + i.margin.toFixed(1)));
+  b.addEventListener("click", () => select(ch, i.n, true));
+  return b;
+}
+function renderLists() {
+  const ch = state.chamber;
+  const all = Object.keys(RES[ch]).map(Number).map(n => info(ch, n));
+  const flips = all.filter(i => i.flip).sort((a, b) => a.margin - b.margin);
+  const close = all.filter(i => !i.unopposed && i.margin < 5).sort((a, b) => a.margin - b.margin);
+  const fl = document.getElementById("flips-list"); fl.replaceChildren();
+  for (const i of flips) fl.append(rowFor(ch, i, `over ${i.c[1].name} (${PARTY[i.c[1].party].short}) · was ${PARTY[i.prior].short}${i.called ? " · called" : ""}`));
+  if (!flips.length) fl.append(el("p", { class: "note" }, "None."));
+  const cl = document.getElementById("close-list"); cl.replaceChildren();
+  for (const i of close) cl.append(rowFor(ch, i, `over ${i.c[1].name} (${PARTY[i.c[1].party].short})${i.flip ? " · changing party" : ""}`));
+  if (!close.length) cl.append(el("p", { class: "note" }, "None."));
+}
+
+function renderLegend() {
+  const lg = document.getElementById("legend");
+  lg.replaceChildren();
+  const ch = state.chamber;
+  const parties = ch === "house" ? ["D", "R", "U"] : ["D", "R", "F"];
+  for (const p of parties) {
+    const s = el("span", { class: "lg" });
+    const r = el("span", { class: "ramp", "aria-hidden": "true" });
+    for (const pct of [32, 52, 74, 100]) r.append(el("i", { style: `background:color-mix(in srgb, var(${PARTY[p].v}) ${pct}%, var(--panel))` }));
+    s.append(r, document.createTextNode(p === "U" ? "Unaffiliated leading" : p === "F" ? "Forward leading" : `${PARTY[p].name} leading`));
+    lg.append(s);
+  }
+  lg.append(el("span", { class: "lg" }, "Lighter = lead under 5 pts, darkest = 20+ or unopposed"));
+  const o = el("span", { class: "lg" }); o.append(el("span", { class: "sw out" }), document.createTextNode("Changing party")); lg.append(o);
+  if (ch === "senate") { const h = el("span", { class: "lg" }); h.append(el("span", { class: "sw hold" }), document.createTextNode("Not on ballot in 2026")); lg.append(h); }
+}
+
+function renderJump() {
+  const s = document.getElementById("jump");
+  s.replaceChildren();
+  s.append(el("option", { value: "" }, "District…"));
+  const ch = state.chamber;
+  for (const f of GEO[ch]) {
+    const i = info(ch, f.n);
+    const t = i.hold ? `${abbr(ch, f.n)} (not up)` : `${abbr(ch, f.n)} · ${i.c[0].name}`;
+    s.append(el("option", { value: String(f.n) }, t));
+  }
+  s.value = state.sel == null ? "" : String(state.sel);
+}
+document.getElementById("jump").addEventListener("change", e => { if (e.target.value) select(state.chamber, Number(e.target.value), true); });
+
+function setChamber(ch) {
+  state.chamber = ch;
+  state.sel = null;
+  document.getElementById("btn-house").setAttribute("aria-pressed", String(ch === "house"));
+  document.getElementById("btn-senate").setAttribute("aria-pressed", String(ch === "senate"));
+  groups.house.style("display", ch === "house" ? null : "none");
+  groups.senate.style("display", ch === "senate" ? null : "none");
+  d3.selectAll(".dist").classed("sel", false);
+  drawLabels(); renderSummary(); renderLists(); renderLegend(); renderJump(); renderDetail();
+}
+document.getElementById("btn-house").addEventListener("click", () => setChamber("house"));
+document.getElementById("btn-senate").addEventListener("click", () => setChamber("senate"));
+document.getElementById("flips").addEventListener("change", e => document.getElementById("map").classList.toggle("flipsoff", !e.target.checked));
+document.getElementById("cities").addEventListener("change", scaleLabels);
+window.addEventListener("resize", scaleLabels);
+
+function renderMeta() {
+  const m = RES.meta;
+  const a = document.getElementById("asof");
+  a.replaceChildren();
+  const s1 = el("span"); s1.append(document.createTextNode("Vote counts as of "), el("b", {}, m.counts_asof));
+  const s2 = el("span"); s2.append(document.createTextNode("Race calls checked "), el("b", {}, m.calls_checked));
+  a.append(s1, s2);
+  const pc1 = document.getElementById("src-counts");
+  pc1.replaceChildren(el("b", {}, "Vote counts: "), document.createTextNode(`${m.official ? "official" : "unofficial"} results as of ${m.counts_asof}, from `));
+  const l1 = el("a", { href: m.counts_url }, m.counts_source); pc1.append(l1, document.createTextNode(m.counts_note ? `. ${m.counts_note}` : "."));
+  const pc2 = document.getElementById("src-calls");
+  pc2.replaceChildren(el("b", {}, "Race calls: "), document.createTextNode("races marked “Called” have a winner recorded on "));
+  pc2.append(el("a", { href: m.calls_url }, m.calls_source), document.createTextNode(` as of ${m.calls_checked}. Every other race shows only who is ahead.`));
+}
+
+renderMeta();
+setChamber("house");
+setRegion("front", false);
+</script>
+</body>
+</html>
+
+</body></html>

@@ -75,8 +75,8 @@ def parse_time(v):
         return t if t <= et else t.replace(day=t.day - 1) if t.day > 1 else t
     if isinstance(v, (int, float)):
         return datetime.fromtimestamp(v / 1000 if v > 1e11 else v, timezone.utc)
-    try:
-        return datetime.fromisoformat(str(v).replace('Z', '+00:00'))
+    try:   # trim fractions past microseconds ("05:32:47.0747272Z") so older Pythons accept it
+        return datetime.fromisoformat(re.sub(r'(\.\d{6})\d+', r'\1', str(v)).replace('Z', '+00:00'))
     except ValueError:
         return None
 

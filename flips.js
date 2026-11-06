@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 6, 2026, 6:37 a.m. MT",
-"house_context": "NBC News had called 406 of 435 House races as of 8:30 a.m. ET, Nov. 6. Among called races, 46 seats changed party (44 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 45 seats as party gains.",
+"asof": "Nov. 6, 2026, 9:14 a.m. MT",
+"house_context": "NBC News had called 407 of 435 House races as of 11:12 a.m. ET, Nov. 6. Among called races, 46 seats changed party (44 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 45 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -555,7 +555,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"src": "NBC News count (+3,024 votes, 97% in)",
+"src": "NBC News count (+3,069 votes, 97.3% in)",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Incumbent trailing"
@@ -1314,6 +1314,38 @@ window.FLIPS = {
 },
 {
 "kind": "leg",
+"st": "CO",
+"office": "State House",
+"dist": "50",
+"winner": "Tommy Butler",
+"wp": "D",
+"loser": "Ryan Gonzalez (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/colorado-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "CT",
+"office": "State House",
+"dist": "8",
+"winner": "Francis Lombard",
+"wp": "D",
+"loser": "William Gifford (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/connecticut-2026.html",
+"incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
 "st": "CT",
 "office": "State House",
 "dist": "23",
@@ -1432,6 +1464,22 @@ window.FLIPS = {
 "winner": "Michelle Embree Ku",
 "wp": "D",
 "loser": "Mitch Bolinsky (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/connecticut-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "CT",
+"office": "State House",
+"dist": "122",
+"winner": "Mandy Kilmartin",
+"wp": "D",
+"loser": "Ben McGorty (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -6020,6 +6068,38 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NV",
 "office": "Assembly",
+"dist": "2",
+"winner": "Kamilah Bywaters",
+"wp": "D",
+"loser": "Drew Teitelbaum (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/nevada-2026.html",
+"incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "NV",
+"office": "Assembly",
+"dist": "4",
+"winner": "Eileen Eady",
+"wp": "D",
+"loser": "Lisa Cole (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/nevada-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "NV",
+"office": "Assembly",
 "dist": "13",
 "winner": "Daniel Andrews",
 "wp": "D",
@@ -8463,17 +8543,17 @@ window.FLIPS = {
 "CO": [
 [
 "House",
-"10"
+"4"
 ],
 [
 "Senate",
-"2"
+"1"
 ]
 ],
 "CT": [
 [
 "House",
-"14"
+"12"
 ],
 [
 "Senate",
@@ -8603,7 +8683,7 @@ window.FLIPS = {
 "ME": [
 [
 "House",
-"6"
+"5"
 ],
 [
 "Senate",
@@ -8613,7 +8693,7 @@ window.FLIPS = {
 "MD": [
 [
 "House of Delegates",
-"9"
+"7"
 ],
 [
 "Senate",
@@ -8633,7 +8713,7 @@ window.FLIPS = {
 "MI": [
 [
 "House",
-"1"
+"0"
 ],
 [
 "Senate",
@@ -8679,7 +8759,7 @@ window.FLIPS = {
 "NV": [
 [
 "Assembly",
-"4"
+"2"
 ],
 [
 "Senate",
@@ -8859,7 +8939,7 @@ window.FLIPS = {
 "UT": [
 [
 "House",
-"18"
+"16"
 ],
 [
 "Senate",

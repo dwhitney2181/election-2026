@@ -1,5 +1,5 @@
 window.RES = {
-"meta": {"counts_asof": "10:05 p.m. MT, Nov. 5, 2026", "counts_source": "Utah Lieutenant Governor's Office results site", "counts_url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026", "counts_note": "", "official": false, "calls_checked": "3:12 p.m. MT, Nov. 5, 2026", "calls_source": "MultiState Elections' Utah results page", "calls_url": "https://www.multistate.us/elections/results/utah-2026", "updated_utc": "2026-11-06T07:44:17+00:00"},
+"meta": {"counts_asof": "9:10 a.m. MT, Nov. 6, 2026", "counts_source": "Utah Lieutenant Governor's Office results site", "counts_url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026", "counts_note": "", "official": false, "calls_checked": "9:13 a.m. MT, Nov. 6, 2026", "calls_source": "MultiState Elections' Utah results page", "calls_url": "https://www.multistate.us/elections/results/utah-2026", "updated_utc": "2026-11-06T16:14:35+00:00"},
 "house": {
   "1": {"c": [{"name": "Thomas Peterson", "party": "R", "votes": 10061, "pct": 69.67}, {"name": "Chris Reid", "party": "D", "votes": 2990, "pct": 20.71}, {"name": "Jason O'Dell", "party": "C", "votes": 1389, "pct": 9.62}], "prior": "R", "called": true},
   "2": {"c": [{"name": "Mike Petersen", "party": "R", "votes": 8627, "pct": 62.52}, {"name": "Barbara J. Haggerty", "party": "D", "votes": 5171, "pct": 37.48}], "prior": "R", "called": true},
@@ -11,12 +11,12 @@ window.RES = {
   "8": {"c": [{"name": "Kim James", "party": "D", "votes": 7209, "pct": 49.38}, {"name": "Jason B Kyle", "party": "R", "votes": 6778, "pct": 46.43}, {"name": "Libby Shelton", "party": "F", "votes": 612, "pct": 4.19}], "prior": "R", "called": true},
   "9": {"c": [{"name": "Angela Choberka", "party": "D", "votes": 5855, "pct": 53.21}, {"name": "Jake Sawyer", "party": "R", "votes": 5148, "pct": 46.79}], "prior": "R", "called": true},
   "10": {"c": [{"name": "Rosemary T Lesser", "party": "D", "votes": 6923, "pct": 61.91}, {"name": "Jim Alvey", "party": "R", "votes": 4259, "pct": 38.09}], "prior": "R", "called": true},
-  "11": {"c": [{"name": "Katy Hall", "party": "R", "votes": 5902, "pct": 52.19}, {"name": "Dave Calder", "party": "D", "votes": 5407, "pct": 47.81}], "prior": "R", "called": false},
+  "11": {"c": [{"name": "Katy Hall", "party": "R", "votes": 5902, "pct": 52.19}, {"name": "Dave Calder", "party": "D", "votes": 5407, "pct": 47.81}], "prior": "R", "called": true},
   "12": {"c": [{"name": "Mike Schultz", "party": "R", "votes": 7522, "pct": 57.99}, {"name": "Anna Graff", "party": "D", "votes": 5450, "pct": 42.01}], "prior": "R", "called": true},
   "13": {"c": [{"name": "Erik R. Craythorne", "party": "R", "votes": 6344, "pct": 53.66}, {"name": "Jeffrey Anderson", "party": "D", "votes": 4645, "pct": 39.29}, {"name": "Tony De Mille", "party": "F", "votes": 834, "pct": 7.05}], "prior": "R", "called": true},
   "14": {"c": [{"name": "John Taylor", "party": "R", "votes": 6278, "pct": 56.05}, {"name": "Brandon Young", "party": "D", "votes": 4922, "pct": 43.95}], "prior": "R", "called": true},
   "15": {"c": [{"name": "Ariel Defay", "party": "R", "votes": 8499, "pct": 61.15}, {"name": "Anne Berbert", "party": "D", "votes": 5399, "pct": 38.85}], "prior": "R", "called": true},
-  "16": {"c": [{"name": "Bob J Stevenson", "party": "R", "votes": 6580, "pct": 52.06}, {"name": "Abigail Treasure", "party": "D", "votes": 6059, "pct": 47.94}], "prior": "R", "called": false},
+  "16": {"c": [{"name": "Bob J Stevenson", "party": "R", "votes": 6580, "pct": 52.06}, {"name": "Abigail Treasure", "party": "D", "votes": 6059, "pct": 47.94}], "prior": "R", "called": true},
   "17": {"c": [{"name": "Lili Bitner", "party": "R", "votes": 8710, "pct": 59.71}, {"name": "Eric Last", "party": "D", "votes": 5876, "pct": 40.29}], "prior": "R", "called": true},
   "18": {"c": [{"name": "Paul Cutler", "party": "R", "votes": 9072, "pct": 59.93}, {"name": "Scott Troxel", "party": "D", "votes": 6065, "pct": 40.07}], "prior": "R", "called": true},
   "19": {"c": [{"name": "Raymond P. Ward", "party": "R", "votes": 10856, "pct": 100.0}], "prior": "R", "called": true},

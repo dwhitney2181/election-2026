@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 5, 2026, 3:13 p.m. MT",
-"house_context": "NBC News had called 405 of 435 House races as of 5:12 p.m. ET, Nov. 5. Among called races, 45 seats changed party (43 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 44 seats as party gains.",
+"asof": "Nov. 5, 2026, 6:41 p.m. MT",
+"house_context": "NBC News had called 406 of 435 House races as of 8:38 p.m. ET, Nov. 5. Among called races, 46 seats changed party (44 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 45 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -234,11 +234,11 @@ window.FLIPS = {
 "loser": "Mike Lawler (R)",
 "fr": "R",
 "to": "D",
-"status": "leading",
-"src": "NBC News count (+4.4 pts, 87.6% in)",
+"status": "called",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
-"incdef": false,
-"note": "Incumbent trailing"
+"incdef": true,
+"note": "Incumbent defeated"
 },
 {
 "kind": "house",
@@ -555,7 +555,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"src": "NBC News count (+2,690 votes, 95.2% in)",
+"src": "NBC News count (+3,024 votes, 97.1% in)",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Incumbent trailing"
@@ -571,7 +571,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"src": "NBC News count (+323 votes, 98.8% in)",
+"src": "NBC News count (+321 votes, 98.8% in)",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Incumbent trailing"
@@ -3684,6 +3684,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "ME",
 "office": "State Senate",
+"dist": "16",
+"winner": "Patric Aaron Moore",
+"wp": "D",
+"loser": "Scott Cyrway (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/maine-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "ME",
+"office": "State Senate",
 "dist": "20",
 "winner": "Michael Scott",
 "wp": "D",
@@ -5351,7 +5367,7 @@ window.FLIPS = {
 "dist": "Hillsborough-29",
 "winner": "Christopher Calhoun, Judi Lanza, Marie B. Morgan, Karyn Battey",
 "wp": "D",
-"loser": "Joe Alexander (R), Henry Giasson (R)",
+"loser": "Joe Alexander (R), Sherri Reinfurt (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -6611,6 +6627,22 @@ window.FLIPS = {
 {
 "kind": "leg",
 "st": "RI",
+"office": "State House",
+"dist": "42",
+"winner": "Edward W Stravato",
+"wp": "D",
+"loser": "Dick Fascia (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/rhode-island-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "RI",
 "office": "State Senate",
 "dist": "17",
 "winner": "Nelly Burdette",
@@ -7805,7 +7837,7 @@ window.FLIPS = {
 "status": "called",
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/vermont-2026.html",
-"incdef": false,
+"incdef": true,
 "note": "Multi-member district"
 },
 {
@@ -8029,7 +8061,7 @@ window.FLIPS = {
 "status": "called",
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/west-virginia-2026.html",
-"incdef": true,
+"incdef": false,
 "note": ""
 },
 {
@@ -8289,7 +8321,7 @@ window.FLIPS = {
 "fr": "F",
 "to": "R",
 "status": "leading",
-"margin": 0.7,
+"margin": 0.8,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -8337,7 +8369,7 @@ window.FLIPS = {
 "AZ": [
 [
 "House",
-"9"
+"7"
 ],
 [
 "Senate",
@@ -8361,7 +8393,7 @@ window.FLIPS = {
 ],
 [
 "Senate",
-"11"
+"8"
 ]
 ],
 "CO": [
@@ -8507,11 +8539,11 @@ window.FLIPS = {
 "ME": [
 [
 "House",
-"8"
+"6"
 ],
 [
 "Senate",
-"2"
+"1"
 ]
 ],
 "MD": [
@@ -8673,7 +8705,7 @@ window.FLIPS = {
 "RI": [
 [
 "House",
-"2"
+"1"
 ],
 [
 "Senate",
@@ -8733,11 +8765,11 @@ window.FLIPS = {
 "WA": [
 [
 "House",
-"64"
+"62"
 ],
 [
 "Senate",
-"11"
+"9"
 ]
 ],
 "WV": [
@@ -8778,7 +8810,7 @@ window.FLIPS = {
 ],
 [
 "KS",
-"Cindy Holscher (D) led Ty Masterson (R) 50.3% to 49.7% with 98.5% counted (NBC News); not called"
+"Cindy Holscher (D) led Ty Masterson (R) 50.3% to 49.7% with 98.7% counted (NBC News); not called"
 ],
 [
 "MP",

@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 6, 2026, 12:24 p.m. MT",
-"house_context": "NBC News had called 412 of 435 House races as of 2:24 p.m. ET, Nov. 6. Among called races, 46 seats changed party (44 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 45 seats as party gains.",
+"asof": "Nov. 6, 2026, 3:04 p.m. MT",
+"house_context": "NBC News had called 412 of 435 House races as of 5:03 p.m. ET, Nov. 6. Among called races, 46 seats changed party (44 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 45 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -555,7 +555,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"src": "NBC News count (+3,069 votes, 95.5% in)",
+"src": "NBC News count (+3,278 votes, 95.8% in)",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Incumbent trailing"
@@ -2638,6 +2638,22 @@ window.FLIPS = {
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/illinois-2026.html",
 "incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "IL",
+"office": "State House",
+"dist": "48",
+"winner": "Amanda Zahorak",
+"wp": "D",
+"loser": "Jennifer Sanalitro (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/illinois-2026.html",
+"incdef": true,
 "note": ""
 },
 {
@@ -8696,7 +8712,7 @@ window.FLIPS = {
 "IL": [
 [
 "House",
-"4"
+"3"
 ],
 [
 "Senate",
@@ -8746,7 +8762,7 @@ window.FLIPS = {
 "ME": [
 [
 "House",
-"4"
+"3"
 ],
 [
 "Senate",
@@ -8832,7 +8848,7 @@ window.FLIPS = {
 "NH": [
 [
 "House",
-"23"
+"22"
 ],
 [
 "Senate",
@@ -8922,7 +8938,7 @@ window.FLIPS = {
 "SC": [
 [
 "House",
-"6"
+"5"
 ],
 [
 "Senate",
@@ -9017,7 +9033,7 @@ window.FLIPS = {
 ],
 [
 "KS",
-"Cindy Holscher (D) led Ty Masterson (R) 50.3% to 49.7% with 98.7% counted (NBC News); not called"
+"Cindy Holscher (D) led Ty Masterson (R) 50.3% to 49.7% with 98.8% counted (NBC News); not called"
 ],
 [
 "MP",

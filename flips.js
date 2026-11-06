@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 6, 2026, 9:14 a.m. MT",
-"house_context": "NBC News had called 407 of 435 House races as of 11:12 a.m. ET, Nov. 6. Among called races, 46 seats changed party (44 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 45 seats as party gains.",
+"asof": "Nov. 6, 2026, 12:24 p.m. MT",
+"house_context": "NBC News had called 412 of 435 House races as of 2:24 p.m. ET, Nov. 6. Among called races, 46 seats changed party (44 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 45 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -555,7 +555,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"src": "NBC News count (+3,069 votes, 97.3% in)",
+"src": "NBC News count (+3,069 votes, 95.5% in)",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Incumbent trailing"
@@ -635,7 +635,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"src": "NBC News count (+1.1 pts, 98.9% in)",
+"src": "NBC News count (+1.1 pts, 99% in)",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Open seat"
@@ -1204,6 +1204,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "AZ",
 "office": "State House",
+"dist": "16",
+"winner": "Julia Gusse",
+"wp": "D",
+"loser": "Teresa Martinez (R), Chris Lopez (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/arizona-2026.html",
+"incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "AZ",
+"office": "State House",
 "dist": "23",
 "winner": "Mariana Sandoval, Emilia Cortez",
 "wp": "D",
@@ -1240,6 +1256,22 @@ window.FLIPS = {
 "winner": "Amelia Gallitano",
 "wp": "D",
 "loser": "Shawnna Bolick (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/arizona-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "AZ",
+"office": "State Senate",
+"dist": "4",
+"winner": "Aaron Lieberman",
+"wp": "D",
+"loser": "Carine Werner (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -1320,6 +1352,22 @@ window.FLIPS = {
 "winner": "Tommy Butler",
 "wp": "D",
 "loser": "Ryan Gonzalez (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/colorado-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "CO",
+"office": "State Senate",
+"dist": "30",
+"winner": "Kevin Leung",
+"wp": "D",
+"loser": "John Carson (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -5236,6 +5284,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NH",
 "office": "State House",
+"dist": "Grafton-1",
+"winner": "Linda Massimilla",
+"wp": "D",
+"loser": "Timothy Egan (D), Andrew Dorsett (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
+"incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "NH",
+"office": "State House",
 "dist": "Grafton-10",
 "winner": "Marc E. Bourassa",
 "wp": "D",
@@ -7571,6 +7635,22 @@ window.FLIPS = {
 {
 "kind": "leg",
 "st": "UT",
+"office": "State House",
+"dist": "43",
+"winner": "Ofa Matagi",
+"wp": "D",
+"loser": "Steve Eliason (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/utah-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "UT",
 "office": "State Senate",
 "dist": "5",
 "winner": "CJ Hernandez",
@@ -8390,23 +8470,6 @@ window.FLIPS = {
 "kind": "leg",
 "st": "UT",
 "office": "State House",
-"dist": "43",
-"winner": "Ofa Matagi",
-"wp": "D",
-"loser": "Steve Eliason (R)",
-"fr": "R",
-"to": "D",
-"status": "leading",
-"margin": 11.8,
-"src": "Utah's official results site (unofficial count)",
-"url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
-"incdef": false,
-"note": ""
-},
-{
-"kind": "leg",
-"st": "UT",
-"office": "State House",
 "dist": "44",
 "winner": "Jess Birtcher",
 "wp": "D",
@@ -8513,11 +8576,11 @@ window.FLIPS = {
 "AZ": [
 [
 "House",
-"6"
+"5"
 ],
 [
 "Senate",
-"5"
+"3"
 ]
 ],
 "AR": [
@@ -8547,7 +8610,7 @@ window.FLIPS = {
 ],
 [
 "Senate",
-"1"
+"0"
 ]
 ],
 "CT": [
@@ -8643,7 +8706,7 @@ window.FLIPS = {
 "IN": [
 [
 "House",
-"2"
+"1"
 ],
 [
 "Senate",
@@ -8683,7 +8746,7 @@ window.FLIPS = {
 "ME": [
 [
 "House",
-"5"
+"4"
 ],
 [
 "Senate",
@@ -8769,7 +8832,7 @@ window.FLIPS = {
 "NH": [
 [
 "House",
-"24"
+"23"
 ],
 [
 "Senate",
@@ -8829,11 +8892,11 @@ window.FLIPS = {
 "OR": [
 [
 "House",
-"10"
+"7"
 ],
 [
 "Senate",
-"4"
+"3"
 ]
 ],
 "PA": [
@@ -8909,7 +8972,7 @@ window.FLIPS = {
 "WA": [
 [
 "House",
-"29"
+"28"
 ],
 [
 "Senate",
@@ -8939,11 +9002,11 @@ window.FLIPS = {
 "UT": [
 [
 "House",
-"16"
+"14"
 ],
 [
 "Senate",
-"4"
+"3"
 ]
 ]
 },

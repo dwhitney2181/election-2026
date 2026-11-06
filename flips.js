@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 5, 2026, 9:22 p.m. MT",
-"house_context": "NBC News had called 406 of 435 House races as of 11:18 p.m. ET, Nov. 5. Among called races, 46 seats changed party (44 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 45 seats as party gains.",
+"asof": "Nov. 6, 2026, 12:44 a.m. MT",
+"house_context": "NBC News had called 406 of 435 House races as of 1:45 a.m. ET, Nov. 6. Among called races, 46 seats changed party (44 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 45 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -1368,6 +1368,22 @@ window.FLIPS = {
 "winner": "Ellen Paul",
 "wp": "D",
 "loser": "Steve Weir (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/connecticut-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "CT",
+"office": "State House",
+"dist": "59",
+"winner": "Rick LeBorious",
+"wp": "D",
+"loser": "Carol Hall (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -7858,6 +7874,38 @@ window.FLIPS = {
 },
 {
 "kind": "leg",
+"st": "WA",
+"office": "State House",
+"dist": "17",
+"winner": "Ben Christly",
+"wp": "D",
+"loser": "Kevin Waters (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/washington-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "WA",
+"office": "State House",
+"dist": "17",
+"winner": "Diana H. Perez",
+"wp": "D",
+"loser": "David Stuebe (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/washington-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
 "st": "WI",
 "office": "Assembly",
 "dist": "21",
@@ -8320,7 +8368,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"margin": 11.1,
+"margin": 10.6,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -8337,7 +8385,7 @@ window.FLIPS = {
 "fr": "F",
 "to": "R",
 "status": "leading",
-"margin": 0.8,
+"margin": 1.1,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -8354,7 +8402,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"margin": 11.1,
+"margin": 10.3,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -8425,7 +8473,7 @@ window.FLIPS = {
 "CT": [
 [
 "House",
-"15"
+"14"
 ],
 [
 "Senate",
@@ -8661,11 +8709,11 @@ window.FLIPS = {
 "NY": [
 [
 "Assembly",
-"13"
+"12"
 ],
 [
 "Senate",
-"6"
+"5"
 ]
 ],
 "ND": [
@@ -8781,11 +8829,11 @@ window.FLIPS = {
 "WA": [
 [
 "House",
-"62"
+"29"
 ],
 [
 "Senate",
-"9"
+"3"
 ]
 ],
 "WV": [

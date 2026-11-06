@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 5, 2026, 6:41 p.m. MT",
-"house_context": "NBC News had called 406 of 435 House races as of 8:38 p.m. ET, Nov. 5. Among called races, 46 seats changed party (44 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 45 seats as party gains.",
+"asof": "Nov. 5, 2026, 9:22 p.m. MT",
+"house_context": "NBC News had called 406 of 435 House races as of 11:18 p.m. ET, Nov. 5. Among called races, 46 seats changed party (44 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 45 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -555,7 +555,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"src": "NBC News count (+3,024 votes, 97.1% in)",
+"src": "NBC News count (+3,024 votes, 97% in)",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Incumbent trailing"
@@ -1262,6 +1262,22 @@ window.FLIPS = {
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/arizona-2026.html",
 "incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "AZ",
+"office": "State Senate",
+"dist": "27",
+"winner": "Kyle Clayton",
+"wp": "D",
+"loser": "Kevin Payne (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/arizona-2026.html",
+"incdef": true,
 "note": ""
 },
 {
@@ -8219,7 +8235,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"margin": 3.7,
+"margin": 1.5,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -8236,7 +8252,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"margin": 9.3,
+"margin": 8.4,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -8253,7 +8269,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"margin": 12.7,
+"margin": 11.8,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -8270,7 +8286,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"margin": 8.2,
+"margin": 7.6,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -8287,7 +8303,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"margin": 4.0,
+"margin": 2.6,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -8338,7 +8354,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"margin": 13.3,
+"margin": 11.1,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -8369,11 +8385,11 @@ window.FLIPS = {
 "AZ": [
 [
 "House",
-"7"
+"6"
 ],
 [
 "Senate",
-"7"
+"5"
 ]
 ],
 "AR": [
@@ -8389,7 +8405,7 @@ window.FLIPS = {
 "CA": [
 [
 "Assembly",
-"25"
+"21"
 ],
 [
 "Senate",
@@ -8615,7 +8631,7 @@ window.FLIPS = {
 "NV": [
 [
 "Assembly",
-"6"
+"4"
 ],
 [
 "Senate",
@@ -8685,7 +8701,7 @@ window.FLIPS = {
 "OR": [
 [
 "House",
-"12"
+"10"
 ],
 [
 "Senate",

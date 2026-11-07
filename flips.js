@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 6, 2026, 6:30 p.m. MT",
-"house_context": "NBC News had called 413 of 435 House races as of 8:29 p.m. ET, Nov. 6. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
+"asof": "Nov. 6, 2026, 9:17 p.m. MT",
+"house_context": "NBC News had called 414 of 435 House races as of 11:11 p.m. ET, Nov. 6. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -1188,6 +1188,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "AZ",
 "office": "State House",
+"dist": "4",
+"winner": "Tammy Caputi, Karen Gresham",
+"wp": "D",
+"loser": "Matt Gress (R), Pamela Carter (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/arizona-2026.html",
+"incdef": true,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "AZ",
+"office": "State House",
 "dist": "13",
 "winner": "Rockee Armstrong, Jacob Weinberg",
 "wp": "D",
@@ -1204,17 +1220,49 @@ window.FLIPS = {
 "kind": "leg",
 "st": "AZ",
 "office": "State House",
-"dist": "16",
-"winner": "Julia Gusse",
-"wp": "D",
-"loser": "Teresa Martinez (R), Chris Lopez (R)",
+"dist": "14",
+"winner": "Mary Rose, Tyler Andrew Farnsworth",
+"wp": "mixed",
+"loser": "Laurin Hendrix (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/arizona-2026.html",
-"incdef": false,
-"note": ""
+"incdef": true,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "AZ",
+"office": "State House",
+"dist": "16",
+"winner": "Julia Gusse, Teresa Martinez",
+"wp": "mixed",
+"loser": "Chris Lopez (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/arizona-2026.html",
+"incdef": true,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "AZ",
+"office": "State House",
+"dist": "17",
+"winner": "Kevin Volk, Hollace Lyon",
+"wp": "D",
+"loser": "John Winchester (R), Rachel Keshel (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/arizona-2026.html",
+"incdef": true,
+"note": "Multi-member district"
 },
 {
 "kind": "leg",
@@ -1247,6 +1295,22 @@ window.FLIPS = {
 "url": "https://www.multistate.us/elections/results/arizona-2026.html",
 "incdef": false,
 "note": ""
+},
+{
+"kind": "leg",
+"st": "AZ",
+"office": "State House",
+"dist": "29",
+"winner": "Christine Scianna, Steve Montenegro",
+"wp": "mixed",
+"loser": "James Taylor (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/arizona-2026.html",
+"incdef": true,
+"note": "Multi-member district"
 },
 {
 "kind": "leg",
@@ -1288,6 +1352,54 @@ window.FLIPS = {
 "winner": "Kristie O'Brien",
 "wp": "D",
 "loser": "Julie Willoughby (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/arizona-2026.html",
+"incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "AZ",
+"office": "State Senate",
+"dist": "14",
+"winner": "Stephanie Walsh",
+"wp": "D",
+"loser": "Mylie Biggs (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/arizona-2026.html",
+"incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "AZ",
+"office": "State Senate",
+"dist": "16",
+"winner": "Elaine Aldrete",
+"wp": "D",
+"loser": "T.J. Shope (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/arizona-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "AZ",
+"office": "State Senate",
+"dist": "17",
+"winner": "Edgar Soto",
+"wp": "D",
+"loser": "Christopher King (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -1943,7 +2055,7 @@ window.FLIPS = {
 "dist": "113",
 "winner": "Gloria Romero Roses",
 "wp": "D",
-"loser": "Bruno Barreiro (R), Paola Vazquez del Mercado (write-in)",
+"loser": "Bruno Barreiro (R), Paola Vázquez del Mercado (write-in)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -8082,6 +8194,22 @@ window.FLIPS = {
 },
 {
 "kind": "leg",
+"st": "WA",
+"office": "State House",
+"dist": "18",
+"winner": "Deken Letinich",
+"wp": "D",
+"loser": "John Ley (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/washington-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
 "st": "WI",
 "office": "Assembly",
 "dist": "21",
@@ -8493,7 +8621,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"margin": 8.4,
+"margin": 6.5,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -8510,24 +8638,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"margin": 7.6,
-"src": "Utah's official results site (unofficial count)",
-"url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
-"incdef": false,
-"note": ""
-},
-{
-"kind": "leg",
-"st": "UT",
-"office": "State House",
-"dist": "48",
-"winner": "Benyde Walker",
-"wp": "D",
-"loser": "Jake Hunsaker (R)",
-"fr": "R",
-"to": "D",
-"status": "leading",
-"margin": 2.6,
+"margin": 6.3,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -8561,7 +8672,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"margin": 10.6,
+"margin": 5.4,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -8578,7 +8689,7 @@ window.FLIPS = {
 "fr": "F",
 "to": "R",
 "status": "leading",
-"margin": 1.1,
+"margin": 1.4,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -8595,7 +8706,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"margin": 10.3,
+"margin": 7.8,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -8626,11 +8737,11 @@ window.FLIPS = {
 "AZ": [
 [
 "House",
-"5"
+"1"
 ],
 [
 "Senate",
-"3"
+"0"
 ]
 ],
 "AR": [
@@ -8646,7 +8757,7 @@ window.FLIPS = {
 "CA": [
 [
 "Assembly",
-"21"
+"20"
 ],
 [
 "Senate",
@@ -8872,7 +8983,7 @@ window.FLIPS = {
 "NV": [
 [
 "Assembly",
-"2"
+"1"
 ],
 [
 "Senate",
@@ -8902,7 +9013,7 @@ window.FLIPS = {
 "NY": [
 [
 "Assembly",
-"12"
+"11"
 ],
 [
 "Senate",
@@ -9022,7 +9133,7 @@ window.FLIPS = {
 "WA": [
 [
 "House",
-"28"
+"25"
 ],
 [
 "Senate",

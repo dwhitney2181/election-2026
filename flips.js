@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 6, 2026, 3:04 p.m. MT",
-"house_context": "NBC News had called 412 of 435 House races as of 5:03 p.m. ET, Nov. 6. Among called races, 46 seats changed party (44 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 45 seats as party gains.",
+"asof": "Nov. 6, 2026, 6:30 p.m. MT",
+"house_context": "NBC News had called 413 of 435 House races as of 8:29 p.m. ET, Nov. 6. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -555,7 +555,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"src": "NBC News count (+3,278 votes, 95.8% in)",
+"src": "NBC News count (+3,172 votes, 96.7% in)",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Incumbent trailing"
@@ -634,8 +634,8 @@ window.FLIPS = {
 "loser": "Jenny Costa Honeycutt (R)",
 "fr": "R",
 "to": "D",
-"status": "leading",
-"src": "NBC News count (+1.1 pts, 99% in)",
+"status": "called",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Open seat"
@@ -8452,6 +8452,23 @@ window.FLIPS = {
 "kind": "leg",
 "st": "UT",
 "office": "State House",
+"dist": "4",
+"winner": "Zane Woolstenhulme",
+"wp": "D",
+"loser": "Tiara Auxier (R)",
+"fr": "R",
+"to": "D",
+"status": "leading",
+"margin": 1.7,
+"src": "Utah's official results site (unofficial count)",
+"url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
+"incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "UT",
+"office": "State House",
 "dist": "20",
 "winner": "Phil Graves",
 "wp": "D",
@@ -8511,6 +8528,23 @@ window.FLIPS = {
 "to": "D",
 "status": "leading",
 "margin": 2.6,
+"src": "Utah's official results site (unofficial count)",
+"url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
+"incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "UT",
+"office": "State House",
+"dist": "59",
+"winner": "Celeste T. Johnson",
+"wp": "D",
+"loser": "Luke Searle (R)",
+"fr": "R",
+"to": "D",
+"status": "leading",
+"margin": 0.2,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -8582,7 +8616,7 @@ window.FLIPS = {
 "AK": [
 [
 "House",
-"26"
+"24"
 ],
 [
 "Senate",
@@ -8616,7 +8650,7 @@ window.FLIPS = {
 ],
 [
 "Senate",
-"8"
+"7"
 ]
 ],
 "CO": [
@@ -8938,7 +8972,7 @@ window.FLIPS = {
 "SC": [
 [
 "House",
-"5"
+"2"
 ],
 [
 "Senate",
@@ -9033,7 +9067,7 @@ window.FLIPS = {
 ],
 [
 "KS",
-"Cindy Holscher (D) led Ty Masterson (R) 50.3% to 49.7% with 98.8% counted (NBC News); not called"
+"Cindy Holscher (D) led Ty Masterson (R) 50.3% to 49.7% with 98.9% counted (NBC News); not called"
 ],
 [
 "MP",

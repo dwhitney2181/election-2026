@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 7, 2026, 3:11 a.m. MT",
-"house_context": "NBC News had called 414 of 435 House races as of 5:11 a.m. ET, Nov. 7. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
+"asof": "Nov. 7, 2026, 9:01 a.m. MT",
+"house_context": "NBC News had called 414 of 435 House races as of 10:51 a.m. ET, Nov. 7. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -5188,6 +5188,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "ND",
 "office": "State House",
+"dist": "42",
+"winner": "Nicole Derenne",
+"wp": "D",
+"loser": "Connie Osowski (R) 45.3%",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/north-dakota-2026.html",
+"incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "ND",
+"office": "State House",
 "dist": "43",
 "winner": "Tyler York, Lukas Maughan",
 "wp": "D",
@@ -7460,6 +7476,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "TX",
 "office": "State House",
+"dist": "93",
+"winner": "Ericka Lomick",
+"wp": "D",
+"loser": "Alan Blaylock (R) 49%",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/texas-2026.html",
+"incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "TX",
+"office": "State House",
 "dist": "94",
 "winner": "Katie O'Brien Duzan",
 "wp": "D",
@@ -8574,6 +8606,22 @@ window.FLIPS = {
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/west-virginia-2026.html",
 "incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "WV",
+"office": "State Senate",
+"dist": "17",
+"winner": "Richie Robb",
+"wp": "D",
+"loser": "Anne B. Charnock (R) 46.81%",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/west-virginia-2026.html",
+"incdef": false,
 "note": ""
 },
 {

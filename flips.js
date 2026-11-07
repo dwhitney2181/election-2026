@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 7, 2026, 12:14 p.m. MT",
-"house_context": "NBC News had called 414 of 435 House races as of 2:13 p.m. ET, Nov. 7. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
+"asof": "Nov. 7, 2026, 3:00 p.m. MT",
+"house_context": "NBC News had called 414 of 435 House races as of 4:59 p.m. ET, Nov. 7. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -1470,6 +1470,22 @@ window.FLIPS = {
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/colorado-2026.html",
 "incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "CO",
+"office": "State House",
+"dist": "51",
+"winner": "Jacki Marsh",
+"wp": "D",
+"loser": "Amy Parks (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/colorado-2026.html",
+"incdef": false,
 "note": ""
 },
 {
@@ -8799,7 +8815,7 @@ window.FLIPS = {
 "CO": [
 [
 "House",
-"4"
+"3"
 ],
 [
 "Senate",

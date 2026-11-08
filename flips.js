@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 7, 2026, 3:00 p.m. MT",
-"house_context": "NBC News had called 414 of 435 House races as of 4:59 p.m. ET, Nov. 7. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
+"asof": "Nov. 7, 2026, 6:39 p.m. MT",
+"house_context": "NBC News had called 414 of 435 House races as of 8:15 p.m. ET, Nov. 7. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -555,7 +555,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"src": "NBC News count (+3,172 votes, 97.4% in)",
+"src": "NBC News count (+3,237 votes, 97.5% in)",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Incumbent trailing"
@@ -1096,6 +1096,22 @@ window.FLIPS = {
 "winner": "Jamie Atkinson",
 "wp": "D",
 "loser": "Steve Unger (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/arkansas-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "AR",
+"office": "State House",
+"dist": "32",
+"winner": "Erika Askeland",
+"wp": "D",
+"loser": "Jack Ladyman (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -3725,6 +3741,22 @@ window.FLIPS = {
 "status": "called",
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/massachusetts-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "MD",
+"office": "House of Delegates",
+"dist": "33B",
+"winner": "Chuck Cook",
+"wp": "D",
+"loser": "Stuart Schmidt (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/maryland-2026.html",
 "incdef": true,
 "note": ""
 },
@@ -8795,7 +8827,7 @@ window.FLIPS = {
 "AR": [
 [
 "House",
-"2"
+"1"
 ],
 [
 "Senate",
@@ -8805,7 +8837,7 @@ window.FLIPS = {
 "CA": [
 [
 "Assembly",
-"20"
+"18"
 ],
 [
 "Senate",
@@ -8965,7 +8997,7 @@ window.FLIPS = {
 "MD": [
 [
 "House of Delegates",
-"7"
+"4"
 ],
 [
 "Senate",

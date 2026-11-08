@@ -1,5 +1,5 @@
 window.RES = {
-"meta": {"counts_asof": "12:24 a.m. MT, Nov. 8, 2026", "counts_source": "Utah Lieutenant Governor's Office results site", "counts_url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026", "counts_note": "", "official": false, "calls_checked": "9:16 p.m. MT, Nov. 6, 2026", "calls_source": "MultiState Elections' Utah results page", "calls_url": "https://www.multistate.us/elections/results/utah-2026", "updated_utc": "2026-11-08T07:31:57+00:00"},
+"meta": {"counts_asof": "12:24 a.m. MT, Nov. 8, 2026", "counts_source": "Utah Lieutenant Governor's Office results site", "counts_url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026", "counts_note": "", "official": false, "calls_checked": "2:59 p.m. MT, Nov. 8, 2026", "calls_source": "MultiState Elections' Utah results page", "calls_url": "https://www.multistate.us/elections/results/utah-2026", "updated_utc": "2026-11-08T22:00:59+00:00"},
 "house": {
   "1": {"c": [{"name": "Thomas Peterson", "party": "R", "votes": 10062, "pct": 69.67}, {"name": "Chris Reid", "party": "D", "votes": 2992, "pct": 20.72}, {"name": "Jason O'Dell", "party": "C", "votes": 1389, "pct": 9.62}], "prior": "R", "called": true},
   "2": {"c": [{"name": "Mike Petersen", "party": "R", "votes": 8667, "pct": 62.42}, {"name": "Barbara J. Haggerty", "party": "D", "votes": 5219, "pct": 37.58}], "prior": "R", "called": true},
@@ -46,10 +46,10 @@ window.RES = {
   "43": {"c": [{"name": "Ofa Matagi", "party": "D", "votes": 8216, "pct": 54.23}, {"name": "Steve Eliason", "party": "R", "votes": 6935, "pct": 45.77}], "prior": "R", "called": true},
   "44": {"c": [{"name": "Jess Birtcher", "party": "D", "votes": 8447, "pct": 52.62}, {"name": "Jordan Teuscher", "party": "R", "votes": 7607, "pct": 47.38}], "prior": "R", "called": false},
   "45": {"c": [{"name": "Tracy Miller", "party": "R", "votes": 8234, "pct": 54.22}, {"name": "Rod Moser", "party": "D", "votes": 6951, "pct": 45.78}], "prior": "R", "called": false},
-  "46": {"c": [{"name": "Cal Roberts", "party": "R", "votes": 8108, "pct": 56.27}, {"name": "Braxten Rutherford", "party": "D", "votes": 6302, "pct": 43.73}], "prior": "R", "called": false},
+  "46": {"c": [{"name": "Cal Roberts", "party": "R", "votes": 8108, "pct": 56.27}, {"name": "Braxten Rutherford", "party": "D", "votes": 6302, "pct": 43.73}], "prior": "R", "called": true},
   "47": {"c": [{"name": "Mark A. Strong", "party": "R", "votes": 9843, "pct": 100.0}], "prior": "R", "called": true},
   "48": {"c": [{"name": "Jake Hunsaker", "party": "R", "votes": 7373, "pct": 51.03}, {"name": "Benyde Walker", "party": "D", "votes": 7075, "pct": 48.97}], "prior": "R", "called": false},
-  "49": {"c": [{"name": "Candice B. Pierucci", "party": "R", "votes": 7598, "pct": 55.97}, {"name": "Lillian Bowles", "party": "D", "votes": 5976, "pct": 44.03}], "prior": "R", "called": false},
+  "49": {"c": [{"name": "Candice B. Pierucci", "party": "R", "votes": 7598, "pct": 55.97}, {"name": "Lillian Bowles", "party": "D", "votes": 5976, "pct": 44.03}], "prior": "R", "called": true},
   "50": {"c": [{"name": "Stephanie Gricius", "party": "R", "votes": 7797, "pct": 60.34}, {"name": "Kristin Meyer", "party": "D", "votes": 5124, "pct": 39.66}], "prior": "R", "called": true},
   "51": {"c": [{"name": "Leah Hansen", "party": "R", "votes": 8418, "pct": 56.72}, {"name": "Brett Nielsen", "party": "D", "votes": 6424, "pct": 43.28}], "prior": "R", "called": false},
   "52": {"c": [{"name": "Cory Maloy", "party": "R", "votes": 7211, "pct": 55.34}, {"name": "Nicole Melling", "party": "D", "votes": 5669, "pct": 43.51}, {"name": "Write-In", "party": "W", "votes": 150, "pct": 1.15}], "prior": "R", "called": false},

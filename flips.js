@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 7, 2026, 6:39 p.m. MT",
-"house_context": "NBC News had called 414 of 435 House races as of 8:15 p.m. ET, Nov. 7. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
+"asof": "Nov. 7, 2026, 9:20 p.m. MT",
+"house_context": "NBC News had called 414 of 435 House races as of 10:26 p.m. ET, Nov. 7. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -1437,6 +1437,38 @@ window.FLIPS = {
 "status": "called",
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/arizona-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "CA",
+"office": "Assembly",
+"dist": "36",
+"winner": "Ida S. Obeso-Martinez",
+"wp": "D",
+"loser": "Jeff Gonzalez (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/california-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "CA",
+"office": "Assembly",
+"dist": "58",
+"winner": "Clarissa Cervantes",
+"wp": "D",
+"loser": "Leticia Castillo (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/california-2026.html",
 "incdef": true,
 "note": ""
 },
@@ -5284,12 +5316,28 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NE",
 "office": "Legislature",
+"dist": "8",
+"winner": "Erin Feichtinger",
+"wp": "NP",
+"loser": "Josh Livingston (Nonpartisan)",
+"fr": "I",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/nebraska-2026.html",
+"incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "NE",
+"office": "Legislature",
 "dist": "12",
 "winner": "Christy Knorr",
 "wp": "NP",
 "loser": "Merv Riepe (Nonpartisan)",
 "fr": "R",
-"to": "NP",
+"to": "D",
 "status": "called",
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/nebraska-2026.html",
@@ -5305,7 +5353,7 @@ window.FLIPS = {
 "wp": "NP",
 "loser": "Taylor Royal (Nonpartisan)",
 "fr": "R",
-"to": "NP",
+"to": "D",
 "status": "called",
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/nebraska-2026.html",
@@ -8837,11 +8885,11 @@ window.FLIPS = {
 "CA": [
 [
 "Assembly",
-"18"
+"15"
 ],
 [
 "Senate",
-"7"
+"6"
 ]
 ],
 "CO": [

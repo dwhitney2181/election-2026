@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 9, 2026, 9:29 a.m. MT",
-"house_context": "NBC News had called 414 of 435 House races as of 11:29 a.m. ET, Nov. 9. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
+"asof": "Nov. 9, 2026, 12:26 p.m. MT",
+"house_context": "NBC News had called 415 of 435 House races as of 2:25 p.m. ET, Nov. 9. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -555,7 +555,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"src": "NBC News count (+3,237 votes, 97.5% in)",
+"src": "NBC News count (+3,237 votes, 97.9% in)",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Incumbent trailing"
@@ -1668,10 +1668,42 @@ window.FLIPS = {
 "kind": "leg",
 "st": "CT",
 "office": "State House",
+"dist": "90",
+"winner": "David J. Fritz",
+"wp": "D",
+"loser": "Craig Fishbein (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/connecticut-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "CT",
+"office": "State House",
 "dist": "106",
 "winner": "Michelle Embree Ku",
 "wp": "D",
 "loser": "Mitch Bolinsky (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/connecticut-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "CT",
+"office": "State House",
+"dist": "107",
+"winner": "Julie Kerton",
+"wp": "D",
+"loser": "Marty Foncello (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -1748,6 +1780,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "CT",
 "office": "State Senate",
+"dist": "21",
+"winner": "Carolann Reid",
+"wp": "D",
+"loser": "Jason Perillo (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/connecticut-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "CT",
+"office": "State Senate",
 "dist": "28",
 "winner": "Rob Blanchard",
 "wp": "D",
@@ -1768,6 +1816,22 @@ window.FLIPS = {
 "winner": "Aaron Zimmer",
 "wp": "D",
 "loser": "Stephen Harding (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/connecticut-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "CT",
+"office": "State Senate",
+"dist": "34",
+"winner": "Brandi Mandato",
+"wp": "D",
+"loser": "Paul Cicarella (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -3810,6 +3874,22 @@ window.FLIPS = {
 },
 {
 "kind": "leg",
+"st": "MD",
+"office": "State Senate",
+"dist": "4",
+"winner": "Lara Westdorp",
+"wp": "D",
+"loser": "William Folden (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/maryland-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
 "st": "ME",
 "office": "State House",
 "dist": "45",
@@ -5316,6 +5396,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NE",
 "office": "Legislature",
+"dist": "4",
+"winner": "Cindy Maxwell-Ostdiek",
+"wp": "NP",
+"loser": "Brad von Gillern (Nonpartisan)",
+"fr": "R",
+"to": "I",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/nebraska-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "NE",
+"office": "Legislature",
 "dist": "8",
 "winner": "Erin Feichtinger",
 "wp": "NP",
@@ -6436,6 +6532,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NY",
 "office": "Assembly",
+"dist": "3",
+"winner": "Joshua Slaughter",
+"wp": "D",
+"loser": "Joe DeStefano (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-york-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "NY",
+"office": "Assembly",
 "dist": "12",
 "winner": "Craig Herskowitz",
 "wp": "D",
@@ -6484,6 +6596,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NY",
 "office": "Assembly",
+"dist": "107",
+"winner": "Chloe Pierce",
+"wp": "D",
+"loser": "Scott Bendett (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-york-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "NY",
+"office": "Assembly",
 "dist": "119",
 "winner": "Michael Gentile",
 "wp": "R",
@@ -6494,6 +6622,22 @@ window.FLIPS = {
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/new-york-2026.html",
 "incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "NY",
+"office": "State Senate",
+"dist": "1",
+"winner": "E. Murray",
+"wp": "D",
+"loser": "Tony Palumbo (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-york-2026.html",
+"incdef": true,
 "note": ""
 },
 {
@@ -7540,6 +7684,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "TX",
 "office": "State House",
+"dist": "55",
+"winner": "Amelia Rabroker",
+"wp": "D",
+"loser": "Hillary Hickland (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/texas-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "TX",
+"office": "State House",
 "dist": "63",
 "winner": "H. Denise Wooten",
 "wp": "D",
@@ -7934,6 +8094,22 @@ window.FLIPS = {
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/utah-2026.html",
 "incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "UT",
+"office": "State Senate",
+"dist": "19",
+"winner": "Shana Anderson",
+"wp": "D",
+"loser": "Kirk Cullimore (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/utah-2026.html",
+"incdef": true,
 "note": ""
 },
 {
@@ -8934,23 +9110,6 @@ window.FLIPS = {
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
 "note": ""
-},
-{
-"kind": "leg",
-"st": "UT",
-"office": "State Senate",
-"dist": "19",
-"winner": "Shana Anderson",
-"wp": "D",
-"loser": "Kirk Cullimore (R)",
-"fr": "R",
-"to": "D",
-"status": "leading",
-"margin": 7.7,
-"src": "Utah's official results site (unofficial count)",
-"url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
-"incdef": false,
-"note": ""
 }
 ],
 "uncalled": {
@@ -9017,11 +9176,11 @@ window.FLIPS = {
 "CT": [
 [
 "House",
-"11"
+"5"
 ],
 [
 "Senate",
-"2"
+"0"
 ]
 ],
 "DE": [
@@ -9161,7 +9320,7 @@ window.FLIPS = {
 ],
 [
 "Senate",
-"1"
+"0"
 ]
 ],
 "MA": [
@@ -9217,7 +9376,7 @@ window.FLIPS = {
 "NE": [
 [
 "Legislature",
-"1"
+"0"
 ]
 ],
 "NV": [
@@ -9237,7 +9396,7 @@ window.FLIPS = {
 ],
 [
 "Senate",
-"2"
+"0"
 ]
 ],
 "NM": [
@@ -9253,11 +9412,11 @@ window.FLIPS = {
 "NY": [
 [
 "Assembly",
-"10"
+"7"
 ],
 [
 "Senate",
-"4"
+"3"
 ]
 ],
 "ND": [
@@ -9297,7 +9456,7 @@ window.FLIPS = {
 ],
 [
 "Senate",
-"3"
+"2"
 ]
 ],
 "PA": [
@@ -9353,7 +9512,7 @@ window.FLIPS = {
 "TX": [
 [
 "House",
-"6"
+"5"
 ],
 [
 "Senate",
@@ -9363,7 +9522,7 @@ window.FLIPS = {
 "VT": [
 [
 "House",
-"4"
+"3"
 ],
 [
 "Senate",
@@ -9403,11 +9562,11 @@ window.FLIPS = {
 "UT": [
 [
 "House",
-"12"
+"8"
 ],
 [
 "Senate",
-"3"
+"1"
 ]
 ]
 },

@@ -1,6 +1,6 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 8, 2026, 6:41 p.m. MT",
+"asof": "Nov. 8, 2026, 9:29 p.m. MT",
 "house_context": "NBC News had called 414 of 435 House races as of 8:04 p.m. ET, Nov. 8. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
 "house_context_urls": [
 [
@@ -8276,6 +8276,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "WA",
 "office": "State House",
+"dist": "14",
+"winner": "Ezequiel Morfin",
+"wp": "D",
+"loser": "Deb Manjarrez (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/washington-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "WA",
+"office": "State House",
 "dist": "17",
 "winner": "Ben Christly",
 "wp": "D",
@@ -8715,7 +8731,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"margin": 2.7,
+"margin": 3.0,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -8783,7 +8799,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"margin": 1.5,
+"margin": 1.8,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -8949,7 +8965,7 @@ window.FLIPS = {
 ],
 [
 "Senate",
-"2"
+"0"
 ]
 ],
 "GA": [
@@ -9261,7 +9277,7 @@ window.FLIPS = {
 "WA": [
 [
 "House",
-"24"
+"23"
 ],
 [
 "Senate",

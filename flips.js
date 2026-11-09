@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 9, 2026, 12:26 p.m. MT",
-"house_context": "NBC News had called 415 of 435 House races as of 2:25 p.m. ET, Nov. 9. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
+"asof": "Nov. 9, 2026, 3:12 p.m. MT",
+"house_context": "NBC News had called 416 of 435 House races as of 5:11 p.m. ET, Nov. 9. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -6962,6 +6962,22 @@ window.FLIPS = {
 },
 {
 "kind": "leg",
+"st": "OR",
+"office": "State House",
+"dist": "52",
+"winner": "Henry Sanders",
+"wp": "D",
+"loser": "Scott Hege (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/oregon-2026.html",
+"incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
 "st": "PA",
 "office": "State Senate",
 "dist": "6",
@@ -8020,6 +8036,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "UT",
 "office": "State House",
+"dist": "36",
+"winner": "Blake Townsend",
+"wp": "D",
+"loser": "Jim Dunnigan (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/utah-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "UT",
+"office": "State House",
 "dist": "38",
 "winner": "Sergio Sotelo",
 "wp": "I",
@@ -8072,6 +8104,22 @@ window.FLIPS = {
 "winner": "Ofa Matagi",
 "wp": "D",
 "loser": "Steve Eliason (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/utah-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "UT",
+"office": "State House",
+"dist": "62",
+"winner": "David Chappell",
+"wp": "D",
+"loser": "Norm Thurston (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -8983,7 +9031,7 @@ window.FLIPS = {
 "dist": "17",
 "winner": "Richie Robb",
 "wp": "D",
-"loser": "Anne B. Charnock (R) 46.81%",
+"loser": "Anne B. Charnock (R) 46.76%",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -9030,23 +9078,6 @@ window.FLIPS = {
 "kind": "leg",
 "st": "UT",
 "office": "State House",
-"dist": "36",
-"winner": "Blake Townsend",
-"wp": "D",
-"loser": "Jim Dunnigan (R)",
-"fr": "R",
-"to": "D",
-"status": "leading",
-"margin": 6.6,
-"src": "Utah's official results site (unofficial count)",
-"url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
-"incdef": false,
-"note": ""
-},
-{
-"kind": "leg",
-"st": "UT",
-"office": "State House",
 "dist": "44",
 "winner": "Jess Birtcher",
 "wp": "D",
@@ -9072,23 +9103,6 @@ window.FLIPS = {
 "to": "D",
 "status": "leading",
 "margin": 1.8,
-"src": "Utah's official results site (unofficial count)",
-"url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
-"incdef": false,
-"note": ""
-},
-{
-"kind": "leg",
-"st": "UT",
-"office": "State House",
-"dist": "62",
-"winner": "David Chappell",
-"wp": "D",
-"loser": "Norm Thurston (R)",
-"fr": "R",
-"to": "D",
-"status": "leading",
-"margin": 5.4,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -9356,11 +9370,11 @@ window.FLIPS = {
 "MO": [
 [
 "House",
-"2"
+"1"
 ],
 [
 "Senate",
-"1"
+"0"
 ]
 ],
 "MT": [
@@ -9412,7 +9426,7 @@ window.FLIPS = {
 "NY": [
 [
 "Assembly",
-"7"
+"6"
 ],
 [
 "Senate",
@@ -9432,11 +9446,11 @@ window.FLIPS = {
 "OH": [
 [
 "House",
-"5"
+"4"
 ],
 [
 "Senate",
-"1"
+"0"
 ]
 ],
 "OK": [
@@ -9452,11 +9466,11 @@ window.FLIPS = {
 "OR": [
 [
 "House",
-"7"
+"6"
 ],
 [
 "Senate",
-"2"
+"1"
 ]
 ],
 "PA": [
@@ -9562,7 +9576,7 @@ window.FLIPS = {
 "UT": [
 [
 "House",
-"8"
+"6"
 ],
 [
 "Senate",

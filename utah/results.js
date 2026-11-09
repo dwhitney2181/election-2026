@@ -1,5 +1,5 @@
 window.RES = {
-"meta": {"counts_asof": "11:56 a.m. MT, Nov. 9, 2026", "counts_source": "Utah Lieutenant Governor's Office results site", "counts_url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026", "counts_note": "", "official": false, "calls_checked": "12:24 p.m. MT, Nov. 9, 2026", "calls_source": "MultiState Elections' Utah results page", "calls_url": "https://www.multistate.us/elections/results/utah-2026", "updated_utc": "2026-11-09T19:26:11+00:00"},
+"meta": {"counts_asof": "11:56 a.m. MT, Nov. 9, 2026", "counts_source": "Utah Lieutenant Governor's Office results site", "counts_url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026", "counts_note": "", "official": false, "calls_checked": "3:10 p.m. MT, Nov. 9, 2026", "calls_source": "MultiState Elections' Utah results page", "calls_url": "https://www.multistate.us/elections/results/utah-2026", "updated_utc": "2026-11-09T22:12:05+00:00"},
 "house": {
   "1": {"c": [{"name": "Thomas Peterson", "party": "R", "votes": 10062, "pct": 69.67}, {"name": "Chris Reid", "party": "D", "votes": 2992, "pct": 20.72}, {"name": "Jason O'Dell", "party": "C", "votes": 1389, "pct": 9.62}], "prior": "R", "called": true},
   "2": {"c": [{"name": "Mike Petersen", "party": "R", "votes": 8667, "pct": 62.42}, {"name": "Barbara J. Haggerty", "party": "D", "votes": 5219, "pct": 37.58}], "prior": "R", "called": true},
@@ -36,7 +36,7 @@ window.RES = {
   "33": {"c": [{"name": "Doug Owens", "party": "D", "votes": 15311, "pct": 75.68}, {"name": "Anna Reeves", "party": "R", "votes": 4920, "pct": 24.32}], "prior": "D", "called": true},
   "34": {"c": [{"name": "Julie Jackson", "party": "D", "votes": 12412, "pct": 100.0}], "prior": "D", "called": true},
   "35": {"c": [{"name": "Rosalba Dominguez", "party": "D", "votes": 8958, "pct": 65.99}, {"name": "Monique I. Ketcham", "party": "R", "votes": 4617, "pct": 34.01}], "prior": "D", "called": true},
-  "36": {"c": [{"name": "Blake Townsend", "party": "D", "votes": 7502, "pct": 53.3}, {"name": "Jim Dunnigan", "party": "R", "votes": 6574, "pct": 46.7}], "prior": "R", "called": false},
+  "36": {"c": [{"name": "Blake Townsend", "party": "D", "votes": 7502, "pct": 53.3}, {"name": "Jim Dunnigan", "party": "R", "votes": 6574, "pct": 46.7}], "prior": "R", "called": true},
   "37": {"c": [{"name": "Ashlee Matthews", "party": "D", "votes": 5929, "pct": 65.24}, {"name": "Casey Saxton", "party": "R", "votes": 3159, "pct": 34.76}], "prior": "D", "called": true},
   "38": {"c": [{"name": "Sergio Sotelo", "party": "U", "votes": 6045, "pct": 55.47}, {"name": "Chris Mcconnehey", "party": "R", "votes": 4852, "pct": 44.53}], "prior": "R", "called": true},
   "39": {"c": [{"name": "Drew Howells", "party": "D", "votes": 7021, "pct": 58.11}, {"name": "Ken Ivory", "party": "R", "votes": 5062, "pct": 41.89}], "prior": "R", "called": true},
@@ -62,7 +62,7 @@ window.RES = {
   "59": {"c": [{"name": "Celeste T. Johnson", "party": "D", "votes": 9170, "pct": 50.89}, {"name": "Luke Searle", "party": "R", "votes": 8848, "pct": 49.11}], "prior": "R", "called": false},
   "60": {"c": [{"name": "Grant Pace", "party": "R", "votes": 2978, "pct": 100.0}], "prior": "R", "called": true},
   "61": {"c": [{"name": "Lisa Shepherd", "party": "R", "votes": 4773, "pct": 49.5}, {"name": "Alan Jimenez", "party": "D", "votes": 4485, "pct": 46.51}, {"name": "Jennifer K Doud", "party": "C", "votes": 385, "pct": 3.99}], "prior": "R", "called": false},
-  "62": {"c": [{"name": "David Chappell", "party": "D", "votes": 5010, "pct": 52.71}, {"name": "Norm Thurston", "party": "R", "votes": 4494, "pct": 47.29}], "prior": "R", "called": false},
+  "62": {"c": [{"name": "David Chappell", "party": "D", "votes": 5010, "pct": 52.71}, {"name": "Norm Thurston", "party": "R", "votes": 4494, "pct": 47.29}], "prior": "R", "called": true},
   "63": {"c": [{"name": "Stephen L. Whyte", "party": "R", "votes": 10312, "pct": 66.74}, {"name": "Mark Youngquist", "party": "D", "votes": 3734, "pct": 24.17}, {"name": "Julie Smith", "party": "F", "votes": 1406, "pct": 9.1}], "prior": "R", "called": true},
   "64": {"c": [{"name": "Jackie Larson", "party": "R", "votes": 8313, "pct": 63.74}, {"name": "Alan Wessman", "party": "U", "votes": 4729, "pct": 36.26}], "prior": "R", "called": true},
   "65": {"c": [{"name": "Doug Welton", "party": "R", "votes": 10595, "pct": 100.0}], "prior": "R", "called": true},

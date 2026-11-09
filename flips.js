@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 9, 2026, 6:42 a.m. MT",
-"house_context": "NBC News had called 414 of 435 House races as of 8:20 a.m. ET, Nov. 9. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
+"asof": "Nov. 9, 2026, 9:29 a.m. MT",
+"house_context": "NBC News had called 414 of 435 House races as of 11:29 a.m. ET, Nov. 9. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -1668,10 +1668,10 @@ window.FLIPS = {
 "kind": "leg",
 "st": "CT",
 "office": "State House",
-"dist": "90",
-"winner": "David J. Fritz",
+"dist": "106",
+"winner": "Michelle Embree Ku",
 "wp": "D",
-"loser": "Craig Fishbein (R)",
+"loser": "Mitch Bolinsky (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -1684,16 +1684,16 @@ window.FLIPS = {
 "kind": "leg",
 "st": "CT",
 "office": "State House",
-"dist": "106",
-"winner": "Michelle Embree Ku",
+"dist": "113",
+"winner": "Bryan Lizotte",
 "wp": "D",
-"loser": "Mitch Bolinsky (R)",
+"loser": "Joe Lauretti (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/connecticut-2026.html",
-"incdef": true,
+"incdef": false,
 "note": ""
 },
 {
@@ -6436,6 +6436,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NY",
 "office": "Assembly",
+"dist": "12",
+"winner": "Craig Herskowitz",
+"wp": "D",
+"loser": "David Weber (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-york-2026.html",
+"incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "NY",
+"office": "Assembly",
 "dist": "45",
 "winner": "Joey Cohen-Saban",
 "wp": "D",
@@ -6478,6 +6494,22 @@ window.FLIPS = {
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/new-york-2026.html",
 "incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "NY",
+"office": "State Senate",
+"dist": "17",
+"winner": "Larry He",
+"wp": "D",
+"loser": "Steve Chan (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-york-2026.html",
+"incdef": true,
 "note": ""
 },
 {
@@ -7940,6 +7972,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "VT",
 "office": "State House",
+"dist": "Bennington-5",
+"winner": "Michael Nigro, Thomas \"Tom\" Blakely",
+"wp": "D",
+"loser": "Mary Morrissey (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/vermont-2026.html",
+"incdef": true,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "VT",
+"office": "State House",
 "dist": "Bennington-Rutland",
 "winner": "Mike Rice",
 "wp": "D",
@@ -8341,6 +8389,22 @@ window.FLIPS = {
 "st": "WA",
 "office": "State House",
 "dist": "18",
+"winner": "Randi L. Knott",
+"wp": "D",
+"loser": "Stephanie McClintock (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/washington-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "WA",
+"office": "State House",
+"dist": "18",
 "winner": "Deken Letinich",
 "wp": "D",
 "loser": "John Ley (R)",
@@ -8350,6 +8414,22 @@ window.FLIPS = {
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/washington-2026.html",
 "incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "WA",
+"office": "State House",
+"dist": "26",
+"winner": "Renee Hernandez Greenfield",
+"wp": "D",
+"loser": "Katy Cornell (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/washington-2026.html",
+"incdef": false,
 "note": ""
 },
 {
@@ -8897,7 +8977,7 @@ window.FLIPS = {
 "AZ": [
 [
 "House",
-"1"
+"0"
 ],
 [
 "Senate",
@@ -8937,7 +9017,7 @@ window.FLIPS = {
 "CT": [
 [
 "House",
-"12"
+"11"
 ],
 [
 "Senate",
@@ -9067,7 +9147,7 @@ window.FLIPS = {
 "ME": [
 [
 "House",
-"3"
+"2"
 ],
 [
 "Senate",
@@ -9173,11 +9253,11 @@ window.FLIPS = {
 "NY": [
 [
 "Assembly",
-"11"
+"10"
 ],
 [
 "Senate",
-"5"
+"4"
 ]
 ],
 "ND": [
@@ -9283,7 +9363,7 @@ window.FLIPS = {
 "VT": [
 [
 "House",
-"5"
+"4"
 ],
 [
 "Senate",
@@ -9293,11 +9373,11 @@ window.FLIPS = {
 "WA": [
 [
 "House",
-"19"
+"16"
 ],
 [
 "Senate",
-"3"
+"2"
 ]
 ],
 "WV": [

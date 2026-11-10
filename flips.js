@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 10, 2026, 12:41 a.m. MT",
-"house_context": "NBC News had called 418 of 435 House races as of 12:39 a.m. ET, Nov. 10. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
+"asof": "Nov. 10, 2026, 9:19 a.m. MT",
+"house_context": "NBC News had called 418 of 435 House races as of 11:18 a.m. ET, Nov. 10. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -27,7 +27,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"src": "NBC News count (49.6% to 28.9%, 75.7% counted)",
+"src": "NBC News count (49.6% to 28.9%, 75.6% counted)",
 "url": "https://www.nbcnews.com/politics/2026-elections/governor-results",
 "incdef": false,
 "note": "Open seat; Alaska uses ranked-choice voting"
@@ -1301,16 +1301,16 @@ window.FLIPS = {
 "st": "AZ",
 "office": "State House",
 "dist": "27",
-"winner": "Deborah Howard, Lisa Fink",
-"wp": "mixed",
-"loser": "Tony Rivero (R)",
+"winner": "Deborah Howard",
+"wp": "D",
+"loser": "Lisa Fink (R), Tony Rivero (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/arizona-2026.html",
-"incdef": true,
-"note": "Multi-member district"
+"incdef": false,
+"note": ""
 },
 {
 "kind": "leg",
@@ -7956,6 +7956,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "UT",
 "office": "State House",
+"dist": "4",
+"winner": "Zane Woolstenhulme",
+"wp": "D",
+"loser": "Tiara Auxier (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/utah-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "UT",
+"office": "State House",
 "dist": "8",
 "winner": "Kim James",
 "wp": "D",
@@ -9044,23 +9060,6 @@ window.FLIPS = {
 "kind": "leg",
 "st": "UT",
 "office": "State House",
-"dist": "4",
-"winner": "Zane Woolstenhulme",
-"wp": "D",
-"loser": "Tiara Auxier (R)",
-"fr": "R",
-"to": "D",
-"status": "leading",
-"margin": 3.0,
-"src": "Utah's official results site (unofficial count)",
-"url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
-"incdef": false,
-"note": ""
-},
-{
-"kind": "leg",
-"st": "UT",
-"office": "State House",
 "dist": "20",
 "winner": "Phil Graves",
 "wp": "D",
@@ -9170,7 +9169,7 @@ window.FLIPS = {
 "CA": [
 [
 "Assembly",
-"15"
+"14"
 ],
 [
 "Senate",
@@ -9466,7 +9465,7 @@ window.FLIPS = {
 "OR": [
 [
 "House",
-"6"
+"4"
 ],
 [
 "Senate",
@@ -9546,11 +9545,11 @@ window.FLIPS = {
 "WA": [
 [
 "House",
-"12"
+"7"
 ],
 [
 "Senate",
-"2"
+"1"
 ]
 ],
 "WV": [
@@ -9576,7 +9575,7 @@ window.FLIPS = {
 "UT": [
 [
 "House",
-"6"
+"5"
 ],
 [
 "Senate",
@@ -9587,7 +9586,7 @@ window.FLIPS = {
 "pending_gov": [
 [
 "AK",
-"Jonathan Kreiss-Tomkins (D) led Bernadette Wilson (R) 49.6% to 28.9% with 75.7% counted (NBC News); not called"
+"Jonathan Kreiss-Tomkins (D) led Bernadette Wilson (R) 49.6% to 28.9% with 75.6% counted (NBC News); not called"
 ],
 [
 "KS",

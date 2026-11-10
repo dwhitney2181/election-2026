@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 10, 2026, 9:19 a.m. MT",
-"house_context": "NBC News had called 418 of 435 House races as of 11:18 a.m. ET, Nov. 10. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
+"asof": "Nov. 10, 2026, 12:25 p.m. MT",
+"house_context": "NBC News had called 420 of 435 House races as of 2:25 p.m. ET, Nov. 10. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -555,7 +555,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"src": "NBC News count (+3,352 votes, 98% in)",
+"src": "NBC News count (+3,353 votes, 98% in)",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Incumbent trailing"
@@ -1460,6 +1460,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "CA",
 "office": "Assembly",
+"dist": "47",
+"winner": "Leila Namvar",
+"wp": "D",
+"loser": "Greg Wallis (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/california-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "CA",
+"office": "Assembly",
 "dist": "58",
 "winner": "Clarissa Cervantes",
 "wp": "D",
@@ -1470,6 +1486,22 @@ window.FLIPS = {
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/california-2026.html",
 "incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "CA",
+"office": "State Senate",
+"dist": "40",
+"winner": "Mara Elliott",
+"wp": "D",
+"loser": "Kristie Bruce-Lane (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/california-2026.html",
+"incdef": false,
 "note": ""
 },
 {
@@ -6644,6 +6676,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NY",
 "office": "State Senate",
+"dist": "9",
+"winner": "Lisa Vider",
+"wp": "D",
+"loser": "Patricia Canzoneri-Fitzpatrick (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-york-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "NY",
+"office": "State Senate",
 "dist": "17",
 "winner": "Larry He",
 "wp": "D",
@@ -6964,10 +7012,42 @@ window.FLIPS = {
 "kind": "leg",
 "st": "OR",
 "office": "State House",
+"dist": "21",
+"winner": "Michael Welsh",
+"wp": "D",
+"loser": "Kevin Mannix (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/oregon-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "OR",
+"office": "State House",
 "dist": "52",
 "winner": "Henry Sanders",
 "wp": "D",
 "loser": "Scott Hege (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/oregon-2026.html",
+"incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "OR",
+"office": "State Senate",
+"dist": "11",
+"winner": "Virginia Stapleton",
+"wp": "D",
+"loser": "Tracy Cramer (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -8132,6 +8212,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "UT",
 "office": "State House",
+"dist": "44",
+"winner": "Jess Birtcher",
+"wp": "D",
+"loser": "Jordan Teuscher (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/utah-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "UT",
+"office": "State House",
 "dist": "62",
 "winner": "David Chappell",
 "wp": "D",
@@ -8660,6 +8756,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "WA",
 "office": "State House",
+"dist": "25",
+"winner": "David Berg",
+"wp": "D",
+"loser": "Michael Keaton (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/washington-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "WA",
+"office": "State House",
 "dist": "26",
 "winner": "Renee Hernandez Greenfield",
 "wp": "D",
@@ -9077,23 +9189,6 @@ window.FLIPS = {
 "kind": "leg",
 "st": "UT",
 "office": "State House",
-"dist": "44",
-"winner": "Jess Birtcher",
-"wp": "D",
-"loser": "Jordan Teuscher (R)",
-"fr": "R",
-"to": "D",
-"status": "leading",
-"margin": 5.2,
-"src": "Utah's official results site (unofficial count)",
-"url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
-"incdef": false,
-"note": ""
-},
-{
-"kind": "leg",
-"st": "UT",
-"office": "State House",
 "dist": "59",
 "winner": "Celeste T. Johnson",
 "wp": "D",
@@ -9169,11 +9264,11 @@ window.FLIPS = {
 "CA": [
 [
 "Assembly",
-"14"
+"6"
 ],
 [
 "Senate",
-"5"
+"4"
 ]
 ],
 "CO": [
@@ -9425,17 +9520,17 @@ window.FLIPS = {
 "NY": [
 [
 "Assembly",
-"6"
+"5"
 ],
 [
 "Senate",
-"3"
+"1"
 ]
 ],
 "ND": [
 [
 "House",
-"2"
+"1"
 ],
 [
 "Senate",
@@ -9465,11 +9560,11 @@ window.FLIPS = {
 "OR": [
 [
 "House",
-"4"
+"0"
 ],
 [
 "Senate",
-"1"
+"0"
 ]
 ],
 "PA": [
@@ -9535,7 +9630,7 @@ window.FLIPS = {
 "VT": [
 [
 "House",
-"3"
+"2"
 ],
 [
 "Senate",
@@ -9545,7 +9640,7 @@ window.FLIPS = {
 "WA": [
 [
 "House",
-"7"
+"3"
 ],
 [
 "Senate",
@@ -9575,7 +9670,7 @@ window.FLIPS = {
 "UT": [
 [
 "House",
-"5"
+"4"
 ],
 [
 "Senate",
@@ -9590,7 +9685,7 @@ window.FLIPS = {
 ],
 [
 "KS",
-"Cindy Holscher (D) led Ty Masterson (R) 50.3% to 49.7% with 98.9% counted (NBC News); not called"
+"Cindy Holscher (D) led Ty Masterson (R) 50.3% to 49.7% with 98.5% counted (NBC News); not called"
 ],
 [
 "MP",

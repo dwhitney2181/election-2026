@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 10, 2026, 12:25 p.m. MT",
-"house_context": "NBC News had called 420 of 435 House races as of 2:25 p.m. ET, Nov. 10. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
+"asof": "Nov. 10, 2026, 3:06 p.m. MT",
+"house_context": "NBC News had called 420 of 435 House races as of 5:06 p.m. ET, Nov. 10. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -863,22 +863,6 @@ window.FLIPS = {
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "New Democratic-leaning district from court-ordered map"
-},
-{
-"kind": "house",
-"st": "NC",
-"office": "U.S. House",
-"dist": "5",
-"winner": "Chuck Hubbard",
-"wp": "D",
-"loser": "Virginia Foxx (R)",
-"fr": "R",
-"to": "D",
-"status": "leading",
-"src": "NBC News count (+99 votes, 99% in)",
-"url": "https://www.nbcnews.com/politics/2026-elections/house-results",
-"incdef": false,
-"note": "Incumbent trailing"
 },
 {
 "kind": "house",
@@ -5524,6 +5508,54 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NH",
 "office": "State House",
+"dist": "Belknap-5",
+"winner": "Mike Bordes, Marcia Hayward, Denise Riley, Eric Hoffman",
+"wp": "mixed",
+"loser": "Cody Pfaff (R), Lois A. Kessin (D)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
+"incdef": false,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "NH",
+"office": "State House",
+"dist": "Carroll-3",
+"winner": "Karel Crawford, Todd Milliken",
+"wp": "mixed",
+"loser": "Bryan Randolph (D), Richard Brown (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
+"incdef": false,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "NH",
+"office": "State House",
+"dist": "Carroll-6",
+"winner": "John MacDonald, Deirdre McEachern",
+"wp": "mixed",
+"loser": "Tim Bauman (R), Phoebe VanScoy-Giessler (D)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
+"incdef": false,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "NH",
+"office": "State House",
 "dist": "Carroll-7",
 "winner": "Dale Fincher",
 "wp": "R",
@@ -5748,6 +5780,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NH",
 "office": "State House",
+"dist": "Hillsborough-13",
+"winner": "Kate Messner, James M. Caron, Cathy Kenny, Dillon Dumont, Jordan Ulery, Tom Trost",
+"wp": "mixed",
+"loser": "James Battis (D), Andrew Prout (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
+"incdef": true,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "NH",
+"office": "State House",
 "dist": "Hillsborough-15",
 "winner": "Michael Farley, Michael Fitzell",
 "wp": "D",
@@ -5892,6 +5940,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NH",
 "office": "State House",
+"dist": "Hillsborough-30",
+"winner": "Janet McEwen, Tim Morehouse, W. Gordon Allen",
+"wp": "mixed",
+"loser": "Austin Cottle (R), Larry Baker (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
+"incdef": false,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "NH",
+"office": "State House",
 "dist": "Hillsborough-35",
 "winner": "Ben Ming, Kat McGhee",
 "wp": "D",
@@ -5909,16 +5973,16 @@ window.FLIPS = {
 "st": "NH",
 "office": "State House",
 "dist": "Hillsborough-38",
-"winner": "Heidi Jakoby",
-"wp": "D",
-"loser": "Adam Haverstock (R), Ted Trost (R)",
+"winner": "Heidi Jakoby, Adam Haverstock",
+"wp": "mixed",
+"loser": "Ted Trost (R), Mahendra Bakshi (D)",
 "fr": "R",
 "to": "D",
 "status": "called",
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
 "incdef": false,
-"note": ""
+"note": "Multi-member district"
 },
 {
 "kind": "leg",
@@ -6020,6 +6084,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NH",
 "office": "State House",
+"dist": "Merrimack-10",
+"winner": "William Lynch, Lucas J. Coriaty, Thomas Walsh, Germano Martins",
+"wp": "mixed",
+"loser": "Ricky Gurung (D), Pamela McMahon (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
+"incdef": true,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "NH",
+"office": "State House",
 "dist": "Merrimack-11",
 "winner": "Alan Turcotte",
 "wp": "D",
@@ -6040,6 +6120,38 @@ window.FLIPS = {
 "winner": "Mariana R. Beer, Kenneth Nivison",
 "wp": "D",
 "loser": "Brian Seaworth (R), Peter L. Mehegan (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
+"incdef": true,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "NH",
+"office": "State House",
+"dist": "Merrimack-13",
+"winner": "Becky Berk, Clayton Wood",
+"wp": "mixed",
+"loser": "Paul Twomey (I), Cyril Aures (R)",
+"fr": "R",
+"to": "I",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
+"incdef": true,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "NH",
+"office": "State House",
+"dist": "Merrimack-27",
+"winner": "Vanessa Poulin, Phillip Walker",
+"wp": "mixed",
+"loser": "Harold Kozlowski (D), Ray Plante (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -6100,6 +6212,38 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NH",
 "office": "State House",
+"dist": "Rockingham-16",
+"winner": "Bob Cote, Jane Cooper, Michela Hites, Paul Skudlarek, Isaac Fernandez, Ted Combes, David Lundgren",
+"wp": "mixed",
+"loser": "Neil Marceau (D), Kristine Perez (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
+"incdef": true,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "NH",
+"office": "State House",
+"dist": "Rockingham-20",
+"winner": "Robert Harb, Rick Faulconer, James Summers",
+"wp": "mixed",
+"loser": "Charles Melvin Sr. (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
+"incdef": true,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "NH",
+"office": "State House",
 "dist": "Rockingham-29",
 "winner": "Molly McCoy, Rebecca LaPierre, Nathan Andrew Riggs, Ward Galanis",
 "wp": "D",
@@ -6120,6 +6264,22 @@ window.FLIPS = {
 "winner": "Michelle Stith",
 "wp": "D",
 "loser": "Julius F. Soti (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "NH",
+"office": "State House",
+"dist": "Rockingham-40",
+"winner": "Justin G. Packard",
+"wp": "D",
+"loser": "Linda McGrath (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -9170,6 +9330,22 @@ window.FLIPS = {
 },
 {
 "kind": "leg",
+"st": "WY",
+"office": "State House",
+"dist": "11",
+"winner": "Britney Tennant",
+"wp": "D",
+"loser": "Dan McIntosh (R), Ryan Shollenberger (L)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/wyoming-2026.html",
+"incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
 "st": "UT",
 "office": "State House",
 "dist": "20",
@@ -9254,7 +9430,7 @@ window.FLIPS = {
 "AR": [
 [
 "House",
-"1"
+"0"
 ],
 [
 "Senate",
@@ -9284,7 +9460,7 @@ window.FLIPS = {
 "CT": [
 [
 "House",
-"5"
+"4"
 ],
 [
 "Senate",
@@ -9500,7 +9676,7 @@ window.FLIPS = {
 "NH": [
 [
 "House",
-"22"
+"13"
 ],
 [
 "Senate",
@@ -9660,7 +9836,7 @@ window.FLIPS = {
 "WY": [
 [
 "House",
-"1"
+"0"
 ],
 [
 "Senate",
@@ -9685,7 +9861,7 @@ window.FLIPS = {
 ],
 [
 "KS",
-"Cindy Holscher (D) led Ty Masterson (R) 50.3% to 49.7% with 98.5% counted (NBC News); not called"
+"Cindy Holscher (D) led Ty Masterson (R) 50.3% to 49.7% with 98.6% counted (NBC News); not called"
 ],
 [
 "MP",

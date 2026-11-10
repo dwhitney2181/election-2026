@@ -1,5 +1,5 @@
 window.RES = {
-"meta": {"counts_asof": "12:24 p.m. MT, Nov. 10, 2026", "counts_source": "Utah Lieutenant Governor's Office results site", "counts_url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026", "counts_note": "", "official": false, "calls_checked": "12:24 p.m. MT, Nov. 10, 2026", "calls_source": "MultiState Elections' Utah results page", "calls_url": "https://www.multistate.us/elections/results/utah-2026", "updated_utc": "2026-11-10T19:25:56+00:00"},
+"meta": {"counts_asof": "3:03 p.m. MT, Nov. 10, 2026", "counts_source": "Utah Lieutenant Governor's Office results site", "counts_url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026", "counts_note": "", "official": false, "calls_checked": "12:24 p.m. MT, Nov. 10, 2026", "calls_source": "MultiState Elections' Utah results page", "calls_url": "https://www.multistate.us/elections/results/utah-2026", "updated_utc": "2026-11-10T22:06:49+00:00"},
 "house": {
   "1": {"c": [{"name": "Thomas Peterson", "party": "R", "votes": 10063, "pct": 69.67}, {"name": "Chris Reid", "party": "D", "votes": 2992, "pct": 20.71}, {"name": "Jason O'Dell", "party": "C", "votes": 1389, "pct": 9.62}], "prior": "R", "called": true},
   "2": {"c": [{"name": "Mike Petersen", "party": "R", "votes": 8704, "pct": 62.06}, {"name": "Barbara J. Haggerty", "party": "D", "votes": 5321, "pct": 37.94}], "prior": "R", "called": true},
@@ -29,7 +29,7 @@ window.RES = {
   "26": {"c": [{"name": "Michael E Finch", "party": "D", "votes": 6682, "pct": 64.79}, {"name": "Matt Macpherson", "party": "R", "votes": 3631, "pct": 35.21}], "prior": "R", "called": true},
   "27": {"c": [{"name": "Liz Oates", "party": "D", "votes": 6765, "pct": 62.17}, {"name": "Anthony Loubet", "party": "R", "votes": 4117, "pct": 37.83}], "prior": "R", "called": true},
   "28": {"c": [{"name": "Nicholeen Peck", "party": "R", "votes": 6123, "pct": 53.81}, {"name": "Anita Dalrymple", "party": "D", "votes": 4347, "pct": 38.2}, {"name": "Wales Nematollahi", "party": "F", "votes": 909, "pct": 7.99}], "prior": "R", "called": true},
-  "29": {"c": [{"name": "Sheldon Birch", "party": "R", "votes": 9069, "pct": 67.31}, {"name": "Sara Snow", "party": "D", "votes": 3040, "pct": 22.56}, {"name": "Jonathan Garrard", "party": "C", "votes": 697, "pct": 5.17}, {"name": "Tynley Bean", "party": "F", "votes": 667, "pct": 4.95}], "prior": "R", "called": true},
+  "29": {"c": [{"name": "Sheldon Birch", "party": "R", "votes": 9133, "pct": 67.3}, {"name": "Sara Snow", "party": "D", "votes": 3069, "pct": 22.62}, {"name": "Jonathan Garrard", "party": "C", "votes": 700, "pct": 5.16}, {"name": "Tynley Bean", "party": "F", "votes": 668, "pct": 4.92}], "prior": "R", "called": true},
   "30": {"c": [{"name": "Jake Fitisemanu", "party": "D", "votes": 6918, "pct": 65.2}, {"name": "Dave Parke", "party": "R", "votes": 3692, "pct": 34.8}], "prior": "D", "called": true},
   "31": {"c": [{"name": "Verona Mauga", "party": "D", "votes": 6543, "pct": 70.21}, {"name": "Melody Jones", "party": "R", "votes": 2776, "pct": 29.79}], "prior": "D", "called": true},
   "32": {"c": [{"name": "Sahara Hayes", "party": "D", "votes": 11004, "pct": 81.97}, {"name": "Aileen Hampton", "party": "R", "votes": 2420, "pct": 18.03}], "prior": "D", "called": true},
@@ -72,10 +72,10 @@ window.RES = {
   "69": {"c": [{"name": "Logan J. Monson", "party": "R", "votes": 8858, "pct": 57.83}, {"name": "Tracie Yellowman Tso", "party": "D", "votes": 6460, "pct": 42.17}], "prior": "R", "called": true},
   "70": {"c": [{"name": "Carl R. Albrecht", "party": "R", "votes": 11165, "pct": 82.85}, {"name": "Stacey D. Pendergraft", "party": "D", "votes": 2025, "pct": 15.03}, {"name": "Zeno B. Parry", "party": "F", "votes": 286, "pct": 2.12}], "prior": "R", "called": true},
   "71": {"c": [{"name": "Rex P Shipp", "party": "R", "votes": 8922, "pct": 68.64}, {"name": "Thomas Loveheart", "party": "D", "votes": 4076, "pct": 31.36}], "prior": "R", "called": true},
-  "72": {"c": [{"name": "Joseph Elison", "party": "R", "votes": 12547, "pct": 69.0}, {"name": "Eva M Weldon", "party": "D", "votes": 4629, "pct": 25.46}, {"name": "April A Pinkston", "party": "C", "votes": 1008, "pct": 5.54}], "prior": "R", "called": true},
-  "73": {"c": [{"name": "Colin W. Jack", "party": "R", "votes": 9786, "pct": 70.29}, {"name": "Glenn D Webb", "party": "D", "votes": 4137, "pct": 29.71}], "prior": "R", "called": true},
-  "74": {"c": [{"name": "R. Neil Walter", "party": "R", "votes": 11911, "pct": 66.89}, {"name": "Jeffrey N Lipe", "party": "D", "votes": 5897, "pct": 33.11}], "prior": "R", "called": true},
-  "75": {"c": [{"name": "Walt Brooks", "party": "R", "votes": 9210, "pct": 70.56}, {"name": "Rebecca Winsor", "party": "D", "votes": 3843, "pct": 29.44}], "prior": "R", "called": true}
+  "72": {"c": [{"name": "Joseph Elison", "party": "R", "votes": 12627, "pct": 68.66}, {"name": "Eva M Weldon", "party": "D", "votes": 4746, "pct": 25.81}, {"name": "April A Pinkston", "party": "C", "votes": 1018, "pct": 5.54}], "prior": "R", "called": true},
+  "73": {"c": [{"name": "Colin W. Jack", "party": "R", "votes": 9831, "pct": 69.6}, {"name": "Glenn D Webb", "party": "D", "votes": 4293, "pct": 30.4}], "prior": "R", "called": true},
+  "74": {"c": [{"name": "R. Neil Walter", "party": "R", "votes": 11959, "pct": 66.52}, {"name": "Jeffrey N Lipe", "party": "D", "votes": 6018, "pct": 33.48}], "prior": "R", "called": true},
+  "75": {"c": [{"name": "Walt Brooks", "party": "R", "votes": 9263, "pct": 69.62}, {"name": "Rebecca Winsor", "party": "D", "votes": 4043, "pct": 30.38}], "prior": "R", "called": true}
 },
 "senate": {
   "1": {"c": [{"name": "Scott Sandall", "party": "R", "votes": 24367, "pct": 66.17}, {"name": "Claudia Bigler", "party": "D", "votes": 9342, "pct": 25.37}, {"name": "Julie Quinlan", "party": "F", "votes": 3114, "pct": 8.46}], "prior": "R", "called": true},
@@ -92,7 +92,7 @@ window.RES = {
   "20": {"c": [{"name": "Ronald M Winterton", "party": "R", "votes": 22386, "pct": 61.15}, {"name": "Annette Mcrae", "party": "F", "votes": 14221, "pct": 38.85}], "prior": "R", "called": true},
   "21": {"c": [{"name": "Brady Brammer", "party": "R", "votes": 22047, "pct": 57.69}, {"name": "Kandee Myers", "party": "D", "votes": 10526, "pct": 27.54}, {"name": "Wayne Woodfield", "party": "F", "votes": 5646, "pct": 14.77}], "prior": "R", "called": true},
   "23": {"c": [{"name": "Keith Grover", "party": "R", "votes": 14929, "pct": 55.49}, {"name": "Tucker Smith", "party": "D", "votes": 11975, "pct": 44.51}], "prior": "R", "called": true},
-  "28": {"c": [{"name": "Evan J Vickers", "party": "R", "votes": 27531, "pct": 75.43}, {"name": "Richard S Robillard", "party": "D", "votes": 8969, "pct": 24.57}], "prior": "R", "called": true}
+  "28": {"c": [{"name": "Evan J Vickers", "party": "R", "votes": 27622, "pct": 75.17}, {"name": "Richard S Robillard", "party": "D", "votes": 9122, "pct": 24.83}], "prior": "R", "called": true}
 },
 "senate_hold": {"10": "D", "15": "D", "2": "R", "3": "R", "4": "R", "8": "R", "16": "R", "17": "R", "22": "R", "24": "R", "25": "R", "26": "R", "27": "R", "29": "R"}
 };

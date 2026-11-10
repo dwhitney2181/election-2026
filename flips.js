@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 9, 2026, 6:33 p.m. MT",
-"house_context": "NBC News had called 416 of 435 House races as of 8:32 p.m. ET, Nov. 9. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
+"asof": "Nov. 9, 2026, 9:19 p.m. MT",
+"house_context": "NBC News had called 418 of 435 House races as of 10:56 p.m. ET, Nov. 9. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -555,7 +555,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"src": "NBC News count (+3,352 votes, 98.1% in)",
+"src": "NBC News count (+3,352 votes, 98% in)",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Incumbent trailing"
@@ -1301,16 +1301,16 @@ window.FLIPS = {
 "st": "AZ",
 "office": "State House",
 "dist": "27",
-"winner": "Deborah Howard",
-"wp": "D",
-"loser": "Lisa Fink (R), Tony Rivero (R)",
+"winner": "Deborah Howard, Lisa Fink",
+"wp": "mixed",
+"loser": "Tony Rivero (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/arizona-2026.html",
-"incdef": false,
-"note": ""
+"incdef": true,
+"note": "Multi-member district"
 },
 {
 "kind": "leg",
@@ -9546,7 +9546,7 @@ window.FLIPS = {
 "WA": [
 [
 "House",
-"16"
+"12"
 ],
 [
 "Senate",

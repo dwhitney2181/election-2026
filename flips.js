@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 9, 2026, 3:12 p.m. MT",
-"house_context": "NBC News had called 416 of 435 House races as of 5:11 p.m. ET, Nov. 9. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
+"asof": "Nov. 9, 2026, 6:33 p.m. MT",
+"house_context": "NBC News had called 416 of 435 House races as of 8:32 p.m. ET, Nov. 9. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -27,7 +27,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"src": "NBC News count (49.1% to 29.2%, 73.8% counted)",
+"src": "NBC News count (49.6% to 28.9%, 75.7% counted)",
 "url": "https://www.nbcnews.com/politics/2026-elections/governor-results",
 "incdef": false,
 "note": "Open seat; Alaska uses ranked-choice voting"
@@ -555,7 +555,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"src": "NBC News count (+3,237 votes, 97.9% in)",
+"src": "NBC News count (+3,352 votes, 98.1% in)",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Incumbent trailing"
@@ -9270,7 +9270,7 @@ window.FLIPS = {
 "IL": [
 [
 "House",
-"3"
+"2"
 ],
 [
 "Senate",
@@ -9587,7 +9587,7 @@ window.FLIPS = {
 "pending_gov": [
 [
 "AK",
-"Jonathan Kreiss-Tomkins (D) led Bernadette Wilson (R) 49.1% to 29.2% with 73.8% counted (NBC News); not called"
+"Jonathan Kreiss-Tomkins (D) led Bernadette Wilson (R) 49.6% to 28.9% with 75.7% counted (NBC News); not called"
 ],
 [
 "KS",

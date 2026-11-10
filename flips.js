@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 9, 2026, 9:19 p.m. MT",
-"house_context": "NBC News had called 418 of 435 House races as of 10:56 p.m. ET, Nov. 9. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
+"asof": "Nov. 10, 2026, 12:41 a.m. MT",
+"house_context": "NBC News had called 418 of 435 House races as of 12:39 a.m. ET, Nov. 10. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",

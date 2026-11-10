@@ -1,11 +1,11 @@
 window.RES = {
-"meta": {"counts_asof": "5:51 p.m. MT, Nov. 9, 2026", "counts_source": "Utah Lieutenant Governor's Office results site", "counts_url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026", "counts_note": "", "official": false, "calls_checked": "3:10 p.m. MT, Nov. 9, 2026", "calls_source": "MultiState Elections' Utah results page", "calls_url": "https://www.multistate.us/elections/results/utah-2026", "updated_utc": "2026-11-10T01:33:18+00:00"},
+"meta": {"counts_asof": "9:55 p.m. MT, Nov. 9, 2026", "counts_source": "Utah Lieutenant Governor's Office results site", "counts_url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026", "counts_note": "", "official": false, "calls_checked": "3:10 p.m. MT, Nov. 9, 2026", "calls_source": "MultiState Elections' Utah results page", "calls_url": "https://www.multistate.us/elections/results/utah-2026", "updated_utc": "2026-11-10T07:41:42+00:00"},
 "house": {
-  "1": {"c": [{"name": "Thomas Peterson", "party": "R", "votes": 10062, "pct": 69.67}, {"name": "Chris Reid", "party": "D", "votes": 2992, "pct": 20.72}, {"name": "Jason O'Dell", "party": "C", "votes": 1389, "pct": 9.62}], "prior": "R", "called": true},
-  "2": {"c": [{"name": "Mike Petersen", "party": "R", "votes": 8667, "pct": 62.42}, {"name": "Barbara J. Haggerty", "party": "D", "votes": 5219, "pct": 37.58}], "prior": "R", "called": true},
-  "3": {"c": [{"name": "Patrick Belmont", "party": "U", "votes": 6323, "pct": 58.28}, {"name": "Jason E. Thompson", "party": "R", "votes": 4527, "pct": 41.72}], "prior": "R", "called": true},
+  "1": {"c": [{"name": "Thomas Peterson", "party": "R", "votes": 10063, "pct": 69.67}, {"name": "Chris Reid", "party": "D", "votes": 2992, "pct": 20.71}, {"name": "Jason O'Dell", "party": "C", "votes": 1389, "pct": 9.62}], "prior": "R", "called": true},
+  "2": {"c": [{"name": "Mike Petersen", "party": "R", "votes": 8702, "pct": 62.08}, {"name": "Barbara J. Haggerty", "party": "D", "votes": 5315, "pct": 37.92}], "prior": "R", "called": true},
+  "3": {"c": [{"name": "Patrick Belmont", "party": "U", "votes": 6576, "pct": 59.01}, {"name": "Jason E. Thompson", "party": "R", "votes": 4568, "pct": 40.99}], "prior": "R", "called": true},
   "4": {"c": [{"name": "Zane Woolstenhulme", "party": "D", "votes": 9772, "pct": 51.49}, {"name": "Tiara Auxier", "party": "R", "votes": 9207, "pct": 48.51}], "prior": "R", "called": false},
-  "5": {"c": [{"name": "Casey Snider", "party": "R", "votes": 10257, "pct": 65.86}, {"name": "Kendra Penry", "party": "D", "votes": 5318, "pct": 34.14}], "prior": "R", "called": true},
+  "5": {"c": [{"name": "Casey Snider", "party": "R", "votes": 10293, "pct": 65.6}, {"name": "Kendra Penry", "party": "D", "votes": 5398, "pct": 34.4}], "prior": "R", "called": true},
   "6": {"c": [{"name": "Rob Bishop", "party": "R", "votes": 9778, "pct": 68.71}, {"name": "James Rich", "party": "F", "votes": 4453, "pct": 31.29}], "prior": "R", "called": true},
   "7": {"c": [{"name": "Ryan D. Wilcox", "party": "R", "votes": 6465, "pct": 52.08}, {"name": "Bianca Mittendorf", "party": "D", "votes": 5948, "pct": 47.92}], "prior": "R", "called": true},
   "8": {"c": [{"name": "Kim James", "party": "D", "votes": 7360, "pct": 49.79}, {"name": "Jason B Kyle", "party": "R", "votes": 6800, "pct": 46.01}, {"name": "Libby Shelton", "party": "F", "votes": 621, "pct": 4.2}], "prior": "R", "called": true},
@@ -78,7 +78,7 @@ window.RES = {
   "75": {"c": [{"name": "Walt Brooks", "party": "R", "votes": 9210, "pct": 70.56}, {"name": "Rebecca Winsor", "party": "D", "votes": 3843, "pct": 29.44}], "prior": "R", "called": true}
 },
 "senate": {
-  "1": {"c": [{"name": "Scott Sandall", "party": "R", "votes": 24349, "pct": 66.21}, {"name": "Claudia Bigler", "party": "D", "votes": 9314, "pct": 25.33}, {"name": "Julie Quinlan", "party": "F", "votes": 3112, "pct": 8.46}], "prior": "R", "called": true},
+  "1": {"c": [{"name": "Scott Sandall", "party": "R", "votes": 24365, "pct": 66.17}, {"name": "Claudia Bigler", "party": "D", "votes": 9341, "pct": 25.37}, {"name": "Julie Quinlan", "party": "F", "votes": 3114, "pct": 8.46}], "prior": "R", "called": true},
   "5": {"c": [{"name": "CJ Christina Hernandez", "party": "D", "votes": 17198, "pct": 55.81}, {"name": "Jill F. Koford", "party": "R", "votes": 13620, "pct": 44.19}], "prior": "R", "called": true},
   "6": {"c": [{"name": "Tami Tran", "party": "R", "votes": 18178, "pct": 57.22}, {"name": "Jared Neal", "party": "D", "votes": 11266, "pct": 35.46}, {"name": "Josh Smith", "party": "F", "votes": 2323, "pct": 7.31}], "prior": "R", "called": true},
   "7": {"c": [{"name": "Stephanie Hollist", "party": "R", "votes": 22451, "pct": 57.31}, {"name": "Garret Rushforth", "party": "D", "votes": 14636, "pct": 37.36}, {"name": "Jeffrey Ostler", "party": "C", "votes": 2087, "pct": 5.33}], "prior": "R", "called": true},

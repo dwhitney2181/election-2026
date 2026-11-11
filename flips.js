@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 11, 2026, 12:28 p.m. MT",
-"house_context": "NBC News had called 423 of 435 House races as of 2:27 p.m. ET, Nov. 11. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
+"asof": "Nov. 11, 2026, 3:35 p.m. MT",
+"house_context": "NBC News had called 423 of 435 House races as of 5:33 p.m. ET, Nov. 11. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -2056,6 +2056,22 @@ window.FLIPS = {
 "winner": "Amy Trask",
 "wp": "D",
 "loser": "Chad Johnson (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/florida-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "FL",
+"office": "State House",
+"dist": "33",
+"winner": "Daniel McDow",
+"wp": "D",
+"loser": "Monique Miller (R), Grover Bentley (L)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -9644,7 +9660,7 @@ window.FLIPS = {
 "FL": [
 [
 "House",
-"1"
+"0"
 ],
 [
 "Senate",

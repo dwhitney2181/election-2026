@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 10, 2026, 6:33 p.m. MT",
-"house_context": "NBC News had called 422 of 435 House races as of 8:32 p.m. ET, Nov. 10. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
+"asof": "Nov. 10, 2026, 9:26 p.m. MT",
+"house_context": "NBC News had called 422 of 435 House races as of 11:24 p.m. ET, Nov. 10. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -27,7 +27,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"src": "NBC News count (49.6% to 28.9%, 75.6% counted)",
+"src": "NBC News count (49.9% to 28.8%, 84% counted)",
 "url": "https://www.nbcnews.com/politics/2026-elections/governor-results",
 "incdef": false,
 "note": "Open seat; Alaska uses ranked-choice voting"
@@ -9437,7 +9437,7 @@ window.FLIPS = {
 "fr": "F",
 "to": "R",
 "status": "leading",
-"margin": 1.4,
+"margin": 1.3,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -9905,7 +9905,7 @@ window.FLIPS = {
 "pending_gov": [
 [
 "AK",
-"Jonathan Kreiss-Tomkins (D) led Bernadette Wilson (R) 49.6% to 28.9% with 75.6% counted (NBC News); not called"
+"Jonathan Kreiss-Tomkins (D) led Bernadette Wilson (R) 49.9% to 28.8% with 84% counted (NBC News); not called"
 ],
 [
 "KS",

@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 10, 2026, 3:06 p.m. MT",
-"house_context": "NBC News had called 420 of 435 House races as of 5:06 p.m. ET, Nov. 10. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
+"asof": "Nov. 10, 2026, 6:33 p.m. MT",
+"house_context": "NBC News had called 422 of 435 House races as of 8:32 p.m. ET, Nov. 10. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -555,7 +555,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"src": "NBC News count (+3,353 votes, 98% in)",
+"src": "NBC News count (+3,362 votes, 98.1% in)",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Incumbent trailing"
@@ -740,6 +740,22 @@ window.FLIPS = {
 "kind": "house",
 "st": "NC",
 "office": "U.S. House",
+"dist": "3",
+"winner": "Raymond Smith",
+"wp": "D",
+"loser": "Greg Murphy (R)",
+"fr": "R",
+"to": "D",
+"status": "leading",
+"src": "NBC News count (+293 votes, 99% in)",
+"url": "https://www.nbcnews.com/politics/2026-elections/house-results",
+"incdef": false,
+"note": "Incumbent trailing"
+},
+{
+"kind": "house",
+"st": "NC",
+"office": "U.S. House",
 "dist": "9",
 "winner": "Richard Ojeda",
 "wp": "D",
@@ -863,6 +879,22 @@ window.FLIPS = {
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "New Democratic-leaning district from court-ordered map"
+},
+{
+"kind": "house",
+"st": "NC",
+"office": "U.S. House",
+"dist": "5",
+"winner": "Chuck Hubbard",
+"wp": "D",
+"loser": "Virginia Foxx (R)",
+"fr": "R",
+"to": "D",
+"status": "leading",
+"src": "NBC News count (+325 votes, 99% in)",
+"url": "https://www.nbcnews.com/politics/2026-elections/house-results",
+"incdef": false,
+"note": "Incumbent trailing"
 },
 {
 "kind": "house",
@@ -1269,7 +1301,7 @@ window.FLIPS = {
 "st": "AZ",
 "office": "State House",
 "dist": "23",
-"winner": "Mariana Sandoval, Emilia Cortez",
+"winner": "Emilia Cortez, Mariana Sandoval",
 "wp": "D",
 "loser": "Michele Peña (R), Gary Garcia Snyder (R)",
 "fr": "R",
@@ -6756,6 +6788,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NY",
 "office": "Assembly",
+"dist": "16",
+"winner": "Kim Keiserman",
+"wp": "D",
+"loser": "David Hassid (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-york-2026.html",
+"incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "NY",
+"office": "Assembly",
 "dist": "45",
 "winner": "Joey Cohen-Saban",
 "wp": "D",
@@ -9389,7 +9437,7 @@ window.FLIPS = {
 "fr": "F",
 "to": "R",
 "status": "leading",
-"margin": 1.6,
+"margin": 1.4,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -9484,7 +9532,7 @@ window.FLIPS = {
 ],
 [
 "Senate",
-"1"
+"0"
 ]
 ],
 "WI": [
@@ -9544,7 +9592,7 @@ window.FLIPS = {
 ],
 [
 "Senate",
-"1"
+"0"
 ]
 ],
 "IN": [
@@ -9696,7 +9744,7 @@ window.FLIPS = {
 "NY": [
 [
 "Assembly",
-"5"
+"4"
 ],
 [
 "Senate",

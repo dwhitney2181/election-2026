@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 11, 2026, 9:23 a.m. MT",
-"house_context": "NBC News had called 423 of 435 House races as of 11:23 a.m. ET, Nov. 11. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
+"asof": "Nov. 11, 2026, 12:28 p.m. MT",
+"house_context": "NBC News had called 423 of 435 House races as of 2:27 p.m. ET, Nov. 11. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -1544,6 +1544,38 @@ window.FLIPS = {
 "winner": "Clarissa Cervantes",
 "wp": "D",
 "loser": "Leticia Castillo (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/california-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "CA",
+"office": "Assembly",
+"dist": "70",
+"winner": "Paula Swift",
+"wp": "D",
+"loser": "Tri Ta (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/california-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "CA",
+"office": "State Senate",
+"dist": "36",
+"winner": "Chris Duncan",
+"wp": "D",
+"loser": "Tony Strickland (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -7684,6 +7716,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "SC",
 "office": "State House",
+"dist": "89",
+"winner": "Joe Madge",
+"wp": "D",
+"loser": "Micah Caskey (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/south-carolina-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "SC",
+"office": "State House",
 "dist": "92",
 "winner": "Byron Walters",
 "wp": "D",
@@ -9536,11 +9584,11 @@ window.FLIPS = {
 "CA": [
 [
 "Assembly",
-"6"
+"5"
 ],
 [
 "Senate",
-"4"
+"3"
 ]
 ],
 "CO": [
@@ -9862,7 +9910,7 @@ window.FLIPS = {
 "SC": [
 [
 "House",
-"2"
+"0"
 ],
 [
 "Senate",

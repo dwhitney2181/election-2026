@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 12, 2026, 12:24 p.m. MT",
-"house_context": "NBC News had called 424 of 435 House races as of 2:22 p.m. ET, Nov. 12. Among called races, 48 seats changed party (45 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 47 seats as party gains.",
+"asof": "Nov. 12, 2026, 3:12 p.m. MT",
+"house_context": "NBC News had called 424 of 435 House races as of 5:11 p.m. ET, Nov. 12. Among called races, 48 seats changed party (45 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 47 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -10037,7 +10037,7 @@ window.FLIPS = {
 ],
 [
 "KS",
-"Cindy Holscher (D) led Ty Masterson (R) 50.3% to 49.7% with 98% counted (NBC News); not called"
+"Cindy Holscher (D) led Ty Masterson (R) 50.3% to 49.7% with 98.1% counted (NBC News); not called"
 ],
 [
 "MP",

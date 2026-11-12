@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 12, 2026, 9:29 a.m. MT",
-"house_context": "NBC News had called 423 of 435 House races as of 11:28 a.m. ET, Nov. 12. Among called races, 47 seats changed party (45 to Democrats, 2 to Republicans), as marked by NBC News or ABC News. ABC News marked 46 seats as party gains.",
+"asof": "Nov. 12, 2026, 12:24 p.m. MT",
+"house_context": "NBC News had called 424 of 435 House races as of 2:22 p.m. ET, Nov. 12. Among called races, 48 seats changed party (45 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 47 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -559,6 +559,22 @@ window.FLIPS = {
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Incumbent trailing"
+},
+{
+"kind": "house",
+"st": "ME",
+"office": "U.S. House",
+"dist": "2",
+"winner": "Paul LePage",
+"wp": "R",
+"loser": "Matthew Dunlap (D)",
+"fr": "D",
+"to": "R",
+"status": "called",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
+"url": "https://www.nbcnews.com/politics/2026-elections/house-results",
+"incdef": false,
+"note": ""
 },
 {
 "kind": "house",
@@ -9515,7 +9531,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"margin": 1.5,
+"margin": 2.2,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -9680,7 +9696,7 @@ window.FLIPS = {
 "HI": [
 [
 "House",
-"1"
+"0"
 ],
 [
 "Senate",
@@ -10021,7 +10037,7 @@ window.FLIPS = {
 ],
 [
 "KS",
-"Cindy Holscher (D) led Ty Masterson (R) 50.3% to 49.7% with 98.6% counted (NBC News); not called"
+"Cindy Holscher (D) led Ty Masterson (R) 50.3% to 49.7% with 98% counted (NBC News); not called"
 ],
 [
 "MP",

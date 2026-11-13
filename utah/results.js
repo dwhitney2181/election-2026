@@ -1,5 +1,5 @@
 window.RES = {
-"meta": {"counts_asof": "8:36 a.m. MT, Nov. 13, 2026", "counts_source": "Utah Lieutenant Governor's Office results site", "counts_url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026", "counts_note": "", "official": false, "calls_checked": "12:24 p.m. MT, Nov. 10, 2026", "calls_source": "MultiState Elections' Utah results page", "calls_url": "https://www.multistate.us/elections/results/utah-2026", "updated_utc": "2026-11-13T16:18:03+00:00"},
+"meta": {"counts_asof": "12:22 p.m. MT, Nov. 13, 2026", "counts_source": "Utah Lieutenant Governor's Office results site", "counts_url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026", "counts_note": "", "official": false, "calls_checked": "12:24 p.m. MT, Nov. 10, 2026", "calls_source": "MultiState Elections' Utah results page", "calls_url": "https://www.multistate.us/elections/results/utah-2026", "updated_utc": "2026-11-13T19:24:55+00:00"},
 "house": {
   "1": {"c": [{"name": "Thomas Peterson", "party": "R", "votes": 10134, "pct": 69.19}, {"name": "Chris Reid", "party": "D", "votes": 3102, "pct": 21.18}, {"name": "Jason O'Dell", "party": "C", "votes": 1410, "pct": 9.63}], "prior": "R", "called": true},
   "2": {"c": [{"name": "Mike Petersen", "party": "R", "votes": 8704, "pct": 62.06}, {"name": "Barbara J. Haggerty", "party": "D", "votes": 5321, "pct": 37.94}], "prior": "R", "called": true},
@@ -66,8 +66,8 @@ window.RES = {
   "63": {"c": [{"name": "Stephen L. Whyte", "party": "R", "votes": 10349, "pct": 66.42}, {"name": "Mark Youngquist", "party": "D", "votes": 3794, "pct": 24.35}, {"name": "Julie Smith", "party": "F", "votes": 1438, "pct": 9.23}], "prior": "R", "called": true},
   "64": {"c": [{"name": "Jackie Larson", "party": "R", "votes": 8355, "pct": 63.56}, {"name": "Alan Wessman", "party": "U", "votes": 4791, "pct": 36.44}], "prior": "R", "called": true},
   "65": {"c": [{"name": "Doug Welton", "party": "R", "votes": 10697, "pct": 100.0}], "prior": "R", "called": true},
-  "66": {"c": [{"name": "Troy Shelley", "party": "R", "votes": 9033, "pct": 72.11}, {"name": "Breanne Mashek", "party": "D", "votes": 2246, "pct": 17.93}, {"name": "Russ Hatch", "party": "C", "votes": 1248, "pct": 9.96}], "prior": "R", "called": true},
-  "67": {"c": [{"name": "JR Bird", "party": "R", "votes": 9207, "pct": 75.45}, {"name": "Carl Ingwell", "party": "D", "votes": 2996, "pct": 24.55}], "prior": "R", "called": true},
+  "66": {"c": [{"name": "Troy Shelley", "party": "R", "votes": 9099, "pct": 71.67}, {"name": "Breanne Mashek", "party": "D", "votes": 2330, "pct": 18.35}, {"name": "Russ Hatch", "party": "C", "votes": 1267, "pct": 9.98}], "prior": "R", "called": true},
+  "67": {"c": [{"name": "JR Bird", "party": "R", "votes": 9284, "pct": 75.12}, {"name": "Carl Ingwell", "party": "D", "votes": 3075, "pct": 24.88}], "prior": "R", "called": true},
   "68": {"c": [{"name": "Scott H Chew", "party": "R", "votes": 9327, "pct": 84.57}, {"name": "Sonya Ray", "party": "C", "votes": 1702, "pct": 15.43}], "prior": "R", "called": true},
   "69": {"c": [{"name": "Logan J. Monson", "party": "R", "votes": 9747, "pct": 58.28}, {"name": "Tracie Yellowman Tso", "party": "D", "votes": 6977, "pct": 41.72}], "prior": "R", "called": true},
   "70": {"c": [{"name": "Carl R. Albrecht", "party": "R", "votes": 11165, "pct": 82.85}, {"name": "Stacey D. Pendergraft", "party": "D", "votes": 2025, "pct": 15.03}, {"name": "Zeno B. Parry", "party": "F", "votes": 286, "pct": 2.12}], "prior": "R", "called": true},

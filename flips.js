@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 12, 2026, 3:12 p.m. MT",
-"house_context": "NBC News had called 424 of 435 House races as of 5:11 p.m. ET, Nov. 12. Among called races, 48 seats changed party (45 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 47 seats as party gains.",
+"asof": "Nov. 12, 2026, 6:39 p.m. MT",
+"house_context": "NBC News had called 424 of 435 House races as of 8:34 p.m. ET, Nov. 12. Among called races, 48 seats changed party (45 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 47 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -9548,7 +9548,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"margin": 1.8,
+"margin": 2.0,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -10034,10 +10034,6 @@ window.FLIPS = {
 [
 "AK",
 "Jonathan Kreiss-Tomkins (D) led Bernadette Wilson (R) 49.8% to 29% with 85.9% counted (NBC News); not called"
-],
-[
-"KS",
-"Cindy Holscher (D) led Ty Masterson (R) 50.3% to 49.7% with 98.1% counted (NBC News); not called"
 ],
 [
 "MP",

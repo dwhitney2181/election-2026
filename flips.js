@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 13, 2026, 12:24 p.m. MT",
-"house_context": "NBC News had called 424 of 435 House races as of 2:24 p.m. ET, Nov. 13. Among called races, 48 seats changed party (45 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 47 seats as party gains.",
+"asof": "Nov. 13, 2026, 3:10 p.m. MT",
+"house_context": "NBC News had called 425 of 435 House races as of 5:09 p.m. ET, Nov. 13. Among called races, 49 seats changed party (46 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 48 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -554,11 +554,11 @@ window.FLIPS = {
 "loser": "Lauren Boebert (R)",
 "fr": "R",
 "to": "D",
-"status": "leading",
-"src": "NBC News count (+3,257 votes, 99% in)",
+"status": "called",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
-"incdef": false,
-"note": "Incumbent trailing"
+"incdef": true,
+"note": "Incumbent defeated"
 },
 {
 "kind": "house",
@@ -763,7 +763,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"src": "NBC News count (+267 votes, 99% in)",
+"src": "NBC News count (+260 votes, 99% in)",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Incumbent trailing"
@@ -907,7 +907,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"src": "NBC News count (+334 votes, 99% in)",
+"src": "NBC News count (+331 votes, 99% in)",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Incumbent trailing"
@@ -2938,6 +2938,22 @@ window.FLIPS = {
 "loser": "Mike Zimmer (D)",
 "fr": "D",
 "to": "R",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/iowa-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "IA",
+"office": "State Senate",
+"dist": "47",
+"winner": "Nikhil Wagle",
+"wp": "D",
+"loser": "Scott Webster (R)",
+"fr": "R",
+"to": "D",
 "status": "called",
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/iowa-2026.html",
@@ -6995,6 +7011,22 @@ window.FLIPS = {
 {
 "kind": "leg",
 "st": "NY",
+"office": "Assembly",
+"dist": "143",
+"winner": "Ryan Taughrin",
+"wp": "D",
+"loser": "Pat Chludzinski (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-york-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "NY",
 "office": "State Senate",
 "dist": "1",
 "winner": "E. Murray",
@@ -9756,7 +9788,7 @@ window.FLIPS = {
 ],
 [
 "Senate",
-"1"
+"0"
 ]
 ],
 "KS": [
@@ -9888,7 +9920,7 @@ window.FLIPS = {
 "NY": [
 [
 "Assembly",
-"3"
+"2"
 ],
 [
 "Senate",

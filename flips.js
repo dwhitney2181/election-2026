@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 13, 2026, 6:33 p.m. MT",
-"house_context": "NBC News had called 426 of 435 House races as of 8:33 p.m. ET, Nov. 13. Among called races, 49 seats changed party (46 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 48 seats as party gains.",
+"asof": "Nov. 13, 2026, 9:20 p.m. MT",
+"house_context": "NBC News had called 426 of 435 House races as of 10:35 p.m. ET, Nov. 13. Among called races, 49 seats changed party (46 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 48 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -1540,6 +1540,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "CA",
 "office": "Assembly",
+"dist": "33",
+"winner": "Hipolito Cerros",
+"wp": "D",
+"loser": "Ali Macedo (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/california-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "CA",
+"office": "Assembly",
 "dist": "36",
 "winner": "Ida S. Obeso-Martinez",
 "wp": "D",
@@ -1652,6 +1668,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "CO",
 "office": "State House",
+"dist": "15",
+"winner": "Jeff Livingston",
+"wp": "D",
+"loser": "Pricella Tiegen (R), Doug Jones (L)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/colorado-2026.html",
+"incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "CO",
+"office": "State House",
 "dist": "16",
 "winner": "Stephanie Vigil",
 "wp": "D",
@@ -1678,6 +1710,22 @@ window.FLIPS = {
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/colorado-2026.html",
 "incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "CO",
+"office": "State House",
+"dist": "21",
+"winner": "Michelle Tweed",
+"wp": "D",
+"loser": "Brenda Miller (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/colorado-2026.html",
+"incdef": false,
 "note": ""
 },
 {
@@ -9595,7 +9643,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"margin": 2.2,
+"margin": 2.6,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -9612,7 +9660,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"margin": 2.0,
+"margin": 2.3,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -9680,7 +9728,7 @@ window.FLIPS = {
 "CA": [
 [
 "Assembly",
-"2"
+"1"
 ],
 [
 "Senate",
@@ -9690,7 +9738,7 @@ window.FLIPS = {
 "CO": [
 [
 "House",
-"3"
+"0"
 ],
 [
 "Senate",

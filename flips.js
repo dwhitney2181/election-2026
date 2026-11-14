@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 13, 2026, 3:10 p.m. MT",
-"house_context": "NBC News had called 425 of 435 House races as of 5:09 p.m. ET, Nov. 13. Among called races, 49 seats changed party (46 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 48 seats as party gains.",
+"asof": "Nov. 13, 2026, 6:33 p.m. MT",
+"house_context": "NBC News had called 426 of 435 House races as of 8:33 p.m. ET, Nov. 13. Among called races, 49 seats changed party (46 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 48 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -763,7 +763,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"src": "NBC News count (+260 votes, 99% in)",
+"src": "NBC News count (+258 votes, 99% in)",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Incumbent trailing"
@@ -1517,6 +1517,22 @@ window.FLIPS = {
 "status": "called",
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/arizona-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "CA",
+"office": "Assembly",
+"dist": "7",
+"winner": "Amy L. Slavensky",
+"wp": "D",
+"loser": "Joshua Hoover (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/california-2026.html",
 "incdef": true,
 "note": ""
 },
@@ -9664,7 +9680,7 @@ window.FLIPS = {
 "CA": [
 [
 "Assembly",
-"3"
+"2"
 ],
 [
 "Senate",

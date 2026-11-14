@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 13, 2026, 9:20 p.m. MT",
-"house_context": "NBC News had called 426 of 435 House races as of 10:35 p.m. ET, Nov. 13. Among called races, 49 seats changed party (46 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 48 seats as party gains.",
+"asof": "Nov. 14, 2026, 12:33 a.m. MT",
+"house_context": "NBC News had called 426 of 435 House races as of 12:02 a.m. ET, Nov. 14. Among called races, 49 seats changed party (46 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 48 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -26,11 +26,11 @@ window.FLIPS = {
 "loser": "Bernadette Wilson (R)",
 "fr": "R",
 "to": "D",
-"status": "leading",
-"src": "NBC News count (50% to 28.7%, 87.9% counted)",
+"status": "called",
+"src": "NBC News call",
 "url": "https://www.nbcnews.com/politics/2026-elections/governor-results",
 "incdef": false,
-"note": "Open seat; Alaska uses ranked-choice voting"
+"note": ""
 },
 {
 "kind": "gov",
@@ -10143,10 +10143,6 @@ window.FLIPS = {
 ]
 },
 "pending_gov": [
-[
-"AK",
-"Jonathan Kreiss-Tomkins (D) led Bernadette Wilson (R) 50% to 28.7% with 87.9% counted (NBC News); not called"
-],
 [
 "MP",
 "Ralph Torres (R) led with 49.5% in unofficial results, short of a majority; a runoff with Blas T. Attao (I) is expected (Marianas Press via PINA)"

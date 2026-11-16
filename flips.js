@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 16, 2026, 12:26 p.m. MT",
-"house_context": "NBC News had called 426 of 435 House races as of 2:25 p.m. ET, Nov. 16. Among called races, 49 seats changed party (46 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 48 seats as party gains.",
+"asof": "Nov. 16, 2026, 3:14 p.m. MT",
+"house_context": "NBC News had called 427 of 435 House races as of 5:08 p.m. ET, Nov. 16. Among called races, 49 seats changed party (46 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 48 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -3922,6 +3922,22 @@ window.FLIPS = {
 },
 {
 "kind": "leg",
+"st": "KS",
+"office": "State House",
+"dist": "123",
+"winner": "Becca Burnfin",
+"wp": "D",
+"loser": "Bob Lewis (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/kansas-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
 "st": "KY",
 "office": "State House",
 "dist": "28",
@@ -4159,6 +4175,22 @@ window.FLIPS = {
 "url": "https://www.multistate.us/elections/results/massachusetts-2026.html",
 "incdef": true,
 "note": ""
+},
+{
+"kind": "leg",
+"st": "MD",
+"office": "House of Delegates",
+"dist": "4",
+"winner": "Jerry Donald, Andrew Duck",
+"wp": "D",
+"loser": "Jesse Pippy (R), Alleria Stanley (D)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/maryland-2026.html",
+"incdef": false,
+"note": "Multi-member district"
 },
 {
 "kind": "leg",
@@ -4430,6 +4462,22 @@ window.FLIPS = {
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/maine-2026.html",
 "incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "ME",
+"office": "State Senate",
+"dist": "18",
+"winner": "Elizabeth Bosworth",
+"wp": "D",
+"loser": "John Andrews (R)",
+"fr": "I",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/maine-2026.html",
+"incdef": false,
 "note": ""
 },
 {
@@ -9922,7 +9970,7 @@ window.FLIPS = {
 "KS": [
 [
 "House",
-"1"
+"0"
 ],
 [
 "Senate",
@@ -9946,13 +9994,13 @@ window.FLIPS = {
 ],
 [
 "Senate",
-"1"
+"0"
 ]
 ],
 "MD": [
 [
 "House of Delegates",
-"2"
+"0"
 ],
 [
 "Senate",

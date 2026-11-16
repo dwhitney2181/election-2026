@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 16, 2026, 8:34 a.m. MT",
-"house_context": "NBC News had called 426 of 435 House races as of 10:33 a.m. ET, Nov. 16. Among called races, 49 seats changed party (46 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 48 seats as party gains.",
+"asof": "Nov. 16, 2026, 12:26 p.m. MT",
+"house_context": "NBC News had called 426 of 435 House races as of 2:25 p.m. ET, Nov. 16. Among called races, 49 seats changed party (46 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 48 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -3620,6 +3620,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "KS",
 "office": "State House",
+"dist": "8",
+"winner": "Megan Phillips",
+"wp": "D",
+"loser": "Chris Croft (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/kansas-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "KS",
+"office": "State House",
 "dist": "14",
 "winner": "Sherry Giebler",
 "wp": "D",
@@ -3640,6 +3656,22 @@ window.FLIPS = {
 "winner": "Allison Hougland",
 "wp": "D",
 "loser": "Lauren Bohi (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/kansas-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "KS",
+"office": "State House",
+"dist": "27",
+"winner": "Sara Kiewiet",
+"wp": "D",
+"loser": "Sean Tarwater (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -3726,6 +3758,22 @@ window.FLIPS = {
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/kansas-2026.html",
 "incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "KS",
+"office": "State House",
+"dist": "43",
+"winner": "Kristen Schultz",
+"wp": "D",
+"loser": "Bill Sutton (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/kansas-2026.html",
+"incdef": true,
 "note": ""
 },
 {
@@ -3832,6 +3880,22 @@ window.FLIPS = {
 "winner": "John Burke",
 "wp": "D",
 "loser": "Jill Ward (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/kansas-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "KS",
+"office": "State House",
+"dist": "117",
+"winner": "Brandon Holland",
+"wp": "D",
+"loser": "Adam Turk (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -9858,7 +9922,7 @@ window.FLIPS = {
 "KS": [
 [
 "House",
-"7"
+"1"
 ],
 [
 "Senate",

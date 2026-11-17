@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 16, 2026, 6:44 p.m. MT",
-"house_context": "NBC News had called 428 of 435 House races as of 8:43 p.m. ET, Nov. 16. Among called races, 49 seats changed party (46 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 48 seats as party gains.",
+"asof": "Nov. 16, 2026, 9:22 p.m. MT",
+"house_context": "NBC News had called 428 of 435 House races as of 10:26 p.m. ET, Nov. 16. Among called races, 49 seats changed party (46 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 48 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -9772,7 +9772,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"margin": 2.3,
+"margin": 2.4,
 "src": "Utah's official results site (unofficial count)",
 "url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
 "incdef": false,
@@ -9844,7 +9844,7 @@ window.FLIPS = {
 ],
 [
 "Senate",
-"2"
+"1"
 ]
 ],
 "CO": [

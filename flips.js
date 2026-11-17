@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 17, 2026, 9:23 a.m. MT",
-"house_context": "NBC News had called 428 of 435 House races as of 11:21 a.m. ET, Nov. 17. Among called races, 49 seats changed party (46 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 48 seats as party gains.",
+"asof": "Nov. 17, 2026, 12:30 p.m. MT",
+"house_context": "NBC News had called 428 of 435 House races as of 2:29 p.m. ET, Nov. 17. Among called races, 49 seats changed party (46 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 48 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -955,7 +955,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"src": "NBC News count (+274 votes, 99% in)",
+"src": "NBC News count (+272 votes, 99% in)",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Incumbent trailing"
@@ -4330,6 +4330,22 @@ window.FLIPS = {
 "loser": "James Sorcek (R)",
 "fr": "R",
 "to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/maine-2026.html",
+"incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "ME",
+"office": "State House",
+"dist": "96",
+"winner": "Kerryl Clement",
+"wp": "R",
+"loser": "Luke Jensen (D)",
+"fr": "D",
+"to": "R",
 "status": "called",
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/maine-2026.html",
@@ -8085,16 +8101,16 @@ window.FLIPS = {
 "st": "SD",
 "office": "State House",
 "dist": "11",
-"winner": "Sonja Mentzer",
-"wp": "D",
-"loser": "Brian Mulder (R), Keri Weems (R)",
+"winner": "Sonja Mentzer, Brian Mulder",
+"wp": "mixed",
+"loser": "Keri Weems (R), Tracey Quint (L)",
 "fr": "R",
 "to": "D",
 "status": "called",
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/south-dakota-2026.html",
-"incdef": false,
-"note": ""
+"incdef": true,
+"note": "Multi-member district"
 },
 {
 "kind": "leg",
@@ -8269,6 +8285,22 @@ window.FLIPS = {
 "status": "called",
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/tennessee-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "TX",
+"office": "State House",
+"dist": "14",
+"winner": "Janet Dudding",
+"wp": "D",
+"loser": "Paul Dyson (R), Jeff Miller (L)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/texas-2026.html",
 "incdef": true,
 "note": ""
 },
@@ -9990,7 +10022,7 @@ window.FLIPS = {
 "ME": [
 [
 "House",
-"2"
+"1"
 ],
 [
 "Senate",
@@ -10196,7 +10228,7 @@ window.FLIPS = {
 "TX": [
 [
 "House",
-"5"
+"4"
 ],
 [
 "Senate",

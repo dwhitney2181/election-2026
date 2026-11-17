@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 17, 2026, 12:30 p.m. MT",
-"house_context": "NBC News had called 428 of 435 House races as of 2:29 p.m. ET, Nov. 17. Among called races, 49 seats changed party (46 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 48 seats as party gains.",
+"asof": "Nov. 17, 2026, 3:21 p.m. MT",
+"house_context": "NBC News had called 429 of 435 House races as of 5:20 p.m. ET, Nov. 17. Among called races, 50 seats changed party (47 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 49 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -762,11 +762,11 @@ window.FLIPS = {
 "loser": "Greg Murphy (R)",
 "fr": "R",
 "to": "D",
-"status": "leading",
-"src": "NBC News count (+258 votes, 99% in)",
+"status": "called",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
-"incdef": false,
-"note": "Incumbent trailing"
+"incdef": true,
+"note": "Incumbent defeated"
 },
 {
 "kind": "house",
@@ -5364,6 +5364,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NC",
 "office": "State House",
+"dist": "9",
+"winner": "Claire Kempner",
+"wp": "D",
+"loser": "Tim Reeder (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/north-carolina-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "NC",
+"office": "State House",
 "dist": "25",
 "winner": "Lorenza M. Wilkins",
 "wp": "D",
@@ -5476,6 +5492,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NC",
 "office": "State House",
+"dist": "63",
+"winner": "Ian Baltutis",
+"wp": "D",
+"loser": "Ryan Moffitt (R), Whitney Olive (D)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/north-carolina-2026.html",
+"incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "NC",
+"office": "State House",
 "dist": "64",
 "winner": "LeVon Barnes",
 "wp": "D",
@@ -5544,6 +5576,22 @@ window.FLIPS = {
 "winner": "Chris Bishopp",
 "wp": "D",
 "loser": "Brian Echevarria (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/north-carolina-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "NC",
+"office": "State House",
+"dist": "93",
+"winner": "Charlie Wallin",
+"wp": "D",
+"loser": "Ray Pickett (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -9912,7 +9960,7 @@ window.FLIPS = {
 "NC": [
 [
 "House",
-"5"
+"2"
 ],
 [
 "Senate",

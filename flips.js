@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 18, 2026, 6:43 a.m. MT",
-"house_context": "NBC News had called 429 of 435 House races as of 8:43 a.m. ET, Nov. 18. Among called races, 50 seats changed party (47 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 49 seats as party gains.",
+"asof": "Nov. 18, 2026, 9:27 a.m. MT",
+"house_context": "NBC News had called 429 of 435 House races as of 11:42 p.m. ET, Nov. 17. Among called races, 50 seats changed party (47 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 49 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -5940,6 +5940,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NH",
 "office": "State House",
+"dist": "Belknap-6",
+"winner": "David Nagel, Bob McLean, Jade Wood, Lisa Rivard",
+"wp": "mixed",
+"loser": "Priscilla M. Bean (R), Allan Frank (D)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
+"incdef": true,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "NH",
+"office": "State House",
 "dist": "Carroll-3",
 "winner": "Karel Crawford, Todd Milliken",
 "wp": "mixed",
@@ -5983,6 +5999,22 @@ window.FLIPS = {
 "url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
 "incdef": false,
 "note": ""
+},
+{
+"kind": "leg",
+"st": "NH",
+"office": "State House",
+"dist": "Carroll-8",
+"winner": "Colin Mitchell, George Randell",
+"wp": "mixed",
+"loser": "Tammy Garthwaite (R), James Pittman (D)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
+"incdef": false,
+"note": "Multi-member district"
 },
 {
 "kind": "leg",
@@ -10156,7 +10188,7 @@ window.FLIPS = {
 "NH": [
 [
 "House",
-"13"
+"11"
 ],
 [
 "Senate",

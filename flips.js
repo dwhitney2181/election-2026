@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 18, 2026, 9:27 a.m. MT",
-"house_context": "NBC News had called 429 of 435 House races as of 11:42 p.m. ET, Nov. 17. Among called races, 50 seats changed party (47 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 49 seats as party gains.",
+"asof": "Nov. 18, 2026, 12:26 p.m. MT",
+"house_context": "NBC News had called 429 of 435 House races as of 2:26 p.m. ET, Nov. 18. Among called races, 50 seats changed party (47 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 49 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -1844,6 +1844,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "CT",
 "office": "State House",
+"dist": "48",
+"winner": "Bob Fernandez",
+"wp": "D",
+"loser": "Mark DeCaprio (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/connecticut-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "CT",
+"office": "State House",
 "dist": "55",
 "winner": "Ellen Paul",
 "wp": "D",
@@ -1864,6 +1880,22 @@ window.FLIPS = {
 "winner": "Rick LeBorious",
 "wp": "D",
 "loser": "Carol Hall (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/connecticut-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "CT",
+"office": "State House",
+"dist": "62",
+"winner": "Kim Becker",
+"wp": "D",
+"loser": "Mark Anderson (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -3192,6 +3224,22 @@ window.FLIPS = {
 "winner": "Mary Catherine Roberson",
 "wp": "D",
 "loser": "Brandun Schweizer (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/illinois-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "IL",
+"office": "State House",
+"dist": "114",
+"winner": "George McClellan Jr.",
+"wp": "D",
+"loser": "Kevin Schmidt (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -6133,16 +6181,16 @@ window.FLIPS = {
 "st": "NH",
 "office": "State House",
 "dist": "Grafton-1",
-"winner": "Linda Massimilla",
-"wp": "D",
-"loser": "Timothy Egan (D), Andrew Dorsett (R)",
+"winner": "Linda Massimilla, Timothy Egan, Andrew Dorsett",
+"wp": "mixed",
+"loser": "Joseph Goderic Beaulieu (D), Joseph Barton (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
-"incdef": false,
-"note": ""
+"incdef": true,
+"note": "Multi-member district"
 },
 {
 "kind": "leg",
@@ -6596,6 +6644,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NH",
 "office": "State House",
+"dist": "Merrimack-26",
+"winner": "Harold D. Tuttle",
+"wp": "D",
+"loser": "Alvin B. See (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "NH",
+"office": "State House",
 "dist": "Merrimack-27",
 "winner": "Vanessa Poulin, Phillip Walker",
 "wp": "mixed",
@@ -6644,10 +6708,42 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NH",
 "office": "State House",
+"dist": "Merrimack-5",
+"winner": "Thomas Ware, Lorna Carlisle",
+"wp": "D",
+"loser": "Louise Andrus (R), Deborah Aylward (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
+"incdef": true,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "NH",
+"office": "State House",
 "dist": "Rockingham-1",
 "winner": "Hal Rafter, Pamela Sanderson, Donna Danis",
 "wp": "D",
 "loser": "Scott Bryer (R), James Guzofski (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
+"incdef": true,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "NH",
+"office": "State House",
+"dist": "Rockingham-13",
+"winner": "Kristine Trow, Jamie Carreau, Matt Glavin, Hollie Hesse, Charles Foote, Jim Marshall, Haley Carreau, David Provencher, Brian Chirichiello, Paula Mahon d'Entremont",
+"wp": "mixed",
+"loser": "Jodi Nelson (R), Thomas C. Wood (D)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -7156,6 +7252,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NV",
 "office": "Assembly",
+"dist": "22",
+"winner": "Shenea Booth",
+"wp": "D",
+"loser": "Melissa Hardy (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/nevada-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "NV",
+"office": "Assembly",
 "dist": "35",
 "winner": "Joseph Spica",
 "wp": "D",
@@ -7240,6 +7352,22 @@ window.FLIPS = {
 "winner": "Chris McCreight",
 "wp": "D",
 "loser": "Alec Brook-Krasny (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-york-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "NY",
+"office": "Assembly",
+"dist": "49",
+"winner": "Joyce Xie",
+"wp": "D",
+"loser": "Lester Chang (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -7908,6 +8036,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "PA",
 "office": "State House",
+"dist": "143",
+"winner": "Timothy J Hayes",
+"wp": "D",
+"loser": "Shelby Labs (R), Chris Gambino (Forward Independent)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/pennsylvania-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "PA",
+"office": "State House",
 "dist": "160",
 "winner": "Elizabeth Moro",
 "wp": "D",
@@ -7961,6 +8105,22 @@ window.FLIPS = {
 "wp": "D",
 "loser": "Dick Fascia (R)",
 "fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/rhode-island-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "RI",
+"office": "State House",
+"dist": "49",
+"winner": "Veronicka Vega",
+"wp": "D",
+"loser": "Jon Brien (I)",
+"fr": "I",
 "to": "D",
 "status": "called",
 "src": "MultiState Elections",
@@ -8772,6 +8932,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "UT",
 "office": "State House",
+"dist": "20",
+"winner": "Phil Graves",
+"wp": "D",
+"loser": "Melissa Ballard (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/utah-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "UT",
+"office": "State House",
 "dist": "26",
 "winner": "Michael Finch",
 "wp": "D",
@@ -8894,6 +9070,22 @@ window.FLIPS = {
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/utah-2026.html",
 "incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "UT",
+"office": "State House",
+"dist": "59",
+"winner": "Celeste Johnson",
+"wp": "D",
+"loser": "Luke Searle (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/utah-2026.html",
+"incdef": false,
 "note": ""
 },
 {
@@ -9076,6 +9268,38 @@ window.FLIPS = {
 "kind": "leg",
 "st": "VT",
 "office": "State House",
+"dist": "Chittenden-Franklin",
+"winner": "Natalie Cashen, Henry Bonges III",
+"wp": "D",
+"loser": "Anthony Micklus (R), Kumulia Long (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/vermont-2026.html",
+"incdef": true,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "VT",
+"office": "State House",
+"dist": "Franklin-1",
+"winner": "Keith Billado, Caroline Bright",
+"wp": "mixed",
+"loser": "Bob Stebbins (R), Julie Filiberti (D)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/vermont-2026.html",
+"incdef": false,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "VT",
+"office": "State House",
 "dist": "Franklin-3",
 "winner": "Suzanne Kenyon",
 "wp": "D",
@@ -9103,6 +9327,22 @@ window.FLIPS = {
 "url": "https://www.multistate.us/elections/results/vermont-2026.html",
 "incdef": true,
 "note": ""
+},
+{
+"kind": "leg",
+"st": "VT",
+"office": "State House",
+"dist": "Grand Isle-Chittenden",
+"winner": "Mike Morgan, Dave Skinner",
+"wp": "mixed",
+"loser": "Sylvia Jensen (D), Josie Henry (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/vermont-2026.html",
+"incdef": false,
+"note": "Multi-member district"
 },
 {
 "kind": "leg",
@@ -9327,6 +9567,22 @@ window.FLIPS = {
 "url": "https://www.multistate.us/elections/results/vermont-2026.html",
 "incdef": true,
 "note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "WA",
+"office": "State House",
+"dist": "12",
+"winner": "Stacy Willoughby",
+"wp": "D",
+"loser": "Brian Burnett (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/washington-2026.html",
+"incdef": true,
+"note": ""
 },
 {
 "kind": "leg",
@@ -9636,6 +9892,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "WV",
 "office": "House of Delegates",
+"dist": "12",
+"winner": "Dennis Rempel",
+"wp": "D",
+"loser": "Charles Hartzog (R), Stephen Thomas Smith (L)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/west-virginia-2026.html",
+"incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "WV",
+"office": "House of Delegates",
 "dist": "24",
 "winner": "Steve Williams",
 "wp": "D",
@@ -9859,40 +10131,6 @@ window.FLIPS = {
 {
 "kind": "leg",
 "st": "UT",
-"office": "State House",
-"dist": "20",
-"winner": "Phil Graves",
-"wp": "D",
-"loser": "Melissa Ballard (R)",
-"fr": "R",
-"to": "D",
-"status": "leading",
-"margin": 2.6,
-"src": "Utah's official results site (unofficial count)",
-"url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
-"incdef": false,
-"note": ""
-},
-{
-"kind": "leg",
-"st": "UT",
-"office": "State House",
-"dist": "59",
-"winner": "Celeste T. Johnson",
-"wp": "D",
-"loser": "Luke Searle (R)",
-"fr": "R",
-"to": "D",
-"status": "leading",
-"margin": 2.4,
-"src": "Utah's official results site (unofficial count)",
-"url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
-"incdef": false,
-"note": ""
-},
-{
-"kind": "leg",
-"st": "UT",
 "office": "State Senate",
 "dist": "11",
 "winner": "Brooks Benson",
@@ -9956,7 +10194,7 @@ window.FLIPS = {
 ],
 [
 "Senate",
-"1"
+"0"
 ]
 ],
 "CO": [
@@ -9972,7 +10210,7 @@ window.FLIPS = {
 "CT": [
 [
 "House",
-"4"
+"1"
 ],
 [
 "Senate",
@@ -10052,7 +10290,7 @@ window.FLIPS = {
 "IL": [
 [
 "House",
-"2"
+"0"
 ],
 [
 "Senate",
@@ -10062,7 +10300,7 @@ window.FLIPS = {
 "IN": [
 [
 "House",
-"1"
+"0"
 ],
 [
 "Senate",
@@ -10162,7 +10400,7 @@ window.FLIPS = {
 "MT": [
 [
 "House",
-"2"
+"1"
 ],
 [
 "Senate",
@@ -10178,7 +10416,7 @@ window.FLIPS = {
 "NV": [
 [
 "Assembly",
-"1"
+"0"
 ],
 [
 "Senate",
@@ -10188,7 +10426,7 @@ window.FLIPS = {
 "NH": [
 [
 "House",
-"11"
+"6"
 ],
 [
 "Senate",
@@ -10208,7 +10446,7 @@ window.FLIPS = {
 "NY": [
 [
 "Assembly",
-"2"
+"1"
 ],
 [
 "Senate",
@@ -10262,13 +10500,13 @@ window.FLIPS = {
 ],
 [
 "House",
-"3"
+"2"
 ]
 ],
 "RI": [
 [
 "House",
-"1"
+"0"
 ],
 [
 "Senate",
@@ -10308,7 +10546,7 @@ window.FLIPS = {
 "TX": [
 [
 "House",
-"4"
+"2"
 ],
 [
 "Senate",
@@ -10318,7 +10556,7 @@ window.FLIPS = {
 "VT": [
 [
 "House",
-"2"
+"0"
 ],
 [
 "Senate",
@@ -10328,7 +10566,7 @@ window.FLIPS = {
 "WA": [
 [
 "House",
-"3"
+"2"
 ],
 [
 "Senate",
@@ -10338,7 +10576,7 @@ window.FLIPS = {
 "WV": [
 [
 "House of Delegates",
-"7"
+"6"
 ],
 [
 "Senate",
@@ -10358,7 +10596,7 @@ window.FLIPS = {
 "UT": [
 [
 "House",
-"4"
+"0"
 ],
 [
 "Senate",

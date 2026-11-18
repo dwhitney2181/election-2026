@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 18, 2026, 12:26 p.m. MT",
-"house_context": "NBC News had called 429 of 435 House races as of 2:26 p.m. ET, Nov. 18. Among called races, 50 seats changed party (47 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 49 seats as party gains.",
+"asof": "Nov. 18, 2026, 3:18 p.m. MT",
+"house_context": "NBC News had called 429 of 435 House races as of 5:18 p.m. ET, Nov. 18. Among called races, 50 seats changed party (47 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 49 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -5956,6 +5956,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NH",
 "office": "State House",
+"dist": "Belknap-2",
+"winner": "Seth Wheeler, Matt Coker",
+"wp": "mixed",
+"loser": "Scott Wallace (R), Dean S.T. Cascadden (D)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
+"incdef": false,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "NH",
+"office": "State House",
 "dist": "Belknap-3",
 "winner": "William Lawrence, Jr.",
 "wp": "D",
@@ -6756,6 +6772,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NH",
 "office": "State House",
+"dist": "Rockingham-14",
+"winner": "Ken Weyler, Paul C. Paone",
+"wp": "mixed",
+"loser": "Pam Brown (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
+"incdef": true,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "NH",
+"office": "State House",
 "dist": "Rockingham-16",
 "winner": "Bob Cote, Jane Cooper, Michela Hites, Paul Skudlarek, Isaac Fernandez, Ted Combes, David Lundgren",
 "wp": "mixed",
@@ -6782,6 +6814,22 @@ window.FLIPS = {
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
 "incdef": true,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "NH",
+"office": "State House",
+"dist": "Rockingham-25",
+"winner": "Lorie Ball, Joe Sweeney, Susan Vandecasteele, John Sytek, John Janigian, Valerie McDonnell, George I. Kassas, Dennis Mannion, Donna Loranger",
+"wp": "mixed",
+"loser": "Edward W. Huminick (R), Claudia DeFuria (D)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
+"incdef": false,
 "note": "Multi-member district"
 },
 {
@@ -10426,7 +10474,7 @@ window.FLIPS = {
 "NH": [
 [
 "House",
-"6"
+"4"
 ],
 [
 "Senate",

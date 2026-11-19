@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 19, 2026, 12:29 p.m. MT",
-"house_context": "NBC News had called 430 of 435 House races as of 2:23 p.m. ET, Nov. 19. Among called races, 50 seats changed party (47 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 49 seats as party gains.",
+"asof": "Nov. 19, 2026, 3:16 p.m. MT",
+"house_context": "NBC News had called 430 of 435 House races as of 5:00 p.m. ET, Nov. 19. Among called races, 50 seats changed party (47 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 49 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -6516,6 +6516,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NH",
 "office": "State House",
+"dist": "Hillsborough-36",
+"winner": "Michael Pellerito, Stephen Spratt",
+"wp": "D",
+"loser": "Diane Pauer (R), John W. Suiter (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
+"incdef": true,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "NH",
+"office": "State House",
 "dist": "Hillsborough-38",
 "winner": "Heidi Jakoby, Adam Haverstock",
 "wp": "mixed",
@@ -10505,7 +10521,7 @@ window.FLIPS = {
 "NH": [
 [
 "House",
-"3"
+"2"
 ],
 [
 "Senate",
@@ -10655,7 +10671,7 @@ window.FLIPS = {
 "WV": [
 [
 "House of Delegates",
-"6"
+"5"
 ],
 [
 "Senate",

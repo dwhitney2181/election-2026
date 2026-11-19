@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 19, 2026, 9:29 a.m. MT",
-"house_context": "NBC News had called 429 of 435 House races as of 8:46 p.m. ET, Nov. 18. Among called races, 50 seats changed party (47 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 49 seats as party gains.",
+"asof": "Nov. 19, 2026, 12:29 p.m. MT",
+"house_context": "NBC News had called 430 of 435 House races as of 2:23 p.m. ET, Nov. 19. Among called races, 50 seats changed party (47 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 49 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -9204,6 +9204,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "UT",
 "office": "State Senate",
+"dist": "11",
+"winner": "Brooks Benson",
+"wp": "R",
+"loser": "Emily Buss (Forward Party), Mackenzie Miller (D)",
+"fr": "FWD",
+"to": "R",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/utah-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "UT",
+"office": "State Senate",
 "dist": "19",
 "winner": "Shana Anderson",
 "wp": "D",
@@ -10207,23 +10223,6 @@ window.FLIPS = {
 "url": "https://www.multistate.us/elections/results/wyoming-2026.html",
 "incdef": false,
 "note": ""
-},
-{
-"kind": "leg",
-"st": "UT",
-"office": "State Senate",
-"dist": "11",
-"winner": "Brooks Benson",
-"wp": "R",
-"loser": "Emily Buss (F)",
-"fr": "F",
-"to": "R",
-"status": "leading",
-"margin": 0.4,
-"src": "Utah's official results site (unofficial count)",
-"url": "https://electionresults.utah.gov/results/public/Utah/elections/general11032026",
-"incdef": false,
-"note": ""
 }
 ],
 "uncalled": {
@@ -10410,7 +10409,7 @@ window.FLIPS = {
 "KY": [
 [
 "House",
-"1"
+"0"
 ],
 [
 "Senate",
@@ -10680,7 +10679,7 @@ window.FLIPS = {
 ],
 [
 "Senate",
-"1"
+"0"
 ]
 ]
 },

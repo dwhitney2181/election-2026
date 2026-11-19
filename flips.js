@@ -1,6 +1,6 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 19, 2026, 6:46 a.m. MT",
+"asof": "Nov. 19, 2026, 9:29 a.m. MT",
 "house_context": "NBC News had called 429 of 435 House races as of 8:46 p.m. ET, Nov. 18. Among called races, 50 seats changed party (47 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 49 seats as party gains.",
 "house_context_urls": [
 [
@@ -6725,16 +6725,16 @@ window.FLIPS = {
 "st": "NH",
 "office": "State House",
 "dist": "Merrimack-3",
-"winner": "Scott Burns",
+"winner": "Scott Burns, Vivian Marie Hall",
 "wp": "D",
-"loser": "Mike Visconti (R), Vivian Marie Hall (D)",
+"loser": "Mike Visconti (R), Werner Horn (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
 "incdef": false,
-"note": ""
+"note": "Multi-member district"
 },
 {
 "kind": "leg",
@@ -10506,7 +10506,7 @@ window.FLIPS = {
 "NH": [
 [
 "House",
-"4"
+"3"
 ],
 [
 "Senate",

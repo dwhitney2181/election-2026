@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 18, 2026, 6:46 p.m. MT",
-"house_context": "NBC News had called 429 of 435 House races as of 8:16 p.m. ET, Nov. 18. Among called races, 50 seats changed party (47 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 49 seats as party gains.",
+"asof": "Nov. 18, 2026, 9:28 p.m. MT",
+"house_context": "NBC News had called 430 of 435 House races as of 9:30 p.m. ET, Nov. 18. Among called races, 50 seats changed party (47 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 49 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -1034,6 +1034,38 @@ window.FLIPS = {
 "loser": "Dan Sager (R)",
 "fr": "R",
 "to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/alaska-2026.html",
+"incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "AK",
+"office": "State House",
+"dist": "37",
+"winner": "Evelynn M. Trefon",
+"wp": "D",
+"loser": "Brenda L. Wilson (R), Mark Smith (Nonpartisan)",
+"fr": "I",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/alaska-2026.html",
+"incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "AK",
+"office": "State Senate",
+"dist": "S",
+"winner": "Bryce Edgmon",
+"wp": "O",
+"loser": "Darren Deacon (R), Wassilie P. \"WG\" Guy (D)",
+"fr": "D",
+"to": "U",
 "status": "called",
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/alaska-2026.html",
@@ -10208,11 +10240,11 @@ window.FLIPS = {
 "AK": [
 [
 "House",
-"14"
+"8"
 ],
 [
 "Senate",
-"4"
+"0"
 ]
 ],
 "AZ": [

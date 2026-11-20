@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 20, 2026, 12:30 p.m. MT",
-"house_context": "NBC News had called 430 of 435 House races as of 2:27 p.m. ET, Nov. 20. Among called races, 50 seats changed party (47 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 49 seats as party gains.",
+"asof": "Nov. 20, 2026, 3:14 p.m. MT",
+"house_context": "NBC News had called 430 of 435 House races as of 5:13 p.m. ET, Nov. 20. Among called races, 50 seats changed party (47 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 49 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -6180,6 +6180,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NH",
 "office": "State House",
+"dist": "Cheshire-18",
+"winner": "Allen Davis, Rory Lovett Sherman",
+"wp": "D",
+"loser": "Jim Qualey (R), Rita Mattson (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
+"incdef": true,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "NH",
+"office": "State House",
 "dist": "Cheshire-9",
 "winner": "James Gruber",
 "wp": "D",
@@ -6584,6 +6600,22 @@ window.FLIPS = {
 "winner": "Paul Dargie, Claire Holston, Maria Perez, Ethan Aho",
 "wp": "D",
 "loser": "Gary Daniels (R), Vanessa Sheehan (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-hampshire-2026.html",
+"incdef": true,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "NH",
+"office": "State House",
+"dist": "Hillsborough-44",
+"winner": "Chris Conroy, Lisa Mazur",
+"wp": "mixed",
+"loser": "Bob Jones (D), Ross Berry (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -10521,7 +10553,7 @@ window.FLIPS = {
 "NH": [
 [
 "House",
-"2"
+"0"
 ],
 [
 "Senate",

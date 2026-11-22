@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 22, 2026, 9:09 a.m. MT",
-"house_context": "NBC News had called 430 of 435 House races as of 6:02 p.m. ET, Nov. 21. Among called races, 50 seats changed party (47 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 49 seats as party gains.",
+"asof": "Nov. 22, 2026, 12:20 p.m. MT",
+"house_context": "NBC News had called 431 of 435 House races as of 1:29 p.m. ET, Nov. 22. Among called races, 51 seats changed party (48 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 50 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -906,11 +906,11 @@ window.FLIPS = {
 "loser": "Virginia Foxx (R)",
 "fr": "R",
 "to": "D",
-"status": "leading",
-"src": "NBC News count (+330 votes, 99% in)",
+"status": "called",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
-"incdef": false,
-"note": "Incumbent trailing"
+"incdef": true,
+"note": "Incumbent defeated"
 },
 {
 "kind": "house",

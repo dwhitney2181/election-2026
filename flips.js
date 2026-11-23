@@ -1,6 +1,6 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 22, 2026, 3:09 p.m. MT",
+"asof": "Nov. 22, 2026, 6:47 p.m. MT",
 "house_context": "NBC News had called 431 of 435 House races as of 1:29 p.m. ET, Nov. 22. Among called races, 51 seats changed party (48 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 50 seats as party gains.",
 "house_context_urls": [
 [
@@ -5460,6 +5460,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NC",
 "office": "State House",
+"dist": "20",
+"winner": "Tim Merrick",
+"wp": "D",
+"loser": "Dane Scalise (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/north-carolina-2026.html",
+"incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "NC",
+"office": "State House",
 "dist": "25",
 "winner": "Lorenza M. Wilkins",
 "wp": "D",
@@ -5560,6 +5576,22 @@ window.FLIPS = {
 "winner": "Elma Hairston",
 "wp": "D",
 "loser": "Alan Branson (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/north-carolina-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "NC",
+"office": "State House",
+"dist": "62",
+"winner": "Shelly Headen",
+"wp": "D",
+"loser": "John M. Blust (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -10357,7 +10389,7 @@ window.FLIPS = {
 "NC": [
 [
 "House",
-"2"
+"0"
 ],
 [
 "Senate",

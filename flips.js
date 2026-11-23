@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 23, 2026, 9:28 a.m. MT",
-"house_context": "NBC News had called 431 of 435 House races as of 11:15 a.m. ET, Nov. 23. Among called races, 51 seats changed party (48 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 50 seats as party gains.",
+"asof": "Nov. 23, 2026, 12:30 p.m. MT",
+"house_context": "NBC News had called 431 of 435 House races as of 2:26 p.m. ET, Nov. 23. Among called races, 51 seats changed party (48 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 50 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -955,7 +955,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"src": "NBC News count (+272 votes, 99% in)",
+"src": "NBC News count (+271 votes, 99% in)",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Incumbent trailing"
@@ -1012,6 +1012,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "AK",
 "office": "State House",
+"dist": "6",
+"winner": "Brent Johnson",
+"wp": "NP",
+"loser": "Sarah Vance (R)",
+"fr": "R",
+"to": "NP",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/alaska-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "AK",
+"office": "State House",
 "dist": "15",
 "winner": "Denny Wells",
 "wp": "D",
@@ -1034,6 +1050,22 @@ window.FLIPS = {
 "loser": "Dan Sager (R)",
 "fr": "R",
 "to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/alaska-2026.html",
+"incdef": false,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "AK",
+"office": "State House",
+"dist": "34",
+"winner": "Joy Cottle",
+"wp": "NP",
+"loser": "Harmony Tomaszewski (R)",
+"fr": "R",
+"to": "NP",
 "status": "called",
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/alaska-2026.html",
@@ -1413,16 +1445,16 @@ window.FLIPS = {
 "st": "AZ",
 "office": "State House",
 "dist": "27",
-"winner": "Deborah Howard",
-"wp": "D",
-"loser": "Lisa Fink (R), Tony Rivero (R)",
+"winner": "Deborah Howard, Lisa Fink",
+"wp": "mixed",
+"loser": "Tony Rivero (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/arizona-2026.html",
-"incdef": false,
-"note": ""
+"incdef": true,
+"note": "Multi-member district"
 },
 {
 "kind": "leg",
@@ -2632,6 +2664,22 @@ window.FLIPS = {
 "winner": "Michelle Kang",
 "wp": "D",
 "loser": "Matt Reeves (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/georgia-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "GA",
+"office": "State House",
+"dist": "103",
+"winner": "Chris Luchey",
+"wp": "D",
+"loser": "Soo Hong (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -4261,15 +4309,15 @@ window.FLIPS = {
 "st": "MD",
 "office": "House of Delegates",
 "dist": "4",
-"winner": "Jerry Donald, Andrew Duck",
-"wp": "D",
-"loser": "Jesse Pippy (R), Alleria Stanley (D)",
+"winner": "Jerry Donald, Andrew Duck, Jesse Pippy",
+"wp": "mixed",
+"loser": "Alleria Stanley (D), April Miller (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/maryland-2026.html",
-"incdef": false,
+"incdef": true,
 "note": "Multi-member district"
 },
 {
@@ -4376,6 +4424,22 @@ window.FLIPS = {
 "winner": "Timothy J. Becker",
 "wp": "D",
 "loser": "Marygrace Cimino (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/maine-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "ME",
+"office": "State House",
+"dist": "86",
+"winner": "Abigail N. Geer",
+"wp": "D",
+"loser": "Rolf Olsen (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -5379,6 +5443,22 @@ window.FLIPS = {
 {
 "kind": "leg",
 "st": "MT",
+"office": "State House",
+"dist": "20",
+"winner": "Steve Keller",
+"wp": "D",
+"loser": "Melissa Nikolakakos (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/montana-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "MT",
 "office": "State Senate",
 "dist": "10",
 "winner": "Margaret Mitchell",
@@ -5882,6 +5962,22 @@ window.FLIPS = {
 "loser": "Cara Cody-Braun (I), Liz Conmy (D)",
 "fr": "D",
 "to": "R",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/north-dakota-2026.html",
+"incdef": false,
+"note": "Multi-member district"
+},
+{
+"kind": "leg",
+"st": "ND",
+"office": "State House",
+"dist": "41",
+"winner": "Chris Tiongson, Stacy Heidenreich",
+"wp": "D",
+"loser": "Jennifer Benson (R), Rich Slagle (R)",
+"fr": "R",
+"to": "D",
 "status": "called",
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/north-dakota-2026.html",
@@ -7572,6 +7668,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "NY",
 "office": "Assembly",
+"dist": "126",
+"winner": "Ian Phillips",
+"wp": "D",
+"loser": "John Lemondes (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-york-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "NY",
+"office": "Assembly",
 "dist": "143",
 "winner": "Ryan Taughrin",
 "wp": "D",
@@ -7656,6 +7768,22 @@ window.FLIPS = {
 "winner": "Lisa Kaul",
 "wp": "D",
 "loser": "Rob Rolison (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/new-york-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "NY",
+"office": "State Senate",
+"dist": "43",
+"winner": "Devin Lander",
+"wp": "D",
+"loser": "Jake Ashby (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -7800,6 +7928,22 @@ window.FLIPS = {
 "winner": "Shelby Kimball",
 "wp": "D",
 "loser": "Brian Lorenz (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/ohio-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "OH",
+"office": "State House",
+"dist": "75",
+"winner": "Richard J. Rettig",
+"wp": "D",
+"loser": "Haraz Ghanbari (R), Jake Kielmeyer (D)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -8200,6 +8344,22 @@ window.FLIPS = {
 "winner": "Timothy J Hayes",
 "wp": "D",
 "loser": "Shelby Labs (R), Chris Gambino (Forward Independent)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/pennsylvania-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "PA",
+"office": "State House",
+"dist": "147",
+"winner": "Margaret Burke",
+"wp": "D",
+"loser": "Donna Scheuren (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -8942,6 +9102,22 @@ window.FLIPS = {
 "src": "MultiState Elections",
 "url": "https://www.multistate.us/elections/results/texas-2026.html",
 "incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "TX",
+"office": "State House",
+"dist": "126",
+"winner": "Stefanie Bord",
+"wp": "D",
+"loser": "Stan Stanart (R), Lisa Emerson (I)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/texas-2026.html",
+"incdef": false,
 "note": ""
 },
 {
@@ -10319,7 +10495,7 @@ window.FLIPS = {
 "AK": [
 [
 "House",
-"6"
+"2"
 ],
 [
 "Senate",
@@ -10419,7 +10595,7 @@ window.FLIPS = {
 "GA": [
 [
 "House",
-"3"
+"1"
 ],
 [
 "Senate",
@@ -10499,7 +10675,7 @@ window.FLIPS = {
 "ME": [
 [
 "House",
-"1"
+"0"
 ],
 [
 "Senate",
@@ -10549,7 +10725,7 @@ window.FLIPS = {
 "MO": [
 [
 "House",
-"1"
+"0"
 ],
 [
 "Senate",
@@ -10559,7 +10735,7 @@ window.FLIPS = {
 "MT": [
 [
 "House",
-"1"
+"0"
 ],
 [
 "Senate",
@@ -10605,17 +10781,17 @@ window.FLIPS = {
 "NY": [
 [
 "Assembly",
-"1"
+"0"
 ],
 [
 "Senate",
-"1"
+"0"
 ]
 ],
 "ND": [
 [
 "House",
-"1"
+"0"
 ],
 [
 "Senate",
@@ -10625,7 +10801,7 @@ window.FLIPS = {
 "OH": [
 [
 "House",
-"4"
+"3"
 ],
 [
 "Senate",
@@ -10659,7 +10835,7 @@ window.FLIPS = {
 ],
 [
 "House",
-"2"
+"1"
 ]
 ],
 "RI": [
@@ -10705,7 +10881,7 @@ window.FLIPS = {
 "TX": [
 [
 "House",
-"2"
+"1"
 ],
 [
 "Senate",
@@ -10725,17 +10901,17 @@ window.FLIPS = {
 "WA": [
 [
 "House",
-"2"
+"1"
 ],
 [
 "Senate",
-"1"
+"0"
 ]
 ],
 "WV": [
 [
 "House of Delegates",
-"2"
+"0"
 ],
 [
 "Senate",

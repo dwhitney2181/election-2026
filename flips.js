@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 23, 2026, 3:17 p.m. MT",
-"house_context": "NBC News had called 431 of 435 House races as of 5:02 p.m. ET, Nov. 23. Among called races, 51 seats changed party (48 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 50 seats as party gains.",
+"asof": "Nov. 24, 2026, 9:35 a.m. MT",
+"house_context": "NBC News had called 431 of 435 House races as of 11:24 a.m. ET, Nov. 24. Among called races, 51 seats changed party (48 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 50 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -955,7 +955,7 @@ window.FLIPS = {
 "fr": "R",
 "to": "D",
 "status": "leading",
-"src": "NBC News count (+275 votes, 99% in)",
+"src": "NBC News count (+360 votes, 99% in)",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
 "incdef": false,
 "note": "Incumbent trailing"
@@ -8260,6 +8260,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "PA",
 "office": "State House",
+"dist": "41",
+"winner": "Brad Chambers",
+"wp": "D",
+"loser": "Brett Miller (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/pennsylvania-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "PA",
+"office": "State House",
 "dist": "44",
 "winner": "Hadley Haas",
 "wp": "D",
@@ -10835,7 +10851,7 @@ window.FLIPS = {
 ],
 [
 "House",
-"1"
+"0"
 ]
 ],
 "RI": [

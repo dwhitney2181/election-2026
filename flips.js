@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 24, 2026, 12:29 p.m. MT",
-"house_context": "NBC News had called 432 of 435 House races as of 2:28 p.m. ET, Nov. 24. Among called races, 52 seats changed party (49 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 51 seats as party gains.",
+"asof": "Nov. 24, 2026, 3:24 p.m. MT",
+"house_context": "NBC News had called 432 of 435 House races as of 5:15 p.m. ET, Nov. 24. Among called races, 52 seats changed party (49 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 51 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -7828,6 +7828,22 @@ window.FLIPS = {
 "kind": "leg",
 "st": "OH",
 "office": "State House",
+"dist": "29",
+"winner": "Jonathan Bradner",
+"wp": "D",
+"loser": "Cindy Abrams (R)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/ohio-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "OH",
+"office": "State House",
 "dist": "31",
 "winner": "J. Noah Spinner",
 "wp": "D",
@@ -7864,6 +7880,22 @@ window.FLIPS = {
 "winner": "Rose Lounsbury",
 "wp": "D",
 "loser": "Andrea White (R), Chuck Horn (I)",
+"fr": "R",
+"to": "D",
+"status": "called",
+"src": "MultiState Elections",
+"url": "https://www.multistate.us/elections/results/ohio-2026.html",
+"incdef": true,
+"note": ""
+},
+{
+"kind": "leg",
+"st": "OH",
+"office": "State House",
+"dist": "37",
+"winner": "Tom Herner",
+"wp": "D",
+"loser": "Tom Young (R)",
 "fr": "R",
 "to": "D",
 "status": "called",
@@ -10817,7 +10849,7 @@ window.FLIPS = {
 "OH": [
 [
 "House",
-"3"
+"1"
 ],
 [
 "Senate",

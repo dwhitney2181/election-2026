@@ -1,7 +1,7 @@
 window.FLIPS = {
 "meta": {
-"asof": "Nov. 24, 2026, 9:35 a.m. MT",
-"house_context": "NBC News had called 431 of 435 House races as of 11:24 a.m. ET, Nov. 24. Among called races, 51 seats changed party (48 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 50 seats as party gains.",
+"asof": "Nov. 24, 2026, 12:29 p.m. MT",
+"house_context": "NBC News had called 432 of 435 House races as of 2:28 p.m. ET, Nov. 24. Among called races, 52 seats changed party (49 to Democrats, 3 to Republicans), as marked by NBC News or ABC News. ABC News marked 51 seats as party gains.",
 "house_context_urls": [
 [
 "NBC News",
@@ -954,11 +954,11 @@ window.FLIPS = {
 "loser": "Scott DesJarlais (R)",
 "fr": "R",
 "to": "D",
-"status": "leading",
-"src": "NBC News count (+360 votes, 99% in)",
+"status": "called",
+"src": "NBC News call; NBC and ABC mark it as a party gain",
 "url": "https://www.nbcnews.com/politics/2026-elections/house-results",
-"incdef": false,
-"note": "Incumbent trailing"
+"incdef": true,
+"note": "Incumbent defeated"
 },
 {
 "kind": "house",
@@ -10731,7 +10731,7 @@ window.FLIPS = {
 "MN": [
 [
 "House",
-"1"
+"0"
 ],
 [
 "Senate",
